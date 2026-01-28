@@ -45,8 +45,9 @@ jobs:
             # 1. 先 Commit 本地變更
             git commit -m "Auto-update finance data"
             
-            # 2. 關鍵步驟：上傳前先拉取最新版本 (Rebase 模式可以避免產生醜醜的 Merge Commit)
-            git pull --rebase origin main
+            # 2. 關鍵修正：改用標準 Pull (自動合併)，這比 Rebase 更能容忍差異
+            # --no-edit 表示自動使用預設的合併訊息，不要跳出編輯器
+            git pull origin main --no-edit
             
             # 3. 再次上傳
             git push
