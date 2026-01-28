@@ -1,0 +1,36 @@
+name: Hourly Finance Update
+
+on:
+  schedule:
+    - cron: '0 * * * *' # 每小時執行一次 (分 時 日 月 週)
+  workflow_dispatch: # 允許手動執行
+
+jobs:
+  scrape-and-deploy:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write # 必須允許寫入權限
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run Scraper
+        run: python scraper.py
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          # 檢查是否有變更
+          git add data/dashboard.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update finance data" && git push)
