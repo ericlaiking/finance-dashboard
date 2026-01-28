@@ -35,8 +35,19 @@ jobs:
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           
-          # --- 關鍵修正：加入 data 資料夾下的所有檔案 ---
+          # 加入所有 data 檔案
           git add data/*
           
-          # 只有當有變更時才 Commit，避免空轉報錯
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update finance data" && git push)
+          # 檢查是否有變更
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "沒有變更，跳過 Commit"
+          else
+            # 1. 先 Commit 本地變更
+            git commit -m "Auto-update finance data"
+            
+            # 2. 關鍵步驟：上傳前先拉取最新版本 (Rebase 模式可以避免產生醜醜的 Merge Commit)
+            git pull --rebase origin main
+            
+            # 3. 再次上傳
+            git push
+          fi
