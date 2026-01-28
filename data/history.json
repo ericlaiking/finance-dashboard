@@ -1,16 +1,137 @@
 [
-  { "date": "2025-10-01 13:30", "cnn_score": 45, "tw_pe": 21.50, "biz_score": 30, "vix": 18.5, "us_10y": 3.85, "usd_twd": 31.85 },
-  { "date": "2025-10-15 13:30", "cnn_score": 52, "tw_pe": 22.10, "biz_score": 30, "vix": 17.2, "us_10y": 3.95, "usd_twd": 32.10 },
-  { "date": "2025-10-31 13:30", "cnn_score": 59, "tw_pe": 22.65, "biz_score": 32, "vix": 16.8, "us_10y": 4.10, "usd_twd": 32.35 },
-  { "date": "2025-11-15 13:30", "cnn_score": 68, "tw_pe": 23.50, "biz_score": 32, "vix": 15.5, "us_10y": 4.25, "usd_twd": 32.45 },
-  { "date": "2025-11-30 13:30", "cnn_score": 75, "tw_pe": 24.40, "biz_score": 34, "vix": 14.2, "us_10y": 4.15, "usd_twd": 32.20 },
-  { "date": "2025-12-15 13:30", "cnn_score": 85, "tw_pe": 25.85, "biz_score": 34, "vix": 12.8, "us_10y": 3.90, "usd_twd": 31.90 },
-  { "date": "2025-12-31 13:30", "cnn_score": 85, "tw_pe": 26.40, "biz_score": 38, "vix": 13.5, "us_10y": 3.95, "usd_twd": 32.05 },
-  { "date": "2026-01-10 13:30", "cnn_score": 81, "tw_pe": 26.20, "biz_score": 38, "vix": 14.5, "us_10y": 4.05, "usd_twd": 32.25 },
-  { "date": "2026-01-15 13:30", "cnn_score": 82, "tw_pe": 26.70, "biz_score": 38, "vix": 15.2, "us_10y": 4.12, "usd_twd": 32.30 },
-  { "date": "2026-01-20 13:30", "cnn_score": 76, "tw_pe": 26.60, "biz_score": 38, "vix": 16.1, "us_10y": 4.20, "usd_twd": 32.45 },
-  { "date": "2026-01-25 13:30", "cnn_score": 75, "tw_pe": 27.20, "biz_score": 38, "vix": 15.8, "us_10y": 4.18, "usd_twd": 32.40 },
-  { "date": "2026-01-26 13:30", "cnn_score": 74, "tw_pe": 27.35, "biz_score": 38, "vix": 16.0, "us_10y": 4.22, "usd_twd": 32.42 },
-  { "date": "2026-01-27 13:30", "cnn_score": 70, "tw_pe": 27.40, "biz_score": 38, "vix": 16.5, "us_10y": 4.25, "usd_twd": 32.48 },
-  { "date": "2026-01-28 13:30", "cnn_score": 67, "tw_pe": 27.48, "biz_score": 38, "vix": 17.1, "us_10y": 4.30, "usd_twd": 32.55 }
+  {
+    "date": "2025-10-01 13:30",
+    "cnn_score": 45,
+    "tw_pe": 21.5,
+    "biz_score": 30,
+    "vix": 18.5,
+    "us_10y": 3.85,
+    "usd_twd": 31.85
+  },
+  {
+    "date": "2025-10-15 13:30",
+    "cnn_score": 52,
+    "tw_pe": 22.1,
+    "biz_score": 30,
+    "vix": 17.2,
+    "us_10y": 3.95,
+    "usd_twd": 32.1
+  },
+  {
+    "date": "2025-10-31 13:30",
+    "cnn_score": 59,
+    "tw_pe": 22.65,
+    "biz_score": 32,
+    "vix": 16.8,
+    "us_10y": 4.1,
+    "usd_twd": 32.35
+  },
+  {
+    "date": "2025-11-15 13:30",
+    "cnn_score": 68,
+    "tw_pe": 23.5,
+    "biz_score": 32,
+    "vix": 15.5,
+    "us_10y": 4.25,
+    "usd_twd": 32.45
+  },
+  {
+    "date": "2025-11-30 13:30",
+    "cnn_score": 75,
+    "tw_pe": 24.4,
+    "biz_score": 34,
+    "vix": 14.2,
+    "us_10y": 4.15,
+    "usd_twd": 32.2
+  },
+  {
+    "date": "2025-12-15 13:30",
+    "cnn_score": 85,
+    "tw_pe": 25.85,
+    "biz_score": 34,
+    "vix": 12.8,
+    "us_10y": 3.9,
+    "usd_twd": 31.9
+  },
+  {
+    "date": "2025-12-31 13:30",
+    "cnn_score": 85,
+    "tw_pe": 26.4,
+    "biz_score": 38,
+    "vix": 13.5,
+    "us_10y": 3.95,
+    "usd_twd": 32.05
+  },
+  {
+    "date": "2026-01-10 13:30",
+    "cnn_score": 81,
+    "tw_pe": 26.2,
+    "biz_score": 38,
+    "vix": 14.5,
+    "us_10y": 4.05,
+    "usd_twd": 32.25
+  },
+  {
+    "date": "2026-01-15 13:30",
+    "cnn_score": 82,
+    "tw_pe": 26.7,
+    "biz_score": 38,
+    "vix": 15.2,
+    "us_10y": 4.12,
+    "usd_twd": 32.3
+  },
+  {
+    "date": "2026-01-20 13:30",
+    "cnn_score": 76,
+    "tw_pe": 26.6,
+    "biz_score": 38,
+    "vix": 16.1,
+    "us_10y": 4.2,
+    "usd_twd": 32.45
+  },
+  {
+    "date": "2026-01-25 13:30",
+    "cnn_score": 75,
+    "tw_pe": 27.2,
+    "biz_score": 38,
+    "vix": 15.8,
+    "us_10y": 4.18,
+    "usd_twd": 32.4
+  },
+  {
+    "date": "2026-01-26 13:30",
+    "cnn_score": 74,
+    "tw_pe": 27.35,
+    "biz_score": 38,
+    "vix": 16.0,
+    "us_10y": 4.22,
+    "usd_twd": 32.42
+  },
+  {
+    "date": "2026-01-27 13:30",
+    "cnn_score": 70,
+    "tw_pe": 27.4,
+    "biz_score": 38,
+    "vix": 16.5,
+    "us_10y": 4.25,
+    "usd_twd": 32.48
+  },
+  {
+    "date": "2026-01-28 13:30",
+    "cnn_score": 67,
+    "tw_pe": 27.48,
+    "biz_score": 38,
+    "vix": 17.1,
+    "us_10y": 4.3,
+    "usd_twd": 32.55
+  },
+  {
+    "date": "2026-01-29 00:23",
+    "cnn_score": 65,
+    "tw_pe": 27.48,
+    "biz_score": 38,
+    "vix": 16.85,
+    "us_10y": 4.25,
+    "usd_twd": 31.38
+  }
 ]
