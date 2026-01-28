@@ -154,29 +154,5 @@
     "cnn_score": 66,
     "tw_pe": 27.48,
     "biz_score": 38
-  },
-  {
-    "date": "2026-01-29 09:30",
-    "cnn_score": 65,
-    "tw_pe": 27.42,
-    "biz_score": 38
-  },
-  {
-    "date": "2026-01-29 11:30",
-    "cnn_score": 64,
-    "tw_pe": 27.45,
-    "biz_score": 38
-  },
-  {
-    "date": "2026-01-29 00:05",
-    "cnn_score": 65,
-    "tw_pe": 27.48,
-    "biz_score": 38
-  },
-  {
-    "date": "2026-01-29 00:12",
-    "cnn_score": 65,
-    "tw_pe": 27.48,
-    "biz_score": 38
   }
 ]
