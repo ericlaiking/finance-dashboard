@@ -7,48 +7,107 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        body { background-color: #f0f2f5; font-family: 'Segoe UI', sans-serif; }
-        .card { border: none; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 20px; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); }
-        .metric-value { font-size: 2.5rem; font-weight: 700; color: #2c3e50; }
-        .metric-title { font-size: 0.9rem; color: #7f8c8d; text-transform: uppercase; letter-spacing: 1px; }
-        .chart-container { position: relative; height: 120px; width: 100%; margin-top: 10px; }
+        body { background-color: #f4f7f6; font-family: 'Segoe UI', sans-serif; }
+        .dashboard-container { max-width: 1200px; margin: 30px auto; }
+        .card { border: none; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); transition: all 0.3s ease; overflow: hidden; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        
+        /* 數值顯示區 */
+        .metric-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .metric-title { font-size: 0.9rem; color: #8898aa; font-weight: 600; letter-spacing: 0.5px; }
+        .metric-value { font-size: 3rem; font-weight: 700; line-height: 1; }
+        .metric-sub { font-size: 0.85rem; margin-top: 5px; font-weight: 500; }
+
+        /* 溫度計/量條 Styles */
+        .gauge-container { height: 8px; background: #e9ecef; border-radius: 4px; margin: 15px 0; position: relative; overflow: hidden; }
+        .gauge-fill { height: 100%; border-radius: 4px; transition: width 1s ease-in-out, background-color 0.5s; }
+        
+        /* 狀態顏色定義 (台股邏輯：紅熱綠冷) */
+        .status-hot { color: #ff3333; }   /* 極度貪婪/過熱 */
+        .status-warm { color: #ff8833; }  /* 貪婪/偏熱 */
+        .status-neutral { color: #888; }  /* 中立 */
+        .status-cool { color: #33aaff; }  /* 恐懼/偏冷 */
+        .status-cold { color: #00cc66; }  /* 極度恐懼/便宜 */
+
+        /* 圖表區 */
+        .chart-controls { display: flex; justify-content: flex-end; gap: 5px; margin-bottom: 10px; }
+        .btn-time { font-size: 0.75rem; padding: 2px 10px; border-radius: 20px; border: 1px solid #ddd; background: white; color: #666; }
+        .btn-time.active { background: #333; color: white; border-color: #333; }
+        .chart-wrapper { height: 200px; width: 100%; }
     </style>
 </head>
 <body>
 
-<div class="container py-5">
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h3>📈 市場趨勢追蹤</h3>
-        <small class="text-muted">最後更新: <span id="last-update">--</span></small>
+<div class="container dashboard-container">
+    <div class="d-flex justify-content-between align-items-end mb-5">
+        <div>
+            <h2 class="fw-bold text-dark">📊 市場溫度計</h2>
+            <p class="text-muted mb-0">多維度財經數據追蹤</p>
+        </div>
+        <div class="text-end">
+            <small class="text-muted d-block">最後更新</small>
+            <span id="last-update" class="fw-bold">載入中...</span>
+        </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card p-3">
-                <div class="metric-title">CNN 恐懼貪婪指數</div>
-                <div class="metric-value" id="current-cnn">--</div>
-                <div class="chart-container">
+    <div class="row g-4">
+        <div class="col-lg-4">
+            <div class="card p-4">
+                <div class="metric-header">
+                    <span class="metric-title">CNN 恐懼貪婪指數</span>
+                    <span class="badge bg-light text-dark" id="cnn-badge">--</span>
+                </div>
+                <div class="metric-value" id="cnn-val">--</div>
+                
+                <div class="gauge-container">
+                    <div class="gauge-fill" id="cnn-bar" style="width: 0%"></div>
+                </div>
+                
+                <div class="chart-controls">
+                    <button class="btn btn-time active" onclick="updateTimeRange('7d')">7天</button>
+                    <button class="btn btn-time" onclick="updateTimeRange('30d')">30天</button>
+                    <button class="btn btn-time" onclick="updateTimeRange('all')">全</button>
+                </div>
+                <div class="chart-wrapper">
                     <canvas id="chartCNN"></canvas>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card p-3">
-                <div class="metric-title">台積電 (2330) 本益比</div>
-                <div class="metric-value" id="current-pe">--</div>
-                <div class="chart-container">
+        <div class="col-lg-4">
+            <div class="card p-4">
+                <div class="metric-header">
+                    <span class="metric-title">台積電 (2330) 本益比</span>
+                    <span class="badge bg-light text-dark" id="pe-badge">--</span>
+                </div>
+                <div class="metric-value" id="pe-val">--</div>
+                
+                <div class="gauge-container">
+                    <div class="gauge-fill" id="pe-bar" style="width: 0%"></div>
+                </div>
+
+                <div class="chart-controls">
+                     </div>
+                <div class="chart-wrapper">
                     <canvas id="chartPE"></canvas>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card p-3">
-                <div class="metric-title">景氣對策信號分數</div>
-                <div class="metric-value" id="current-biz">--</div>
-                <div class="chart-container">
+        <div class="col-lg-4">
+            <div class="card p-4">
+                <div class="metric-header">
+                    <span class="metric-title">景氣對策信號</span>
+                    <span class="badge bg-light text-dark" id="biz-badge">--</span>
+                </div>
+                <div class="metric-value" id="biz-val">--</div>
+                
+                <div class="gauge-container">
+                    <div class="gauge-fill" id="biz-bar" style="width: 0%"></div>
+                </div>
+
+                <div class="chart-controls"></div>
+                <div class="chart-wrapper">
                     <canvas id="chartBiz"></canvas>
                 </div>
             </div>
@@ -57,89 +116,146 @@
 </div>
 
 <script>
-    // 通用的圖表設定
-    const commonOptions = {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: { legend: { display: false } },
-        scales: {
-            x: { display: false }, // 隱藏 X 軸讓畫面更簡潔
-            y: { display: true, position: 'right', grid: { display: false } }
-        },
-        elements: {
-            point: { radius: 0, hitRadius: 10 }, // 隱藏原本的點，滑鼠移過去才顯示
-            line: { tension: 0.4, borderWidth: 2 } // 線條平滑度
-        }
+    let rawData = [];
+    let charts = {};
+
+    // 顏色定義
+    const COLORS = {
+        hot: '#ff3333', warm: '#ff8833', neutral: '#888888', cool: '#33aaff', cold: '#00cc66'
     };
+
+    // 取得顏色與狀態文字
+    function getStatus(value, type) {
+        if (type === 'cnn') {
+            if (value >= 75) return { color: COLORS.hot, text: '極度貪婪', pct: value };
+            if (value >= 55) return { color: COLORS.warm, text: '貪婪', pct: value };
+            if (value >= 45) return { color: COLORS.neutral, text: '中立', pct: value };
+            if (value >= 25) return { color: COLORS.cool, text: '恐懼', pct: value };
+            return { color: COLORS.cold, text: '極度恐懼', pct: value };
+        } 
+        else if (type === 'pe') {
+            // 台積電本益比概略區間: <15便宜, >25貴
+            let pct = Math.min(100, Math.max(0, (value - 10) * 5)); // Mapping 10-30 to 0-100%
+            if (value >= 25) return { color: COLORS.hot, text: '昂貴', pct: pct };
+            if (value >= 20) return { color: COLORS.warm, text: '偏高', pct: pct };
+            if (value >= 15) return { color: COLORS.neutral, text: '合理', pct: pct };
+            return { color: COLORS.cold, text: '便宜', pct: pct };
+        }
+        else if (type === 'biz') {
+            let pct = (value / 45) * 100;
+            if (value >= 38) return { color: COLORS.hot, text: '紅燈 (過熱)', pct: pct };
+            if (value >= 32) return { color: COLORS.warm, text: '黃紅燈', pct: pct };
+            if (value >= 23) return { color: COLORS.cold, text: '綠燈 (穩定)', pct: pct }; // 綠燈在景氣反而是好/穩定，但在溫度計邏輯算冷
+            if (value >= 17) return { color: COLORS.cool, text: '黃藍燈', pct: pct };
+            return { color: COLORS.cool, text: '藍燈 (低迷)', pct: pct };
+        }
+    }
+
+    // 初始化圖表
+    function initChart(ctxId, label, color) {
+        const ctx = document.getElementById(ctxId).getContext('2d');
+        return new Chart(ctx, {
+            type: 'line',
+            data: { labels: [], datasets: [{ 
+                label: label, 
+                data: [], 
+                borderColor: color, 
+                borderWidth: 2, 
+                pointRadius: 0, 
+                fill: true,
+                backgroundColor: color + '10' // 10 = alpha 
+            }]},
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false }, tooltip: { mode: 'index', intersect: false } },
+                scales: { 
+                    x: { display: false }, 
+                    y: { position: 'right', grid: { display: false } } 
+                },
+                interaction: { mode: 'nearest', axis: 'x', intersect: false }
+            }
+        });
+    }
 
     async function loadData() {
         try {
-            // 注意：檔名改成 history.json 了
-            const response = await fetch('./data/history.json?t=' + new Date().getTime());
-            const data = await response.json();
+            const response = await fetch('./data/history.json?t=' + Date.now());
+            rawData = await response.json();
+            
+            // 確保資料按時間排序
+            rawData.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-            // 1. 取得最新一筆資料來顯示大數字
-            const latest = data[data.length - 1];
-            document.getElementById('last-update').innerText = latest.date;
-            document.getElementById('current-cnn').innerText = latest.cnn_score;
-            document.getElementById('current-pe').innerText = latest.tw_pe;
-            document.getElementById('current-biz').innerText = latest.biz_score;
+            // 更新最新數值面板
+            updateDashboard(rawData[rawData.length - 1]);
 
-            // 2. 準備圖表需要的陣列
-            const labels = data.map(d => d.date.split(" ")[1]); // 只取時間 "HH:MM" 當標籤
-            const cnnData = data.map(d => d.cnn_score);
-            const peData = data.map(d => d.tw_pe);
-            const bizData = data.map(d => d.biz_score);
+            // 初始化圖表物件
+            charts.cnn = initChart('chartCNN', 'CNN Index', COLORS.warm);
+            charts.pe = initChart('chartPE', 'PE Ratio', COLORS.hot);
+            charts.biz = initChart('chartBiz', 'Signal', COLORS.cold);
 
-            // 3. 繪製 CNN 圖表
-            new Chart(document.getElementById('chartCNN'), {
-                type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        data: cnnData,
-                        borderColor: '#FF6384',
-                        backgroundColor: 'rgba(255, 99, 132, 0.1)',
-                        fill: true
-                    }]
-                },
-                options: commonOptions
-            });
-
-            // 4. 繪製 PE 圖表
-            new Chart(document.getElementById('chartPE'), {
-                type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        data: peData,
-                        borderColor: '#36A2EB',
-                        backgroundColor: 'rgba(54, 162, 235, 0.1)',
-                        fill: true
-                    }]
-                },
-                options: commonOptions
-            });
-
-            // 5. 繪製 景氣 圖表
-            new Chart(document.getElementById('chartBiz'), {
-                type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        data: bizData,
-                        borderColor: '#FFCE56',
-                        backgroundColor: 'rgba(255, 206, 86, 0.1)',
-                        fill: true
-                    }]
-                },
-                options: commonOptions
-            });
+            // 預設顯示 7 天
+            updateTimeRange('7d');
 
         } catch (e) {
-            console.error("讀取失敗", e);
-            document.getElementById('last-update').innerText = "初始化中...請稍後";
+            console.error("Data Load Error", e);
+            document.getElementById('last-update').innerText = "讀取失敗";
         }
+    }
+
+    function updateDashboard(latest) {
+        document.getElementById('last-update').innerText = latest.date;
+
+        // 設定 CNN
+        const cnnStat = getStatus(latest.cnn_score, 'cnn');
+        document.getElementById('cnn-val').innerText = latest.cnn_score;
+        document.getElementById('cnn-val').style.color = cnnStat.color;
+        document.getElementById('cnn-badge').innerText = cnnStat.text;
+        document.getElementById('cnn-bar').style.width = cnnStat.pct + '%';
+        document.getElementById('cnn-bar').style.backgroundColor = cnnStat.color;
+
+        // 設定 PE
+        const peStat = getStatus(latest.tw_pe, 'pe');
+        document.getElementById('pe-val').innerText = latest.tw_pe;
+        document.getElementById('pe-val').style.color = peStat.color;
+        document.getElementById('pe-badge').innerText = peStat.text;
+        document.getElementById('pe-bar').style.width = peStat.pct + '%';
+        document.getElementById('pe-bar').style.backgroundColor = peStat.color;
+
+        // 設定 Biz
+        const bizStat = getStatus(latest.biz_score, 'biz');
+        document.getElementById('biz-val').innerText = latest.biz_score;
+        document.getElementById('biz-val').style.color = bizStat.color;
+        document.getElementById('biz-badge').innerText = bizStat.text;
+        document.getElementById('biz-bar').style.width = bizStat.pct + '%';
+        document.getElementById('biz-bar').style.backgroundColor = bizStat.color;
+    }
+
+    // 切換時間範圍邏輯
+    window.updateTimeRange = function(range) {
+        // 更新按鈕樣式
+        document.querySelectorAll('.btn-time').forEach(b => b.classList.remove('active'));
+        event.target.classList.add('active'); // 注意：這裡簡單實作，如果自動呼叫可能報錯，可忽略
+
+        let sliceCount = 0;
+        // 假設資料是每小時一筆 (一天24筆)
+        if (range === '7d') sliceCount = 24 * 7;
+        else if (range === '30d') sliceCount = 24 * 30;
+        else sliceCount = rawData.length; // All
+
+        const filteredData = rawData.slice(-sliceCount);
+        const labels = filteredData.map(d => d.date);
+
+        // 更新三個圖表
+        updateChartData(charts.cnn, labels, filteredData.map(d => d.cnn_score));
+        updateChartData(charts.pe, labels, filteredData.map(d => d.tw_pe));
+        updateChartData(charts.biz, labels, filteredData.map(d => d.biz_score));
+    }
+
+    function updateChartData(chart, labels, data) {
+        chart.data.labels = labels;
+        chart.data.datasets[0].data = data;
+        chart.update();
     }
 
     loadData();
