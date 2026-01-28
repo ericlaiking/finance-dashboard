@@ -8,32 +8,48 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <style>
-        body { background-color: #f4f7f6; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f0f2f5; font-family: 'Segoe UI', sans-serif; }
         .dashboard-container { max-width: 1200px; margin: 30px auto; }
         
         .card { 
             border: none; border-radius: 16px; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
             transition: all 0.3s ease; height: 100%; 
+            background: white;
         }
         .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
         
+        /* 標題與標籤 */
         .metric-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
-        .metric-title { font-size: 0.85rem; color: #8898aa; font-weight: 600; text-transform: uppercase; }
-        .metric-value { font-size: 2.5rem; font-weight: 700; line-height: 1; margin-bottom: 10px; }
+        .metric-title { font-size: 0.85rem; color: #6c757d; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
         
-        /* 進度條容器 (灰色底) */
-        .gauge-container { height: 8px; background: #e9ecef; border-radius: 4px; margin-bottom: 15px; overflow: hidden; }
-        /* 進度條本體 (有顏色) */
-        .gauge-fill { height: 100%; border-radius: 4px; transition: width 1s ease-in-out, background-color 0.5s; }
-        
-        .chart-wrapper { height: 150px; width: 100%; }
-        
-        .chart-controls { display: flex; justify-content: flex-end; gap: 4px; margin-top: 5px; }
-        .btn-time { font-size: 0.7rem; padding: 2px 10px; border-radius: 15px; border: 1px solid #dee2e6; background: white; color: #6c757d; }
-        .btn-time.active { background: #344767; color: white; border-color: #344767; }
+        /* 狀態標籤 (Badge) */
+        .status-badge {
+            font-size: 0.75rem; padding: 4px 10px; border-radius: 12px;
+            font-weight: 600; color: white; background-color: #adb5bd;
+        }
 
-        .section-title { font-size: 1.2rem; font-weight: bold; margin: 30px 0 15px 0; border-left: 5px solid #344767; padding-left: 10px; }
+        /* 數值顯示 */
+        .metric-value { font-size: 2.8rem; font-weight: 800; line-height: 1; margin: 10px 0; letter-spacing: -1px;}
+        
+        /* 進度條容器 */
+        .gauge-container { 
+            height: 10px; background: #e9ecef; border-radius: 5px; margin-bottom: 15px; overflow: hidden; position: relative;
+        }
+        /* 進度條本體 */
+        .gauge-fill { height: 100%; border-radius: 5px; transition: width 1s ease-in-out, background-color 0.5s; }
+        
+        .chart-wrapper { height: 140px; width: 100%; }
+        
+        .section-title { 
+            font-size: 1.1rem; font-weight: 800; color: #344767; 
+            margin: 30px 0 15px 0; border-left: 4px solid #344767; padding-left: 12px; 
+        }
+
+        /* 按鈕樣式 */
+        .chart-controls { display: flex; justify-content: flex-end; gap: 5px; margin-bottom: 10px; }
+        .btn-time { font-size: 0.7rem; padding: 3px 12px; border-radius: 20px; border: 1px solid #dee2e6; background: white; color: #6c757d; font-weight: 600; }
+        .btn-time.active { background: #344767; color: white; border-color: #344767; }
     </style>
 </head>
 <body>
@@ -41,22 +57,22 @@
 <div class="container dashboard-container">
     <div class="d-flex justify-content-between align-items-end mb-4">
         <div>
-            <h2 class="fw-bold text-dark">📊 投資決策戰情室</h2>
-            <p class="text-muted mb-0">基本面 · 情緒面 · 資金面</p>
+            <h2 class="fw-bold text-dark" style="letter-spacing: -0.5px;">🚀 投資決策戰情室</h2>
+            <p class="text-muted mb-0">Market Sentiment & Risk Dashboard</p>
         </div>
         <div class="text-end">
-            <small class="text-muted d-block">Data Updated</small>
-            <span id="last-update" class="fw-bold">載入中...</span>
+            <small class="text-muted d-block">Last Updated</small>
+            <span id="last-update" class="fw-bold text-primary">載入中...</span>
         </div>
     </div>
 
-    <div class="section-title">市場熱度 (Market Heat)</div>
+    <div class="section-title">🔥 市場熱度 (Market Heat)</div>
     <div class="row g-4">
         <div class="col-lg-4">
             <div class="card p-4">
                 <div class="metric-header">
                     <span class="metric-title">CNN 恐懼貪婪</span>
-                    <span class="badge bg-light text-dark" id="cnn-badge">--</span>
+                    <span class="status-badge" id="cnn-badge">--</span>
                 </div>
                 <div class="metric-value" id="cnn-val">--</div>
                 <div class="gauge-container"><div class="gauge-fill" id="cnn-bar" style="width: 0%"></div></div>
@@ -67,7 +83,7 @@
             <div class="card p-4">
                 <div class="metric-header">
                     <span class="metric-title">台積電 本益比</span>
-                    <span class="badge bg-light text-dark" id="pe-badge">--</span>
+                    <span class="status-badge" id="pe-badge">--</span>
                 </div>
                 <div class="metric-value" id="pe-val">--</div>
                 <div class="gauge-container"><div class="gauge-fill" id="pe-bar" style="width: 0%"></div></div>
@@ -78,7 +94,7 @@
             <div class="card p-4">
                 <div class="metric-header">
                     <span class="metric-title">景氣對策信號</span>
-                    <span class="badge bg-light text-dark" id="biz-badge">--</span>
+                    <span class="status-badge" id="biz-badge">--</span>
                 </div>
                 <div class="metric-value" id="biz-val">--</div>
                 <div class="gauge-container"><div class="gauge-fill" id="biz-bar" style="width: 0%"></div></div>
@@ -87,11 +103,13 @@
         </div>
     </div>
 
-    <div class="section-title">風險與資金 (Risk & Flow)</div>
-    <div class="d-flex justify-content-end mb-3">
-        <button class="btn btn-time active" onclick="updateTimeRange('30d', this)">30天</button>
-        <button class="btn btn-time" onclick="updateTimeRange('90d', this)">90天</button>
-        <button class="btn btn-time" onclick="updateTimeRange('all', this)">全部</button>
+    <div class="d-flex justify-content-between align-items-center mt-4 mb-2">
+        <div class="section-title m-0">🌊 風險與資金 (Risk & Flow)</div>
+        <div class="chart-controls">
+            <button class="btn btn-time active" onclick="updateTimeRange('30d', this)">30天</button>
+            <button class="btn btn-time" onclick="updateTimeRange('90d', this)">90天</button>
+            <button class="btn btn-time" onclick="updateTimeRange('all', this)">全部</button>
+        </div>
     </div>
 
     <div class="row g-4 mb-5">
@@ -99,7 +117,7 @@
             <div class="card p-4">
                 <div class="metric-header">
                     <span class="metric-title">VIX 恐慌指數</span>
-                    <span class="badge bg-light text-dark" id="vix-badge">--</span>
+                    <span class="status-badge" id="vix-badge">--</span>
                 </div>
                 <div class="metric-value" id="vix-val">--</div>
                 <div class="gauge-container"><div class="gauge-fill" id="vix-bar" style="width: 0%"></div></div>
@@ -110,7 +128,7 @@
             <div class="card p-4">
                 <div class="metric-header">
                     <span class="metric-title">美國 10年債殖利率</span>
-                    <span class="badge bg-light text-dark" id="bond-badge">--</span>
+                    <span class="status-badge" id="bond-badge">--</span>
                 </div>
                 <div class="metric-value" id="bond-val">--</div>
                 <div class="gauge-container"><div class="gauge-fill" id="bond-bar" style="width: 0%"></div></div>
@@ -121,7 +139,7 @@
             <div class="card p-4">
                 <div class="metric-header">
                     <span class="metric-title">美元/台幣 匯率</span>
-                    <span class="badge bg-light text-dark" id="usd-badge">--</span>
+                    <span class="status-badge" id="usd-badge">--</span>
                 </div>
                 <div class="metric-value" id="usd-val">--</div>
                 <div class="gauge-container"><div class="gauge-fill" id="usd-bar" style="width: 0%"></div></div>
@@ -134,69 +152,80 @@
 <script>
     let rawData = [];
     let charts = {};
-    const COLORS = { hot: '#ff3333', warm: '#ff8833', neutral: '#888888', cool: '#33aaff', cold: '#00cc66' };
+    // 顏色定義：紅(危險/熱), 橘(警告), 灰(中立), 藍(冷), 綠(安全/便宜)
+    const COLORS = { 
+        danger: '#dc3545', // 紅 (危險/過熱/外資流出)
+        warning: '#ffc107', // 黃 (警告)
+        neutral: '#adb5bd', // 灰 (中立)
+        safe: '#198754',    // 綠 (安全/便宜/恐慌買點)
+        info: '#0dcaf0'     // 藍 (偏冷)
+    };
 
-    // 1. 計算進度條百分比 (核心修正：定義每個指標的最小值與最大值區間)
+    // 1. 計算進度條百分比 (決定 Bar 的長度)
     function getProgress(val, type) {
         let pct = 0;
         val = parseFloat(val);
         
-        if (type === 'cnn') {
-            pct = val; // 0-100
-        } 
-        else if (type === 'pe') {
-            // PE: 10倍~35倍
-            pct = (val - 10) / (35 - 10) * 100;
-        } 
-        else if (type === 'biz') {
-            // 燈號分數: 9分~45分
-            pct = (val / 45) * 100;
-        } 
-        else if (type === 'vix') {
-            // VIX: 10~40 (超過40就是股災了)
-            pct = (val - 10) / (40 - 10) * 100;
-        } 
-        else if (type === 'bond') {
-            // 美債: 3.0% ~ 5.5%
-            pct = (val - 3.0) / (5.5 - 3.0) * 100;
-        } 
-        else if (type === 'usd') {
-            // 匯率: 29 ~ 34
-            pct = (val - 29) / (34 - 29) * 100;
-        }
-
-        // 限制在 5% ~ 100% 之間，避免爆掉或看不見
+        if (type === 'cnn') pct = val; 
+        else if (type === 'pe') pct = (val - 10) / (35 - 10) * 100; // 10~35
+        else if (type === 'biz') pct = (val / 45) * 100; // 0~45
+        else if (type === 'vix') pct = (val - 10) / (40 - 10) * 100; // 10~40
+        else if (type === 'bond') pct = (val - 3.0) / (5.0 - 3.0) * 100; // 3.0% ~ 5.0%
+        else if (type === 'usd') pct = (val - 29) / (33 - 29) * 100; // 29 ~ 33
+        
         return Math.min(100, Math.max(5, pct));
     }
 
-    // 2. 狀態顏色邏輯
+    // 2. 判讀邏輯 (決定顏色與文字) - 這是儀表板的「大腦」
     function getStatus(value, type) {
+        val = parseFloat(value);
+
         if (type === 'cnn') {
-            if (value >= 75) return { color: COLORS.hot, text: '極度貪婪' };
-            if (value <= 25) return { color: COLORS.cold, text: '極度恐懼' };
-            return { color: COLORS.warm, text: '中立' };
+            if (val >= 75) return { color: COLORS.danger, text: '🔥 極度貪婪' };
+            if (val <= 25) return { color: COLORS.safe, text: '🥶 極度恐懼' };
+            return { color: COLORS.warning, text: '😐 中立觀望' };
         } 
+        
         if (type === 'pe') {
-            return { color: value >= 25 ? COLORS.hot : (value <= 15 ? COLORS.cold : COLORS.neutral), text: value >= 25 ? '昂貴' : '合理' };
+            if (val >= 25) return { color: COLORS.danger, text: '⚠️ 估值過高' };
+            if (val <= 15) return { color: COLORS.safe, text: '💰 估值便宜' };
+            return { color: COLORS.warning, text: '👌 估值合理' };
         }
+        
+        if (type === 'biz') {
+            // 這裡強制修正：38分以上就是紅燈過熱
+            if (val >= 38) return { color: COLORS.danger, text: '🔥 紅燈過熱' };
+            if (val >= 32) return { color: COLORS.warning, text: '🟡 黃紅燈' };
+            if (val <= 23) return { color: COLORS.info, text: '🔵 藍燈低迷' };
+            return { color: COLORS.safe, text: '🟢 綠燈穩定' };
+        }
+        
         if (type === 'vix') {
-            // VIX 低代表安逸(紅), 高代表恐慌(綠)
-            let color = value < 15 ? COLORS.hot : (value > 25 ? COLORS.cold : COLORS.neutral);
-            return { color: color, text: value < 15 ? '安逸(警)' : (value > 25 ? '恐慌(買)' : '正常') };
+            // VIX 低 = 市場太樂觀 = 危險
+            if (val < 15) return { color: COLORS.danger, text: '⚠️ 過度樂觀' };
+            if (val > 28) return { color: COLORS.safe, text: '💎 恐慌買點' };
+            return { color: COLORS.neutral, text: '⚖️ 波動正常' };
         }
+        
         if (type === 'bond') {
-            return { color: value >= 4.5 ? COLORS.hot : COLORS.neutral, text: value + '%' };
+            if (val >= 4.2) return { color: COLORS.danger, text: '⚠️ 資金緊縮' };
+            if (val <= 3.5) return { color: COLORS.safe, text: '💸 資金寬鬆' };
+            return { color: COLORS.neutral, text: '⚖️ 利率中性' };
         }
+        
         if (type === 'usd') {
-            return { color: value >= 32.5 ? COLORS.hot : (value < 30 ? COLORS.cold : COLORS.neutral), text: value };
+            if (val >= 32.2) return { color: COLORS.danger, text: '📤 外資流出' };
+            if (val <= 30.5) return { color: COLORS.safe, text: '📥 外資匯入' };
+            return { color: COLORS.neutral, text: '⚖️ 匯率盤整' };
         }
-        return { color: COLORS.neutral, text: '' };
+        
+        return { color: COLORS.neutral, text: 'N/A' };
     }
 
     function initChart(ctxId, color) {
         return new Chart(document.getElementById(ctxId).getContext('2d'), {
             type: 'line',
-            data: { labels: [], datasets: [{ data: [], borderColor: color, borderWidth: 2, pointRadius: 0, fill: true, backgroundColor: color + '10' }]},
+            data: { labels: [], datasets: [{ data: [], borderColor: color, borderWidth: 2, pointRadius: 0, fill: true, backgroundColor: color + '10', tension: 0.4 }]},
             options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { position: 'right', grid: { display: false } } } }
         });
     }
@@ -205,16 +234,18 @@
         try {
             const res = await fetch('./data/history.json?t=' + Date.now());
             rawData = await res.json();
+            // 日期排序
             rawData.sort((a, b) => new Date(a.date.replace(/-/g, '/')) - new Date(b.date.replace(/-/g, '/')));
             
             updateDashboard(rawData[rawData.length - 1]);
             
-            charts.cnn = initChart('chartCNN', COLORS.warm);
-            charts.pe = initChart('chartPE', COLORS.hot);
-            charts.biz = initChart('chartBiz', COLORS.cold);
-            charts.vix = initChart('chartVIX', COLORS.neutral); 
-            charts.bond = initChart('chartBond', '#000000'); 
-            charts.usd = initChart('chartUSD', COLORS.cool); 
+            // 初始化圖表 (顏色給預設，後面 updateTimeRange 會重繪)
+            charts.cnn = initChart('chartCNN', COLORS.warning);
+            charts.pe = initChart('chartPE', COLORS.danger);
+            charts.biz = initChart('chartBiz', COLORS.danger);
+            charts.vix = initChart('chartVIX', COLORS.neutral);
+            charts.bond = initChart('chartBond', '#333');
+            charts.usd = initChart('chartUSD', COLORS.info);
 
             updateTimeRange('30d', null);
         } catch (e) { document.getElementById('last-update').innerText = "讀取失敗"; console.error(e); }
@@ -225,14 +256,19 @@
         
         const updateCard = (id, val, type) => {
             const stat = getStatus(val, type);
-            const pct = getProgress(val, type); // 呼叫計算長度的函式
+            const pct = getProgress(val, type);
 
+            // 更新數值顏色
             const elVal = document.getElementById(id + '-val');
             elVal.innerText = val;
             elVal.style.color = stat.color;
-            document.getElementById(id + '-badge').innerText = stat.text;
             
-            // 這裡修正：使用計算出來的 pct
+            // 更新 Badge (背景色 + 文字)
+            const elBadge = document.getElementById(id + '-badge');
+            elBadge.innerText = stat.text;
+            elBadge.style.backgroundColor = stat.color;
+
+            // 更新進度條
             document.getElementById(id + '-bar').style.width = pct + '%'; 
             document.getElementById(id + '-bar').style.backgroundColor = stat.color;
         };
@@ -250,7 +286,6 @@
             document.querySelectorAll('.btn-time').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
         }
-        
         if (!rawData.length) return;
         
         const now = new Date();
