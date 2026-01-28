@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的財經儀表板</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { background-color: #f8f9fa; }
+        .card { border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .metric-value { font-size: 2.5rem; font-weight: bold; }
+        .metric-label { color: #6c757d; }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <h1 class="text-center mb-4">📊 市場觀測儀表板</h1>
+    <p class="text-center text-muted">最後更新時間: <span id="update-time">Loading...</span></p>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card p-4 text-center">
+                <h5>🇺🇸 CNN 恐懼貪婪指數</h5>
+                <div class="metric-value" id="fg-score">--</div>
+                <div class="metric-label" id="fg-rating">--</div>
+                <div style="height: 150px; position: relative;">
+                    <canvas id="fgChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-4 text-center">
+                <h5>🇹🇼 台股大盤本益比</h5>
+                <div class="metric-value" id="tw-pe">--</div>
+                <div class="metric-label">殖利率: <span id="tw-yield">--</span>%</div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-4 text-center">
+                <h5>🚦 台灣景氣燈號</h5>
+                <div class="metric-value" id="biz-light">--</div>
+                <div class="metric-label">分數: <span id="biz-score">--</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    async function fetchData() {
+        try {
+            // 讀取 GitHub Actions 產生的 JSON
+            // 加上時間戳記避免瀏覽器快取舊資料
+            const response = await fetch('./data/dashboard.json?t=' + new Date().getTime());
+            const data = await response.json();
+
+            // 更新時間
+            document.getElementById('update-time').innerText = data.updated_at;
+
+            // 更新 CNN 指數
+            const score = Math.round(data.fear_greed.score);
+            document.getElementById('fg-score').innerText = score;
+            document.getElementById('fg-rating').innerText = data.fear_greed.rating;
+            renderGauge(score);
+
+            // 更新台股資料
+            document.getElementById('tw-pe').innerText = data.tw_market.pe;
+            document.getElementById('tw-yield').innerText = data.tw_market.yield;
+
+            // 更新景氣燈號
+            document.getElementById('biz-light').innerText = data.business_signal.light;
+            document.getElementById('biz-score').innerText = data.business_signal.score;
+
+            // 設定顏色
+            const lightColorMap = { "紅燈": "red", "藍燈": "blue", "黃紅燈": "orange", "綠燈": "green" };
+            document.getElementById('biz-light').style.color = lightColorMap[data.business_signal.light] || "black";
+
+        } catch (error) {
+            console.error('Error loading data:', error);
+        }
+    }
+
+    function renderGauge(score) {
+        const ctx = document.getElementById('fgChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Fear', 'Greed'],
+                datasets: [{
+                    data: [score, 100 - score],
+                    backgroundColor: [
+                        score < 25 ? '#FF3333' : score < 50 ? '#FFAA33' : score < 75 ? '#33AAFF' : '#33FF33', 
+                        '#E0E0E0'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                circumference: 180,
+                rotation: -90,
+                cutout: '70%',
+                plugins: { legend: { display: false }, tooltip: { enabled: false } }
+            }
+        });
+    }
+
+    fetchData();
+</script>
+
+</body>
+</html>
