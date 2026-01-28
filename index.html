@@ -265,27 +265,37 @@
     }
 
     // 核心優化：更新時間範圍 (接收按鈕物件 btn)
+    // 優化後的切換邏輯：改用「真實日期」來篩選，而非固定筆數
     window.updateTimeRange = function(range, btn) {
-        // 1. UI 更新邏輯 (只有當 btn 真的是一個按鈕時才執行)
+        // 1. UI 更新 (按鈕變色)
         if (btn && btn instanceof HTMLElement) {
-            // 找出所有按鈕並移除 active
             document.querySelectorAll('.btn-time').forEach(b => b.classList.remove('active'));
-            // 這裡做一個簡單的優化：同步所有卡片的按鈕狀態
-            // 找出所有 onclick 包含相同 range 的按鈕並設為 active
+            // 同步所有相同功能的按鈕狀態
             document.querySelectorAll(`.btn-time[onclick*="'${range}'"]`).forEach(b => b.classList.add('active'));
         }
 
-        // 2. 資料篩選邏輯
-        let sliceCount = 0;
-        if (range === '7d') sliceCount = 24 * 7;
-        else if (range === '30d') sliceCount = 24 * 30;
-        else sliceCount = rawData.length;
-
-        // 防止資料不足導致錯誤
+        // 2. 資料篩選邏輯 (Smart Filtering)
         if (!rawData || rawData.length === 0) return;
 
-        const filteredData = rawData.slice(-sliceCount);
-        const labels = filteredData.map(d => d.date.substring(5, 16)); // 只取 MM-DD HH:mm
+        const now = new Date();
+        let cutoffDate = new Date(); // 設定切割點
+
+        if (range === '7d') {
+            cutoffDate.setDate(now.getDate() - 7); // 7天前
+        } else if (range === '30d') {
+            cutoffDate.setDate(now.getDate() - 30); // 30天前
+        } else {
+            cutoffDate = new Date('2000-01-01'); // 全部 (設一個很早的時間)
+        }
+
+        // 篩選出日期大於 cutoffDate 的資料
+        const filteredData = rawData.filter(d => {
+            // 處理日期格式相容性 (將 2025-10-01 轉為 2025/10/01 避免某些瀏覽器報錯)
+            return new Date(d.date.replace(/-/g, '/')) >= cutoffDate;
+        });
+
+        // 3. 更新圖表
+        const labels = filteredData.map(d => d.date.substring(5, 16)); // 標籤只顯示 MM-DD HH:mm
 
         updateChartData(charts.cnn, labels, filteredData.map(d => d.cnn_score));
         updateChartData(charts.pe, labels, filteredData.map(d => d.tw_pe));
