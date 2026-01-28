@@ -22,12 +22,13 @@
         .metric-title { font-size: 0.85rem; color: #8898aa; font-weight: 600; text-transform: uppercase; }
         .metric-value { font-size: 2.5rem; font-weight: 700; line-height: 1; margin-bottom: 10px; }
         
-        .gauge-container { height: 6px; background: #e9ecef; border-radius: 4px; margin-bottom: 15px; overflow: hidden; }
+        /* 進度條容器 (灰色底) */
+        .gauge-container { height: 8px; background: #e9ecef; border-radius: 4px; margin-bottom: 15px; overflow: hidden; }
+        /* 進度條本體 (有顏色) */
         .gauge-fill { height: 100%; border-radius: 4px; transition: width 1s ease-in-out, background-color 0.5s; }
         
         .chart-wrapper { height: 150px; width: 100%; }
         
-        /* 按鈕樣式 */
         .chart-controls { display: flex; justify-content: flex-end; gap: 4px; margin-top: 5px; }
         .btn-time { font-size: 0.7rem; padding: 2px 10px; border-radius: 15px; border: 1px solid #dee2e6; background: white; color: #6c757d; }
         .btn-time.active { background: #344767; color: white; border-color: #344767; }
@@ -135,30 +136,58 @@
     let charts = {};
     const COLORS = { hot: '#ff3333', warm: '#ff8833', neutral: '#888888', cool: '#33aaff', cold: '#00cc66' };
 
-    // 狀態判斷邏輯 (核心大腦)
+    // 1. 計算進度條百分比 (核心修正：定義每個指標的最小值與最大值區間)
+    function getProgress(val, type) {
+        let pct = 0;
+        val = parseFloat(val);
+        
+        if (type === 'cnn') {
+            pct = val; // 0-100
+        } 
+        else if (type === 'pe') {
+            // PE: 10倍~35倍
+            pct = (val - 10) / (35 - 10) * 100;
+        } 
+        else if (type === 'biz') {
+            // 燈號分數: 9分~45分
+            pct = (val / 45) * 100;
+        } 
+        else if (type === 'vix') {
+            // VIX: 10~40 (超過40就是股災了)
+            pct = (val - 10) / (40 - 10) * 100;
+        } 
+        else if (type === 'bond') {
+            // 美債: 3.0% ~ 5.5%
+            pct = (val - 3.0) / (5.5 - 3.0) * 100;
+        } 
+        else if (type === 'usd') {
+            // 匯率: 29 ~ 34
+            pct = (val - 29) / (34 - 29) * 100;
+        }
+
+        // 限制在 5% ~ 100% 之間，避免爆掉或看不見
+        return Math.min(100, Math.max(5, pct));
+    }
+
+    // 2. 狀態顏色邏輯
     function getStatus(value, type) {
-        let pct = 50;
         if (type === 'cnn') {
             if (value >= 75) return { color: COLORS.hot, text: '極度貪婪' };
             if (value <= 25) return { color: COLORS.cold, text: '極度恐懼' };
             return { color: COLORS.warm, text: '中立' };
         } 
         if (type === 'pe') {
-            // PE > 25 昂貴(紅)
             return { color: value >= 25 ? COLORS.hot : (value <= 15 ? COLORS.cold : COLORS.neutral), text: value >= 25 ? '昂貴' : '合理' };
         }
         if (type === 'vix') {
-            // VIX < 15 過度安逸(紅/貪婪), VIX > 25 恐慌(綠/買點)
+            // VIX 低代表安逸(紅), 高代表恐慌(綠)
             let color = value < 15 ? COLORS.hot : (value > 25 ? COLORS.cold : COLORS.neutral);
-            let text = value < 15 ? '安逸(警)' : (value > 25 ? '恐慌(買)' : '正常');
-            return { color: color, text: text };
+            return { color: color, text: value < 15 ? '安逸(警)' : (value > 25 ? '恐慌(買)' : '正常') };
         }
         if (type === 'bond') {
-            // 殖利率 > 4.5% 壓力大
             return { color: value >= 4.5 ? COLORS.hot : COLORS.neutral, text: value + '%' };
         }
         if (type === 'usd') {
-            // 匯率 > 32.5 外資流出(紅), < 30 強勢(綠)
             return { color: value >= 32.5 ? COLORS.hot : (value < 30 ? COLORS.cold : COLORS.neutral), text: value };
         }
         return { color: COLORS.neutral, text: '' };
@@ -180,13 +209,12 @@
             
             updateDashboard(rawData[rawData.length - 1]);
             
-            // 初始化6個圖表
             charts.cnn = initChart('chartCNN', COLORS.warm);
             charts.pe = initChart('chartPE', COLORS.hot);
             charts.biz = initChart('chartBiz', COLORS.cold);
-            charts.vix = initChart('chartVIX', COLORS.neutral); // VIX 用灰色或特殊色
-            charts.bond = initChart('chartBond', '#000000'); // 美債用黑色
-            charts.usd = initChart('chartUSD', COLORS.cool); // 匯率用藍色
+            charts.vix = initChart('chartVIX', COLORS.neutral); 
+            charts.bond = initChart('chartBond', '#000000'); 
+            charts.usd = initChart('chartUSD', COLORS.cool); 
 
             updateTimeRange('30d', null);
         } catch (e) { document.getElementById('last-update').innerText = "讀取失敗"; console.error(e); }
@@ -195,22 +223,23 @@
     function updateDashboard(latest) {
         document.getElementById('last-update').innerText = latest.date;
         
-        // 更新數值卡片 Helper
         const updateCard = (id, val, type) => {
             const stat = getStatus(val, type);
+            const pct = getProgress(val, type); // 呼叫計算長度的函式
+
             const elVal = document.getElementById(id + '-val');
             elVal.innerText = val;
             elVal.style.color = stat.color;
             document.getElementById(id + '-badge').innerText = stat.text;
-            document.getElementById(id + '-bar').style.width = '100%'; // 簡化 bar，直接滿條顯示顏色
+            
+            // 這裡修正：使用計算出來的 pct
+            document.getElementById(id + '-bar').style.width = pct + '%'; 
             document.getElementById(id + '-bar').style.backgroundColor = stat.color;
         };
 
         updateCard('cnn', latest.cnn_score, 'cnn');
         updateCard('pe', latest.tw_pe, 'pe');
         updateCard('biz', latest.biz_score, 'biz');
-        
-        // 新指標
         updateCard('vix', latest.vix || 0, 'vix');
         updateCard('bond', latest.us_10y || 0, 'bond');
         updateCard('usd', latest.usd_twd || 0, 'usd');
@@ -231,7 +260,7 @@
         else cutoff = new Date('2000-01-01');
 
         const data = rawData.filter(d => new Date(d.date.replace(/-/g, '/')) >= cutoff);
-        const labels = data.map(d => d.date.substring(5, 10)); // MM-DD
+        const labels = data.map(d => d.date.substring(5, 10));
 
         const update = (chart, key) => {
             chart.data.labels = labels;
