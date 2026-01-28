@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>市場趨勢儀表板</title>
+    <title>全方位市場儀表板</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
@@ -11,109 +11,68 @@
         body { background-color: #f4f7f6; font-family: 'Segoe UI', sans-serif; }
         .dashboard-container { max-width: 1200px; margin: 30px auto; }
         
-        /* 卡片設計 */
         .card { 
-            border: none; 
-            border-radius: 16px; 
+            border: none; border-radius: 16px; 
             box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
-            transition: all 0.3s ease; 
-            overflow: hidden; 
-            height: 100%; /* 讓高度一致 */
+            transition: all 0.3s ease; height: 100%; 
         }
         .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
         
-        /* 數值區塊 */
-        .metric-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .metric-title { font-size: 0.9rem; color: #8898aa; font-weight: 600; letter-spacing: 0.5px; }
-        .metric-value { font-size: 3rem; font-weight: 700; line-height: 1; }
+        .metric-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+        .metric-title { font-size: 0.85rem; color: #8898aa; font-weight: 600; text-transform: uppercase; }
+        .metric-value { font-size: 2.5rem; font-weight: 700; line-height: 1; margin-bottom: 10px; }
         
-        /* 溫度計 Bar */
-        .gauge-container { height: 8px; background: #e9ecef; border-radius: 4px; margin: 15px 0; position: relative; overflow: hidden; }
+        .gauge-container { height: 6px; background: #e9ecef; border-radius: 4px; margin-bottom: 15px; overflow: hidden; }
         .gauge-fill { height: 100%; border-radius: 4px; transition: width 1s ease-in-out, background-color 0.5s; }
         
-        /* 按鈕區 */
-        .chart-controls { display: flex; justify-content: flex-end; gap: 5px; margin-bottom: 10px; margin-top: 10px;}
-        .btn-time { 
-            font-size: 0.75rem; 
-            padding: 2px 12px; 
-            border-radius: 20px; 
-            border: 1px solid #dee2e6; 
-            background: white; 
-            color: #6c757d; 
-            transition: all 0.2s;
-        }
-        .btn-time:hover { background: #f8f9fa; }
+        .chart-wrapper { height: 150px; width: 100%; }
+        
+        /* 按鈕樣式 */
+        .chart-controls { display: flex; justify-content: flex-end; gap: 4px; margin-top: 5px; }
+        .btn-time { font-size: 0.7rem; padding: 2px 10px; border-radius: 15px; border: 1px solid #dee2e6; background: white; color: #6c757d; }
         .btn-time.active { background: #344767; color: white; border-color: #344767; }
 
-        /* 圖表區 */
-        .chart-wrapper { height: 200px; width: 100%; }
-
-        /* 讀取失敗提示 */
-        .error-msg { color: #dc3545; font-size: 0.8rem; display: none; }
+        .section-title { font-size: 1.2rem; font-weight: bold; margin: 30px 0 15px 0; border-left: 5px solid #344767; padding-left: 10px; }
     </style>
 </head>
 <body>
 
 <div class="container dashboard-container">
-    <div class="d-flex justify-content-between align-items-end mb-5">
+    <div class="d-flex justify-content-between align-items-end mb-4">
         <div>
-            <h2 class="fw-bold text-dark">📊 市場溫度計</h2>
-            <p class="text-muted mb-0">多維度財經數據追蹤 (自動更新)</p>
+            <h2 class="fw-bold text-dark">📊 投資決策戰情室</h2>
+            <p class="text-muted mb-0">基本面 · 情緒面 · 資金面</p>
         </div>
         <div class="text-end">
-            <small class="text-muted d-block">最後更新</small>
+            <small class="text-muted d-block">Data Updated</small>
             <span id="last-update" class="fw-bold">載入中...</span>
-            <div id="error-display" class="error-msg">讀取失敗</div>
         </div>
     </div>
 
+    <div class="section-title">市場熱度 (Market Heat)</div>
     <div class="row g-4">
         <div class="col-lg-4">
             <div class="card p-4">
                 <div class="metric-header">
-                    <span class="metric-title">CNN 恐懼貪婪指數</span>
+                    <span class="metric-title">CNN 恐懼貪婪</span>
                     <span class="badge bg-light text-dark" id="cnn-badge">--</span>
                 </div>
                 <div class="metric-value" id="cnn-val">--</div>
-                
-                <div class="gauge-container">
-                    <div class="gauge-fill" id="cnn-bar" style="width: 0%"></div>
-                </div>
-                
-                <div class="chart-controls">
-                    <button class="btn btn-time active" onclick="updateTimeRange('7d', this)">7天</button>
-                    <button class="btn btn-time" onclick="updateTimeRange('30d', this)">30天</button>
-                    <button class="btn btn-time" onclick="updateTimeRange('all', this)">全</button>
-                </div>
-                <div class="chart-wrapper">
-                    <canvas id="chartCNN"></canvas>
-                </div>
+                <div class="gauge-container"><div class="gauge-fill" id="cnn-bar" style="width: 0%"></div></div>
+                <div class="chart-wrapper"><canvas id="chartCNN"></canvas></div>
             </div>
         </div>
-
         <div class="col-lg-4">
             <div class="card p-4">
                 <div class="metric-header">
-                    <span class="metric-title">台積電 (2330) 本益比</span>
+                    <span class="metric-title">台積電 本益比</span>
                     <span class="badge bg-light text-dark" id="pe-badge">--</span>
                 </div>
                 <div class="metric-value" id="pe-val">--</div>
-                
-                <div class="gauge-container">
-                    <div class="gauge-fill" id="pe-bar" style="width: 0%"></div>
-                </div>
-
-                <div class="chart-controls">
-                    <button class="btn btn-time active" onclick="updateTimeRange('7d', this)">7天</button>
-                    <button class="btn btn-time" onclick="updateTimeRange('30d', this)">30天</button>
-                    <button class="btn btn-time" onclick="updateTimeRange('all', this)">全</button>
-                </div>
-                <div class="chart-wrapper">
-                    <canvas id="chartPE"></canvas>
-                </div>
+                <div class="gauge-container"><div class="gauge-fill" id="pe-bar" style="width: 0%"></div></div>
+                <div class="chart-wrapper"><canvas id="chartPE"></canvas></div>
             </div>
         </div>
-
         <div class="col-lg-4">
             <div class="card p-4">
                 <div class="metric-header">
@@ -121,19 +80,51 @@
                     <span class="badge bg-light text-dark" id="biz-badge">--</span>
                 </div>
                 <div class="metric-value" id="biz-val">--</div>
-                
-                <div class="gauge-container">
-                    <div class="gauge-fill" id="biz-bar" style="width: 0%"></div>
-                </div>
+                <div class="gauge-container"><div class="gauge-fill" id="biz-bar" style="width: 0%"></div></div>
+                <div class="chart-wrapper"><canvas id="chartBiz"></canvas></div>
+            </div>
+        </div>
+    </div>
 
-                <div class="chart-controls">
-                    <button class="btn btn-time active" onclick="updateTimeRange('7d', this)">7天</button>
-                    <button class="btn btn-time" onclick="updateTimeRange('30d', this)">30天</button>
-                    <button class="btn btn-time" onclick="updateTimeRange('all', this)">全</button>
+    <div class="section-title">風險與資金 (Risk & Flow)</div>
+    <div class="d-flex justify-content-end mb-3">
+        <button class="btn btn-time active" onclick="updateTimeRange('30d', this)">30天</button>
+        <button class="btn btn-time" onclick="updateTimeRange('90d', this)">90天</button>
+        <button class="btn btn-time" onclick="updateTimeRange('all', this)">全部</button>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-lg-4">
+            <div class="card p-4">
+                <div class="metric-header">
+                    <span class="metric-title">VIX 恐慌指數</span>
+                    <span class="badge bg-light text-dark" id="vix-badge">--</span>
                 </div>
-                <div class="chart-wrapper">
-                    <canvas id="chartBiz"></canvas>
+                <div class="metric-value" id="vix-val">--</div>
+                <div class="gauge-container"><div class="gauge-fill" id="vix-bar" style="width: 0%"></div></div>
+                <div class="chart-wrapper"><canvas id="chartVIX"></canvas></div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card p-4">
+                <div class="metric-header">
+                    <span class="metric-title">美國 10年債殖利率</span>
+                    <span class="badge bg-light text-dark" id="bond-badge">--</span>
                 </div>
+                <div class="metric-value" id="bond-val">--</div>
+                <div class="gauge-container"><div class="gauge-fill" id="bond-bar" style="width: 0%"></div></div>
+                <div class="chart-wrapper"><canvas id="chartBond"></canvas></div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card p-4">
+                <div class="metric-header">
+                    <span class="metric-title">美元/台幣 匯率</span>
+                    <span class="badge bg-light text-dark" id="usd-badge">--</span>
+                </div>
+                <div class="metric-value" id="usd-val">--</div>
+                <div class="gauge-container"><div class="gauge-fill" id="usd-bar" style="width: 0%"></div></div>
+                <div class="chart-wrapper"><canvas id="chartUSD"></canvas></div>
             </div>
         </div>
     </div>
@@ -142,174 +133,120 @@
 <script>
     let rawData = [];
     let charts = {};
+    const COLORS = { hot: '#ff3333', warm: '#ff8833', neutral: '#888888', cool: '#33aaff', cold: '#00cc66' };
 
-    // 顏色定義 (紅熱綠冷)
-    const COLORS = {
-        hot: '#ff3333', warm: '#ff8833', neutral: '#888888', cool: '#33aaff', cold: '#00cc66'
-    };
-
-    // 狀態判斷邏輯
+    // 狀態判斷邏輯 (核心大腦)
     function getStatus(value, type) {
+        let pct = 50;
         if (type === 'cnn') {
-            if (value >= 75) return { color: COLORS.hot, text: '極度貪婪', pct: value };
-            if (value >= 55) return { color: COLORS.warm, text: '貪婪', pct: value };
-            if (value >= 45) return { color: COLORS.neutral, text: '中立', pct: value };
-            if (value >= 25) return { color: COLORS.cool, text: '恐懼', pct: value };
-            return { color: COLORS.cold, text: '極度恐懼', pct: value };
+            if (value >= 75) return { color: COLORS.hot, text: '極度貪婪' };
+            if (value <= 25) return { color: COLORS.cold, text: '極度恐懼' };
+            return { color: COLORS.warm, text: '中立' };
         } 
-        else if (type === 'pe') {
-            // PE 10~30 對應 0~100%
-            let pct = Math.min(100, Math.max(0, (value - 10) * 5)); 
-            if (value >= 25) return { color: COLORS.hot, text: '昂貴', pct: pct };
-            if (value >= 20) return { color: COLORS.warm, text: '偏高', pct: pct };
-            if (value >= 15) return { color: COLORS.neutral, text: '合理', pct: pct };
-            return { color: COLORS.cold, text: '便宜', pct: pct };
+        if (type === 'pe') {
+            // PE > 25 昂貴(紅)
+            return { color: value >= 25 ? COLORS.hot : (value <= 15 ? COLORS.cold : COLORS.neutral), text: value >= 25 ? '昂貴' : '合理' };
         }
-        else if (type === 'biz') {
-            let pct = (value / 45) * 100;
-            if (value >= 38) return { color: COLORS.hot, text: '紅燈 (過熱)', pct: pct };
-            if (value >= 32) return { color: COLORS.warm, text: '黃紅燈', pct: pct };
-            if (value >= 23) return { color: COLORS.cold, text: '綠燈 (穩定)', pct: pct }; 
-            if (value >= 17) return { color: COLORS.cool, text: '黃藍燈', pct: pct };
-            return { color: COLORS.cool, text: '藍燈 (低迷)', pct: pct };
+        if (type === 'vix') {
+            // VIX < 15 過度安逸(紅/貪婪), VIX > 25 恐慌(綠/買點)
+            let color = value < 15 ? COLORS.hot : (value > 25 ? COLORS.cold : COLORS.neutral);
+            let text = value < 15 ? '安逸(警)' : (value > 25 ? '恐慌(買)' : '正常');
+            return { color: color, text: text };
         }
+        if (type === 'bond') {
+            // 殖利率 > 4.5% 壓力大
+            return { color: value >= 4.5 ? COLORS.hot : COLORS.neutral, text: value + '%' };
+        }
+        if (type === 'usd') {
+            // 匯率 > 32.5 外資流出(紅), < 30 強勢(綠)
+            return { color: value >= 32.5 ? COLORS.hot : (value < 30 ? COLORS.cold : COLORS.neutral), text: value };
+        }
+        return { color: COLORS.neutral, text: '' };
     }
 
-    // 初始化圖表
-    function initChart(ctxId, label, color) {
-        const ctx = document.getElementById(ctxId).getContext('2d');
-        return new Chart(ctx, {
+    function initChart(ctxId, color) {
+        return new Chart(document.getElementById(ctxId).getContext('2d'), {
             type: 'line',
-            data: { labels: [], datasets: [{ 
-                label: label, 
-                data: [], 
-                borderColor: color, 
-                borderWidth: 2, 
-                pointRadius: 0, // 平常隱藏點
-                pointHoverRadius: 4, // 滑鼠移過去顯示
-                fill: true,
-                backgroundColor: color + '10', // 透明度
-                tension: 0.4 // 平滑曲線
-            }]},
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { display: false }, tooltip: { mode: 'index', intersect: false } },
-                scales: { 
-                    x: { display: false }, 
-                    y: { position: 'right', grid: { display: false } } 
-                },
-                interaction: { mode: 'nearest', axis: 'x', intersect: false }
-            }
+            data: { labels: [], datasets: [{ data: [], borderColor: color, borderWidth: 2, pointRadius: 0, fill: true, backgroundColor: color + '10' }]},
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { position: 'right', grid: { display: false } } } }
         });
     }
 
-    // 主程式：載入資料
     async function loadData() {
         try {
-            // 加上時間戳記，避免手機或瀏覽器快取舊資料
-            const response = await fetch('./data/history.json?t=' + Date.now());
-            
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            
-            rawData = await response.json();
-            
-            // 優化：防止資料順序錯亂，強制按日期排序
+            const res = await fetch('./data/history.json?t=' + Date.now());
+            rawData = await res.json();
             rawData.sort((a, b) => new Date(a.date.replace(/-/g, '/')) - new Date(b.date.replace(/-/g, '/')));
-
-            if (rawData.length === 0) throw new Error("No data found");
-
-            // 更新儀表板數字
+            
             updateDashboard(rawData[rawData.length - 1]);
+            
+            // 初始化6個圖表
+            charts.cnn = initChart('chartCNN', COLORS.warm);
+            charts.pe = initChart('chartPE', COLORS.hot);
+            charts.biz = initChart('chartBiz', COLORS.cold);
+            charts.vix = initChart('chartVIX', COLORS.neutral); // VIX 用灰色或特殊色
+            charts.bond = initChart('chartBond', '#000000'); // 美債用黑色
+            charts.usd = initChart('chartUSD', COLORS.cool); // 匯率用藍色
 
-            // 初始化三個圖表
-            charts.cnn = initChart('chartCNN', 'CNN', COLORS.warm);
-            charts.pe = initChart('chartPE', 'PE Ratio', COLORS.hot);
-            charts.biz = initChart('chartBiz', 'Signal', COLORS.cold);
-
-            // 預設顯示 7 天 (這裡不會再報錯了)
-            updateTimeRange('7d', null); // 傳入 null 代表這是自動執行的
-
-        } catch (e) {
-            console.error("Data Load Error:", e);
-            document.getElementById('last-update').innerText = "讀取失敗";
-            document.getElementById('error-display').style.display = 'block';
-            document.getElementById('error-display').innerText = e.message;
-        }
+            updateTimeRange('30d', null);
+        } catch (e) { document.getElementById('last-update').innerText = "讀取失敗"; console.error(e); }
     }
 
-    // 更新數值與進度條
     function updateDashboard(latest) {
         document.getElementById('last-update').innerText = latest.date;
+        
+        // 更新數值卡片 Helper
+        const updateCard = (id, val, type) => {
+            const stat = getStatus(val, type);
+            const elVal = document.getElementById(id + '-val');
+            elVal.innerText = val;
+            elVal.style.color = stat.color;
+            document.getElementById(id + '-badge').innerText = stat.text;
+            document.getElementById(id + '-bar').style.width = '100%'; // 簡化 bar，直接滿條顯示顏色
+            document.getElementById(id + '-bar').style.backgroundColor = stat.color;
+        };
 
-        const cnnStat = getStatus(latest.cnn_score, 'cnn');
-        document.getElementById('cnn-val').innerText = latest.cnn_score;
-        document.getElementById('cnn-val').style.color = cnnStat.color;
-        document.getElementById('cnn-badge').innerText = cnnStat.text;
-        document.getElementById('cnn-bar').style.width = cnnStat.pct + '%';
-        document.getElementById('cnn-bar').style.backgroundColor = cnnStat.color;
-
-        const peStat = getStatus(latest.tw_pe, 'pe');
-        document.getElementById('pe-val').innerText = latest.tw_pe;
-        document.getElementById('pe-val').style.color = peStat.color;
-        document.getElementById('pe-badge').innerText = peStat.text;
-        document.getElementById('pe-bar').style.width = peStat.pct + '%';
-        document.getElementById('pe-bar').style.backgroundColor = peStat.color;
-
-        const bizStat = getStatus(latest.biz_score, 'biz');
-        document.getElementById('biz-val').innerText = latest.biz_score;
-        document.getElementById('biz-val').style.color = bizStat.color;
-        document.getElementById('biz-badge').innerText = bizStat.text;
-        document.getElementById('biz-bar').style.width = bizStat.pct + '%';
-        document.getElementById('biz-bar').style.backgroundColor = bizStat.color;
+        updateCard('cnn', latest.cnn_score, 'cnn');
+        updateCard('pe', latest.tw_pe, 'pe');
+        updateCard('biz', latest.biz_score, 'biz');
+        
+        // 新指標
+        updateCard('vix', latest.vix || 0, 'vix');
+        updateCard('bond', latest.us_10y || 0, 'bond');
+        updateCard('usd', latest.usd_twd || 0, 'usd');
     }
 
-    // 核心優化：更新時間範圍 (接收按鈕物件 btn)
-    // 優化後的切換邏輯：改用「真實日期」來篩選，而非固定筆數
     window.updateTimeRange = function(range, btn) {
-        // 1. UI 更新 (按鈕變色)
-        if (btn && btn instanceof HTMLElement) {
+        if (btn) {
             document.querySelectorAll('.btn-time').forEach(b => b.classList.remove('active'));
-            // 同步所有相同功能的按鈕狀態
-            document.querySelectorAll(`.btn-time[onclick*="'${range}'"]`).forEach(b => b.classList.add('active'));
+            btn.classList.add('active');
         }
-
-        // 2. 資料篩選邏輯 (Smart Filtering)
-        if (!rawData || rawData.length === 0) return;
-
+        
+        if (!rawData.length) return;
+        
         const now = new Date();
-        let cutoffDate = new Date(); // 設定切割點
+        let cutoff = new Date();
+        if (range === '30d') cutoff.setDate(now.getDate() - 30);
+        else if (range === '90d') cutoff.setDate(now.getDate() - 90);
+        else cutoff = new Date('2000-01-01');
 
-        if (range === '7d') {
-            cutoffDate.setDate(now.getDate() - 7); // 7天前
-        } else if (range === '30d') {
-            cutoffDate.setDate(now.getDate() - 30); // 30天前
-        } else {
-            cutoffDate = new Date('2000-01-01'); // 全部 (設一個很早的時間)
-        }
+        const data = rawData.filter(d => new Date(d.date.replace(/-/g, '/')) >= cutoff);
+        const labels = data.map(d => d.date.substring(5, 10)); // MM-DD
 
-        // 篩選出日期大於 cutoffDate 的資料
-        const filteredData = rawData.filter(d => {
-            // 處理日期格式相容性 (將 2025-10-01 轉為 2025/10/01 避免某些瀏覽器報錯)
-            return new Date(d.date.replace(/-/g, '/')) >= cutoffDate;
-        });
+        const update = (chart, key) => {
+            chart.data.labels = labels;
+            chart.data.datasets[0].data = data.map(d => d[key] || 0);
+            chart.update();
+        };
 
-        // 3. 更新圖表
-        const labels = filteredData.map(d => d.date.substring(5, 16)); // 標籤只顯示 MM-DD HH:mm
-
-        updateChartData(charts.cnn, labels, filteredData.map(d => d.cnn_score));
-        updateChartData(charts.pe, labels, filteredData.map(d => d.tw_pe));
-        updateChartData(charts.biz, labels, filteredData.map(d => d.biz_score));
+        update(charts.cnn, 'cnn_score');
+        update(charts.pe, 'tw_pe');
+        update(charts.biz, 'biz_score');
+        update(charts.vix, 'vix');
+        update(charts.bond, 'us_10y');
+        update(charts.usd, 'usd_twd');
     }
 
-    function updateChartData(chart, labels, data) {
-        if (!chart) return;
-        chart.data.labels = labels;
-        chart.data.datasets[0].data = data;
-        chart.update();
-    }
-
-    // 啟動！
     loadData();
 </script>
 
