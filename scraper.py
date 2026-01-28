@@ -67,4 +67,11 @@ if __name__ == "__main__":
         "updated_at": tw_time_str, # 使用校正後的時間
         "fear_greed": get_fear_and_greed(),
         "tw_market": get_tw_stock_data(),
-        "
+        "business_signal": get_business_signal()
+    }
+    
+    os.makedirs("data", exist_ok=True)
+    with open("data/dashboard.json", "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+        
+    print(f"💾 資料已儲存 (台灣時間: {tw_time_str})")
