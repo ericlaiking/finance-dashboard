@@ -275,14 +275,37 @@
         });
     }
 
+    // ★★★ 核心修正：資料清洗函式 ★★★
+    // 功能：將同一天的多筆資料合併，只保留當天「最後一筆」
+    function processDailyData(data) {
+        const dailyMap = {};
+        data.forEach(item => {
+            // 取出日期部分 (YYYY-MM-DD)，忽略時間
+            const dateKey = item.date.split(" ")[0]; 
+            // 因為資料是照時間排序的，後面的會覆蓋前面的
+            // 所以 dailyMap[dateKey] 最後留下的就是當天最新的一筆
+            dailyMap[dateKey] = item;
+        });
+        // 轉回陣列
+        return Object.values(dailyMap);
+    }
+
     async function loadData() {
         try {
             const res = await fetch('./data/history.json?t=' + Date.now());
-            rawData = await res.json();
-            rawData.sort((a, b) => new Date(a.date.replace(/-/g, '/')) - new Date(b.date.replace(/-/g, '/')));
+            let fullData = await res.json();
             
-            updateDashboard(rawData[rawData.length - 1]);
+            // 1. 先排序
+            fullData.sort((a, b) => new Date(a.date.replace(/-/g, '/')) - new Date(b.date.replace(/-/g, '/')));
             
+            // 2. 儀表板顯示「最新」的那一筆 (包含今日即時更新)
+            updateDashboard(fullData[fullData.length - 1]);
+            
+            // 3. 圖表數據使用「清洗過」的版本 (每日一筆)
+            // 這樣 rawData 裡面的每一筆都代表一天，X 軸就會等寬了
+            rawData = processDailyData(fullData);
+
+            // 初始化圖表
             charts.cnn = initChart('chartCNN', COLORS.orange);
             charts.pe = initChart('chartPE', COLORS.red);
             charts.biz = initChart('chartBiz', COLORS.red);
@@ -296,9 +319,8 @@
     }
 
     function updateDashboard(latest) {
-        // 修改前: latest.date.split(" ")[0]  (只顯示日期)
-        // 修改後: latest.date                (顯示完整 日期+時間)
-        document.getElementById('last-update').innerText = latest.date; 
+        // 這裡維持顯示完整的日期時間
+        document.getElementById('last-update').innerText = latest.date;
         
         const updateCard = (id, val, type) => {
             const stat = getStatus(val, type);
@@ -306,13 +328,11 @@
 
             const elVal = document.getElementById(id + '-val');
             elVal.innerText = val;
-            // 黃金文字優化: 如果是黃色(Gold)文字改深色一點才清楚，否則用原本顏色
             elVal.style.color = stat.color === '#FFD700' ? '#b58900' : stat.color; 
             
             const elBadge = document.getElementById(id + '-badge');
             elBadge.innerText = stat.text;
             elBadge.style.backgroundColor = stat.color;
-            // 黃金 Badge 文字優化: 背景黃色時，字改黑色
             if(stat.color === '#FFD700') elBadge.style.color = '#000'; 
             else elBadge.style.color = '#fff';
 
@@ -336,6 +356,8 @@
         }
         if (!rawData.length) return;
         
+        // rawData 現在已經是「每日一筆」的乾淨資料了
+        
         const now = new Date();
         let cutoff = new Date();
         if (range === '30d') cutoff.setDate(now.getDate() - 30);
@@ -343,7 +365,7 @@
         else cutoff = new Date('2000-01-01');
 
         const data = rawData.filter(d => new Date(d.date.replace(/-/g, '/')) >= cutoff);
-        const labels = data.map(d => d.date.substring(5, 10));
+        const labels = data.map(d => d.date.substring(5, 10)); // 取 MM-DD
 
         const update = (chart, key) => {
             chart.data.labels = labels;
