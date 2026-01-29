@@ -296,7 +296,9 @@
     }
 
     function updateDashboard(latest) {
-        document.getElementById('last-update').innerText = latest.date.split(" ")[0];
+        // 修改前: latest.date.split(" ")[0]  (只顯示日期)
+        // 修改後: latest.date                (顯示完整 日期+時間)
+        document.getElementById('last-update').innerText = latest.date; 
         
         const updateCard = (id, val, type) => {
             const stat = getStatus(val, type);
@@ -304,12 +306,15 @@
 
             const elVal = document.getElementById(id + '-val');
             elVal.innerText = val;
+            // 黃金文字優化: 如果是黃色(Gold)文字改深色一點才清楚，否則用原本顏色
             elVal.style.color = stat.color === '#FFD700' ? '#b58900' : stat.color; 
             
             const elBadge = document.getElementById(id + '-badge');
             elBadge.innerText = stat.text;
             elBadge.style.backgroundColor = stat.color;
+            // 黃金 Badge 文字優化: 背景黃色時，字改黑色
             if(stat.color === '#FFD700') elBadge.style.color = '#000'; 
+            else elBadge.style.color = '#fff';
 
             document.getElementById(id + '-bar').style.width = pct + '%'; 
             document.getElementById(id + '-bar').style.backgroundColor = stat.color;
