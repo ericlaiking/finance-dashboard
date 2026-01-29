@@ -439,42 +439,44 @@
     // ==========================================
     
     async function checkForUpdates() {
-        console.log("🔍 Checking for updates...");
+        // console.log("🔍 Checking for updates..."); // 可以註解掉避免洗版
         try {
-            // 1. 強制抓取最新檔案 (加上時間戳記避開快取)
             const res = await fetch('./data/history.json?t=' + Date.now());
-            const newData = await res.json();
+            const fetchedData = await res.json();
             
-            // 2. 簡單比對：看看資料筆數有沒有變多，或是最後一筆日期是否不同
-            if (newData.length > rawData.length || 
-                newData[newData.length-1].date !== rawData[rawData.length-1].date) {
+            // 1. 先對新資料進行排序，確保最後一筆真的是最新的
+            fetchedData.sort((a, b) => new Date(a.date.replace(/-/g, '/')) - new Date(b.date.replace(/-/g, '/')));
+            
+            // 2. 取出雙方的「最後一筆資料」來比對
+            const newLatest = fetchedData[fetchedData.length - 1];
+            const currentLatest = rawData[rawData.length - 1];
+
+            // 3. 核心修正：只比對「日期時間字串」是否不同
+            // 如果新抓到的時間 (例如 14:00) 跟現在顯示的時間 (例如 13:00) 不一樣，才更新
+            if (newLatest.date !== currentLatest.date) {
                 
-                console.log("🚀 New data found! Updating dashboard...");
+                console.log(`🚀 New data found! (${currentLatest.date} -> ${newLatest.date})`);
                 
-                // 3. 更新全域資料
-                rawData = processDailyData(newData); // 記得做每日清洗
+                // 更新全域資料
+                rawData = processDailyData(fetchedData); 
                 
-                // 4. 重新排序 (保險起見)
+                // 再次排序 (清洗後確保順序)
                 rawData.sort((a, b) => new Date(a.date.replace(/-/g, '/')) - new Date(b.date.replace(/-/g, '/')));
                 
-                // 5. 更新上方儀表板數字
+                // 更新畫面
                 updateDashboard(rawData[rawData.length - 1]);
-                
-                // 6. 更新下方圖表 (帶入目前的使用者選項，例如 '90d')
-                // 這裡傳入 null 因為不需要改變按鈕樣式
                 updateTimeRange(currentRange, null);
                 
-                // 7. 視覺回饋：讓更新時間閃爍一下綠色，提示使用者
+                // 視覺提示
                 const timeLabel = document.getElementById('last-update');
-                timeLabel.style.color = '#34c759'; // 變綠
+                timeLabel.style.color = '#34c759'; 
                 timeLabel.innerText = "Updated just now!";
                 setTimeout(() => {
-                    timeLabel.style.color = ''; // 恢復原狀
+                    timeLabel.style.color = ''; 
                     timeLabel.innerText = rawData[rawData.length - 1].date;
                 }, 3000);
-            } else {
-                console.log("💤 No new data.");
-            }
+            } 
+            // else { console.log("💤 No new data."); }
         } catch (e) {
             console.error("Auto-refresh failed:", e);
         }
