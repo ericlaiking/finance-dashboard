@@ -86,13 +86,17 @@ if __name__ == "__main__":
                 history = json.load(f)
         except: pass
 
+    # 補值防呆
     if history:
         last = history[-1]
         for key in new_data:
             if new_data[key] is None: new_data[key] = last.get(key, 0)
 
     history.append(new_data)
-    history = history[-150:] 
+    
+    # ★★★ 關鍵修改：將保留筆數從 150 改為 20000 ★★★
+    # 這樣才能在每10分鐘更新的情況下，依然保存超過 3 個月的歷史
+    history = history[-20000:] 
 
     os.makedirs("data", exist_ok=True)
     with open(file_path, "w", encoding="utf-8") as f:
