@@ -21,22 +21,19 @@ def get_fear_and_greed():
         return None
 
 def get_tw_stock_pe():
-    # 簡單估算：台積電股價 / 預估EPS (44.5)
     try:
         stock = yf.Ticker("2330.TW")
         price = stock.history(period="1d")['Close'].iloc[-1]
-        pe = price / 44.5 
+        pe = price / 44.5  # 預估 EPS
         return round(pe, 2)
     except Exception as e:
         print(f"❌ 台股 PE 失敗: {e}")
         return None
 
 def get_market_metrics():
-    """
-    抓取: VIX, 美債, 匯率, 黃金
-    """
+    """抓取 VIX, 美債, 匯率, 黃金"""
     try:
-        # 新增 GC=F (黃金期貨)
+        # 新增 GC=F (黃金)
         tickers = yf.Tickers("^VIX ^TNX TWD=X GC=F")
         
         vix = tickers.tickers["^VIX"].history(period='1d')['Close'].iloc[-1]
@@ -52,11 +49,9 @@ def get_market_metrics():
         }
     except Exception as e:
         print(f"❌ 市場指標失敗: {e}")
-        # 回傳預設值防止 crash
         return {"vix": 0, "us_10y": 0, "usd_twd": 0, "gold": 0}
 
 def get_business_score():
-    # 目前固定回傳 38 (因為是月資料)
     return 38
 
 if __name__ == "__main__":
@@ -75,10 +70,9 @@ if __name__ == "__main__":
         "vix": market_data['vix'],
         "us_10y": market_data['us_10y'],
         "usd_twd": market_data['usd_twd'],
-        "gold": market_data['gold'] # 新增
+        "gold": market_data['gold']
     }
 
-    # 讀取與更新
     file_path = "data/history.json"
     history = []
     if os.path.exists(file_path):
@@ -87,14 +81,13 @@ if __name__ == "__main__":
                 history = json.load(f)
         except: pass
 
-    # 補值防呆
     if history:
         last = history[-1]
         for key in new_data:
             if new_data[key] is None: new_data[key] = last.get(key, 0)
 
     history.append(new_data)
-    history = history[-150:] # 保留多一點資料
+    history = history[-150:] 
 
     os.makedirs("data", exist_ok=True)
     with open(file_path, "w", encoding="utf-8") as f:
