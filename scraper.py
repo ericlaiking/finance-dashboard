@@ -23,8 +23,13 @@ def get_fear_and_greed():
 def get_tw_stock_pe():
     try:
         stock = yf.Ticker("2330.TW")
+        # 取得最新收盤價
         price = stock.history(period="1d")['Close'].iloc[-1]
-        pe = price / 44.5  # 預估 EPS
+        
+        # 強制使用 2025 全年 EPS (避免 Yahoo 資料庫浮動)
+        EPS_TTM = 66.25 
+        
+        pe = price / EPS_TTM
         return round(pe, 2)
     except Exception as e:
         print(f"❌ 台股 PE 失敗: {e}")
