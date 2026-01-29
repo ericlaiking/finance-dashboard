@@ -2,74 +2,111 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>全方位市場儀表板</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>投資決策戰情室</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <style>
-        body { background-color: #f0f2f5; font-family: 'Segoe UI', sans-serif; }
-        .dashboard-container { max-width: 1200px; margin: 30px auto; }
-        
-        .card { 
-            border: none; border-radius: 16px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
-            transition: all 0.3s ease; height: 100%; 
-            background: white;
-        }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
-        
-        /* 標題與標籤 */
-        .metric-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
-        .metric-title { font-size: 0.85rem; color: #6c757d; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-        
-        /* 狀態標籤 (Badge) */
-        .status-badge {
-            font-size: 0.75rem; padding: 4px 10px; border-radius: 12px;
-            font-weight: 600; color: white; background-color: #adb5bd;
+        :root {
+            --ios-blur: saturate(180%) blur(20px);
+            --ios-bg: rgba(255, 255, 255, 0.75);
+            --card-radius: 20px;
         }
 
-        /* 數值顯示 */
-        .metric-value { font-size: 2.8rem; font-weight: 800; line-height: 1; margin: 10px 0; letter-spacing: -1px;}
-        
-        /* 進度條容器 */
-        .gauge-container { 
-            height: 10px; background: #e9ecef; border-radius: 5px; margin-bottom: 15px; overflow: hidden; position: relative;
+        body { 
+            background-color: #f2f2f7; /* iOS 淺灰背景 */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            padding-bottom: 100px; /* 預留底部懸浮空間 */
         }
-        /* 進度條本體 */
-        .gauge-fill { height: 100%; border-radius: 5px; transition: width 1s ease-in-out, background-color 0.5s; }
         
-        .chart-wrapper { height: 140px; width: 100%; }
+        .dashboard-container { max-width: 1200px; margin: 20px auto; padding: 0 20px; }
+        
+        /* 卡片設計 */
+        .card { 
+            border: none; 
+            border-radius: var(--card-radius); 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
+            transition: transform 0.2s; 
+            background: white;
+            height: 100%;
+        }
+        .card:active { transform: scale(0.98); } /* 手機按壓回饋 */
+        
+        .metric-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+        .metric-title { font-size: 0.8rem; color: #8e8e93; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        .status-badge { font-size: 0.7rem; padding: 4px 8px; border-radius: 8px; font-weight: 700; color: white; }
+        .metric-value { font-size: 2.2rem; font-weight: 700; line-height: 1.1; margin: 5px 0 15px 0; letter-spacing: -0.5px; color: #1c1c1e; }
+        
+        .gauge-container { height: 6px; background: #e5e5ea; border-radius: 3px; margin-bottom: 15px; overflow: hidden; }
+        .gauge-fill { height: 100%; border-radius: 3px; transition: width 0.8s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.5s; }
+        
+        .chart-wrapper { height: 120px; width: 100%; }
         
         .section-title { 
-            font-size: 1.1rem; font-weight: 800; color: #344767; 
-            margin: 30px 0 15px 0; border-left: 4px solid #344767; padding-left: 12px; 
+            font-size: 1.3rem; font-weight: 700; color: #1c1c1e; 
+            margin: 30px 0 15px 0; letter-spacing: -0.5px;
         }
 
-        /* 按鈕樣式 */
-        .chart-controls { display: flex; justify-content: flex-end; gap: 5px; margin-bottom: 10px; }
-        .btn-time { font-size: 0.7rem; padding: 3px 12px; border-radius: 20px; border: 1px solid #dee2e6; background: white; color: #6c757d; font-weight: 600; }
-        .btn-time.active { background: #344767; color: white; border-color: #344767; }
+        /* iOS 風格懸浮控制列 */
+        .floating-controls {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: var(--ios-bg);
+            backdrop-filter: var(--ios-blur);
+            -webkit-backdrop-filter: var(--ios-blur);
+            padding: 8px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: flex;
+            gap: 5px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-float {
+            border: none;
+            background: transparent;
+            color: #8e8e93;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 20px;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .btn-float.active {
+            background: #007aff; /* iOS Blue */
+            color: white;
+            box-shadow: 0 2px 10px rgba(0,122,255,0.3);
+        }
+
+        .last-update-text {
+            font-size: 0.8rem; color: #8e8e93; text-align: right; margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
 
 <div class="container dashboard-container">
-    <div class="d-flex justify-content-between align-items-end mb-4">
+    <div class="d-flex justify-content-between align-items-end mb-2">
         <div>
-            <h2 class="fw-bold text-dark" style="letter-spacing: -0.5px;">🚀 投資決策戰情室</h2>
-            <p class="text-muted mb-0">Market Sentiment & Risk Dashboard</p>
+            <h1 class="fw-bold text-dark m-0" style="letter-spacing: -1px;">戰情室</h1>
+            <p class="text-muted mb-0" style="font-size: 0.9rem;">Market Dashboard</p>
         </div>
         <div class="text-end">
-            <small class="text-muted d-block">Last Updated</small>
-            <span id="last-update" class="fw-bold text-primary">載入中...</span>
+            <div class="last-update-text">Updated</div>
+            <div id="last-update" class="fw-bold" style="font-size: 0.9rem;">--</div>
         </div>
     </div>
 
-    <div class="section-title">🔥 市場熱度 (Market Heat)</div>
-    <div class="row g-4">
-        <div class="col-lg-4">
-            <div class="card p-4">
+    <div class="section-title">市場熱度 (Heat)</div>
+    <div class="row g-3">
+        <div class="col-md-4 col-sm-6">
+            <div class="card p-3">
                 <div class="metric-header">
                     <span class="metric-title">CNN 恐懼貪婪</span>
                     <span class="status-badge" id="cnn-badge">--</span>
@@ -79,10 +116,10 @@
                 <div class="chart-wrapper"><canvas id="chartCNN"></canvas></div>
             </div>
         </div>
-        <div class="col-lg-4">
-            <div class="card p-4">
+        <div class="col-md-4 col-sm-6">
+            <div class="card p-3">
                 <div class="metric-header">
-                    <span class="metric-title">台積電 本益比</span>
+                    <span class="metric-title">台積電 PE</span>
                     <span class="status-badge" id="pe-badge">--</span>
                 </div>
                 <div class="metric-value" id="pe-val">--</div>
@@ -90,10 +127,10 @@
                 <div class="chart-wrapper"><canvas id="chartPE"></canvas></div>
             </div>
         </div>
-        <div class="col-lg-4">
-            <div class="card p-4">
+        <div class="col-md-4 col-sm-6">
+            <div class="card p-3">
                 <div class="metric-header">
-                    <span class="metric-title">景氣對策信號</span>
+                    <span class="metric-title">景氣燈號</span>
                     <span class="status-badge" id="biz-badge">--</span>
                 </div>
                 <div class="metric-value" id="biz-val">--</div>
@@ -103,18 +140,22 @@
         </div>
     </div>
 
-    <div class="d-flex justify-content-between align-items-center mt-4 mb-2">
-        <div class="section-title m-0">🌊 風險與資金 (Risk & Flow)</div>
-        <div class="chart-controls">
-            <button class="btn btn-time active" onclick="updateTimeRange('30d', this)">30天</button>
-            <button class="btn btn-time" onclick="updateTimeRange('90d', this)">90天</button>
-            <button class="btn btn-time" onclick="updateTimeRange('all', this)">全部</button>
+    <div class="section-title">避險與資金 (Risk & Safe Haven)</div>
+    <div class="row g-3">
+        <div class="col-md-3 col-sm-6">
+            <div class="card p-3">
+                <div class="metric-header">
+                    <span class="metric-title">黃金期貨 (Gold)</span>
+                    <span class="status-badge" id="gold-badge">--</span>
+                </div>
+                <div class="metric-value" id="gold-val">--</div>
+                <div class="gauge-container"><div class="gauge-fill" id="gold-bar" style="width: 0%"></div></div>
+                <div class="chart-wrapper"><canvas id="chartGold"></canvas></div>
+            </div>
         </div>
-    </div>
 
-    <div class="row g-4 mb-5">
-        <div class="col-lg-4">
-            <div class="card p-4">
+        <div class="col-md-3 col-sm-6">
+            <div class="card p-3">
                 <div class="metric-header">
                     <span class="metric-title">VIX 恐慌指數</span>
                     <span class="status-badge" id="vix-badge">--</span>
@@ -124,10 +165,11 @@
                 <div class="chart-wrapper"><canvas id="chartVIX"></canvas></div>
             </div>
         </div>
-        <div class="col-lg-4">
-            <div class="card p-4">
+        
+        <div class="col-md-3 col-sm-6">
+            <div class="card p-3">
                 <div class="metric-header">
-                    <span class="metric-title">美國 10年債殖利率</span>
+                    <span class="metric-title">美債 10年殖利率</span>
                     <span class="status-badge" id="bond-badge">--</span>
                 </div>
                 <div class="metric-value" id="bond-val">--</div>
@@ -135,8 +177,9 @@
                 <div class="chart-wrapper"><canvas id="chartBond"></canvas></div>
             </div>
         </div>
-        <div class="col-lg-4">
-            <div class="card p-4">
+        
+        <div class="col-md-3 col-sm-6">
+            <div class="card p-3">
                 <div class="metric-header">
                     <span class="metric-title">美元/台幣 匯率</span>
                     <span class="status-badge" id="usd-badge">--</span>
@@ -149,84 +192,94 @@
     </div>
 </div>
 
+<div class="floating-controls">
+    <button class="btn-float active" onclick="updateTimeRange('30d', this)">30天</button>
+    <button class="btn-float" onclick="updateTimeRange('90d', this)">90天</button>
+    <button class="btn-float" onclick="updateTimeRange('all', this)">全部</button>
+</div>
+
 <script>
     let rawData = [];
     let charts = {};
-    // 顏色定義：紅(危險/熱), 橘(警告), 灰(中立), 藍(冷), 綠(安全/便宜)
+    
+    // 顏色定義 (iOS System Colors)
     const COLORS = { 
-        danger: '#dc3545', // 紅 (危險/過熱/外資流出)
-        warning: '#ffc107', // 黃 (警告)
-        neutral: '#adb5bd', // 灰 (中立)
-        safe: '#198754',    // 綠 (安全/便宜/恐慌買點)
-        info: '#0dcaf0'     // 藍 (偏冷)
+        red: '#ff3b30',     // 危險/過熱
+        orange: '#ff9500',  // 警告/高檔
+        yellow: '#ffcc00',  // 黃金
+        green: '#34c759',   // 安全/便宜
+        blue: '#007aff',    // 中立/冷
+        grey: '#8e8e93',    // 灰色
+        teal: '#5ac8fa'     // 淺藍
     };
 
-    // 1. 計算進度條百分比 (決定 Bar 的長度)
+    // 1. 進度條計算
     function getProgress(val, type) {
-        let pct = 0;
+        let pct = 50;
         val = parseFloat(val);
-        
         if (type === 'cnn') pct = val; 
-        else if (type === 'pe') pct = (val - 10) / (35 - 10) * 100; // 10~35
-        else if (type === 'biz') pct = (val / 45) * 100; // 0~45
-        else if (type === 'vix') pct = (val - 10) / (40 - 10) * 100; // 10~40
-        else if (type === 'bond') pct = (val - 3.0) / (5.0 - 3.0) * 100; // 3.0% ~ 5.0%
-        else if (type === 'usd') pct = (val - 29) / (33 - 29) * 100; // 29 ~ 33
-        
+        else if (type === 'pe') pct = (val - 10) / (35 - 10) * 100;
+        else if (type === 'biz') pct = (val / 45) * 100;
+        else if (type === 'vix') pct = (val - 10) / (40 - 10) * 100;
+        else if (type === 'bond') pct = (val - 3.0) / (5.0 - 3.0) * 100;
+        else if (type === 'usd') pct = (val - 29) / (33 - 29) * 100;
+        else if (type === 'gold') pct = (val - 2000) / (3000 - 2000) * 100; // 黃金區間 2000~3000
         return Math.min(100, Math.max(5, pct));
     }
 
-    // 2. 判讀邏輯 (決定顏色與文字) - 這是儀表板的「大腦」
+    // 2. 狀態判讀
     function getStatus(value, type) {
         val = parseFloat(value);
-
         if (type === 'cnn') {
-            if (val >= 75) return { color: COLORS.danger, text: '🔥 極度貪婪' };
-            if (val <= 25) return { color: COLORS.safe, text: '🥶 極度恐懼' };
-            return { color: COLORS.warning, text: '😐 中立觀望' };
+            if (val >= 75) return { color: COLORS.red, text: '極度貪婪' };
+            if (val <= 25) return { color: COLORS.green, text: '極度恐懼' };
+            return { color: COLORS.orange, text: '中立' };
         } 
-        
         if (type === 'pe') {
-            if (val >= 25) return { color: COLORS.danger, text: '⚠️ 估值過高' };
-            if (val <= 15) return { color: COLORS.safe, text: '💰 估值便宜' };
-            return { color: COLORS.warning, text: '👌 估值合理' };
+            if (val >= 25) return { color: COLORS.red, text: '昂貴' };
+            if (val <= 15) return { color: COLORS.green, text: '便宜' };
+            return { color: COLORS.orange, text: '合理' };
         }
-        
         if (type === 'biz') {
-            // 這裡強制修正：38分以上就是紅燈過熱
-            if (val >= 38) return { color: COLORS.danger, text: '🔥 紅燈過熱' };
-            if (val >= 32) return { color: COLORS.warning, text: '🟡 黃紅燈' };
-            if (val <= 23) return { color: COLORS.info, text: '🔵 藍燈低迷' };
-            return { color: COLORS.safe, text: '🟢 綠燈穩定' };
+            if (val >= 38) return { color: COLORS.red, text: '紅燈' };
+            if (val >= 32) return { color: COLORS.orange, text: '黃紅' };
+            if (val <= 23) return { color: COLORS.blue, text: '藍燈' };
+            return { color: COLORS.green, text: '綠燈' };
         }
-        
         if (type === 'vix') {
-            // VIX 低 = 市場太樂觀 = 危險
-            if (val < 15) return { color: COLORS.danger, text: '⚠️ 過度樂觀' };
-            if (val > 28) return { color: COLORS.safe, text: '💎 恐慌買點' };
-            return { color: COLORS.neutral, text: '⚖️ 波動正常' };
+            if (val < 15) return { color: COLORS.red, text: '過度樂觀' };
+            if (val > 28) return { color: COLORS.green, text: '恐慌買點' };
+            return { color: COLORS.grey, text: '正常' };
         }
-        
         if (type === 'bond') {
-            if (val >= 4.2) return { color: COLORS.danger, text: '⚠️ 資金緊縮' };
-            if (val <= 3.5) return { color: COLORS.safe, text: '💸 資金寬鬆' };
-            return { color: COLORS.neutral, text: '⚖️ 利率中性' };
+            if (val >= 4.4) return { color: COLORS.red, text: '緊縮' };
+            return { color: COLORS.grey, text: '中性' };
         }
-        
         if (type === 'usd') {
-            if (val >= 32.2) return { color: COLORS.danger, text: '📤 外資流出' };
-            if (val <= 30.5) return { color: COLORS.safe, text: '📥 外資匯入' };
-            return { color: COLORS.neutral, text: '⚖️ 匯率盤整' };
+            if (val >= 32.2) return { color: COLORS.red, text: '外資流出' };
+            if (val <= 30.5) return { color: COLORS.green, text: '強勢' };
+            return { color: COLORS.teal, text: '盤整' };
         }
-        
-        return { color: COLORS.neutral, text: 'N/A' };
+        if (type === 'gold') {
+            // 黃金 > 2700 高檔, < 2400 拉回
+            if (val >= 2700) return { color: COLORS.red, text: '創高熱' }; // 熱度高
+            if (val >= 2500) return { color: COLORS.yellow, text: '強勢' }; // 用黃色代表黃金
+            return { color: COLORS.green, text: '回檔' };
+        }
+        return { color: COLORS.grey, text: 'N/A' };
     }
 
     function initChart(ctxId, color) {
         return new Chart(document.getElementById(ctxId).getContext('2d'), {
             type: 'line',
-            data: { labels: [], datasets: [{ data: [], borderColor: color, borderWidth: 2, pointRadius: 0, fill: true, backgroundColor: color + '10', tension: 0.4 }]},
-            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { display: false }, y: { position: 'right', grid: { display: false } } } }
+            data: { labels: [], datasets: [{ data: [], borderColor: color, borderWidth: 2.5, pointRadius: 0, fill: true, backgroundColor: color + '15', tension: 0.4 }]},
+            options: { 
+                responsive: true, 
+                maintainAspectRatio: false, 
+                plugins: { legend: { display: false } }, 
+                scales: { x: { display: false }, y: { display: false } }, // 隱藏 Y 軸標籤讓畫面更乾淨
+                interaction: { mode: 'index', intersect: false }
+            }
         });
     }
 
@@ -234,41 +287,39 @@
         try {
             const res = await fetch('./data/history.json?t=' + Date.now());
             rawData = await res.json();
-            // 日期排序
             rawData.sort((a, b) => new Date(a.date.replace(/-/g, '/')) - new Date(b.date.replace(/-/g, '/')));
             
             updateDashboard(rawData[rawData.length - 1]);
             
-            // 初始化圖表 (顏色給預設，後面 updateTimeRange 會重繪)
-            charts.cnn = initChart('chartCNN', COLORS.warning);
-            charts.pe = initChart('chartPE', COLORS.danger);
-            charts.biz = initChart('chartBiz', COLORS.danger);
-            charts.vix = initChart('chartVIX', COLORS.neutral);
-            charts.bond = initChart('chartBond', '#333');
-            charts.usd = initChart('chartUSD', COLORS.info);
+            // 初始化圖表
+            charts.cnn = initChart('chartCNN', COLORS.orange);
+            charts.pe = initChart('chartPE', COLORS.red);
+            charts.biz = initChart('chartBiz', COLORS.red);
+            charts.gold = initChart('chartGold', '#FFD700'); // 黃金專屬色
+            charts.vix = initChart('chartVIX', COLORS.grey);
+            charts.bond = initChart('chartBond', '#000');
+            charts.usd = initChart('chartUSD', COLORS.blue);
 
             updateTimeRange('30d', null);
         } catch (e) { document.getElementById('last-update').innerText = "讀取失敗"; console.error(e); }
     }
 
     function updateDashboard(latest) {
-        document.getElementById('last-update').innerText = latest.date;
+        document.getElementById('last-update').innerText = latest.date.split(" ")[0]; // 只顯示日期比較簡潔
         
         const updateCard = (id, val, type) => {
             const stat = getStatus(val, type);
             const pct = getProgress(val, type);
 
-            // 更新數值顏色
             const elVal = document.getElementById(id + '-val');
             elVal.innerText = val;
-            elVal.style.color = stat.color;
+            elVal.style.color = stat.color === '#FFD700' ? '#b58900' : stat.color; // 黃金文字用深一點的顏色才看得到
             
-            // 更新 Badge (背景色 + 文字)
             const elBadge = document.getElementById(id + '-badge');
             elBadge.innerText = stat.text;
             elBadge.style.backgroundColor = stat.color;
+            if(stat.color === '#FFD700') elBadge.style.color = '#000'; // 黃金Badge文字用黑色
 
-            // 更新進度條
             document.getElementById(id + '-bar').style.width = pct + '%'; 
             document.getElementById(id + '-bar').style.backgroundColor = stat.color;
         };
@@ -276,6 +327,7 @@
         updateCard('cnn', latest.cnn_score, 'cnn');
         updateCard('pe', latest.tw_pe, 'pe');
         updateCard('biz', latest.biz_score, 'biz');
+        updateCard('gold', latest.gold || 0, 'gold');
         updateCard('vix', latest.vix || 0, 'vix');
         updateCard('bond', latest.us_10y || 0, 'bond');
         updateCard('usd', latest.usd_twd || 0, 'usd');
@@ -283,7 +335,7 @@
 
     window.updateTimeRange = function(range, btn) {
         if (btn) {
-            document.querySelectorAll('.btn-time').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.btn-float').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
         }
         if (!rawData.length) return;
@@ -306,6 +358,7 @@
         update(charts.cnn, 'cnn_score');
         update(charts.pe, 'tw_pe');
         update(charts.biz, 'biz_score');
+        update(charts.gold, 'gold');
         update(charts.vix, 'vix');
         update(charts.bond, 'us_10y');
         update(charts.usd, 'usd_twd');
