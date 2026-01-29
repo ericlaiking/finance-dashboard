@@ -4,9 +4,8 @@ import os
 import yfinance as yf
 from datetime import datetime, timedelta, timezone
 
-# 設定偽裝 Headers
 HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
 }
 
 def get_fear_and_greed():
@@ -22,11 +21,11 @@ def get_fear_and_greed():
         return None
 
 def get_tw_stock_pe():
+    # 簡單估算：台積電股價 / 預估EPS (44.5)
     try:
         stock = yf.Ticker("2330.TW")
-        pe = stock.info.get('trailingPE')
-        if pe is None:
-            pe = stock.info.get('currentPrice', 1000) / 42.0 
+        price = stock.history(period="1d")['Close'].iloc[-1]
+        pe = price / 44.5 
         return round(pe, 2)
     except Exception as e:
         print(f"❌ 台股 PE 失敗: {e}")
@@ -34,81 +33,69 @@ def get_tw_stock_pe():
 
 def get_market_metrics():
     """
-    一次抓取: VIX恐慌指數, 10年美債殖利率, 美元兌台幣
+    抓取: VIX, 美債, 匯率, 黃金
     """
     try:
-        # ^VIX: 波動率指數
-        # ^TNX: 10年期公債殖利率 (Yahoo給的格式通常是 42.5 代表 4.25%)
-        # TWD=X: 美元兌台幣匯率
-        tickers = yf.Tickers("^VIX ^TNX TWD=X")
+        # 新增 GC=F (黃金期貨)
+        tickers = yf.Tickers("^VIX ^TNX TWD=X GC=F")
         
-        # 取得數據 (使用 history 因為 info有時候會漏)
-        vix_hist = tickers.tickers["^VIX"].history(period='1d')
-        tnx_hist = tickers.tickers["^TNX"].history(period='1d')
-        twd_hist = tickers.tickers["TWD=X"].history(period='1d')
+        vix = tickers.tickers["^VIX"].history(period='1d')['Close'].iloc[-1]
+        tnx = tickers.tickers["^TNX"].history(period='1d')['Close'].iloc[-1]
+        twd = tickers.tickers["TWD=X"].history(period='1d')['Close'].iloc[-1]
+        gold = tickers.tickers["GC=F"].history(period='1d')['Close'].iloc[-1]
 
-        vix = vix_hist['Close'].iloc[-1] if not vix_hist.empty else 0
-        tnx = tnx_hist['Close'].iloc[-1] if not tnx_hist.empty else 0
-        twd = twd_hist['Close'].iloc[-1] if not twd_hist.empty else 0
-
-        print(f"✅ 市場指標成功: VIX={vix:.2f}, TNX={tnx:.2f}, TWD={twd:.2f}")
         return {
             "vix": round(vix, 2),
             "us_10y": round(tnx, 2), 
-            "usd_twd": round(twd, 2)
+            "usd_twd": round(twd, 2),
+            "gold": round(gold, 2) # 新增
         }
     except Exception as e:
         print(f"❌ 市場指標失敗: {e}")
-        return {"vix": 0, "us_10y": 0, "usd_twd": 0}
+        # 回傳預設值防止 crash
+        return {"vix": 0, "us_10y": 0, "usd_twd": 0, "gold": 0}
 
-def get_business_signal():
-    # 模擬數據 (台灣景氣燈號通常一個月變一次)
-    return {"light": "紅燈", "score": 38}
+def get_business_score():
+    # 目前固定回傳 38 (因為是月資料)
+    return 38
 
 if __name__ == "__main__":
     print("🚀 開始執行爬蟲...")
-
-    # 1. 設定台灣時間
     utc_now = datetime.now(timezone.utc)
     tw_time = utc_now + timedelta(hours=8)
     date_str = tw_time.strftime("%Y-%m-%d %H:%M")
 
-    # 2. 抓取所有資料
     market_data = get_market_metrics()
     
     new_data = {
         "date": date_str,
         "cnn_score": get_fear_and_greed(),
         "tw_pe": get_tw_stock_pe(),
-        "biz_score": get_business_signal()['score'],
-        # 新增欄位
+        "biz_score": get_business_score(),
         "vix": market_data['vix'],
         "us_10y": market_data['us_10y'],
-        "usd_twd": market_data['usd_twd']
+        "usd_twd": market_data['usd_twd'],
+        "gold": market_data['gold'] # 新增
     }
 
-    # 3. 讀取與更新歷史資料
+    # 讀取與更新
     file_path = "data/history.json"
     history = []
-    
     if os.path.exists(file_path):
         try:
             with open(file_path, "r", encoding="utf-8") as f:
                 history = json.load(f)
-        except:
-            history = []
+        except: pass
 
-    # 填補 None 值 (防呆)
+    # 補值防呆
     if history:
         last = history[-1]
         for key in new_data:
             if new_data[key] is None: new_data[key] = last.get(key, 0)
 
-    # 加入新資料並保留最後 90 筆 (因為現在有 90 天資料了，我們保留多一點)
     history.append(new_data)
-    history = history[-100:] 
+    history = history[-150:] # 保留多一點資料
 
-    # 4. 存檔
     os.makedirs("data", exist_ok=True)
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(history, f, ensure_ascii=False, indent=2)
