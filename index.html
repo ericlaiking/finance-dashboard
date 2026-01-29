@@ -17,7 +17,7 @@
         body { 
             background-color: #f2f2f7; /* iOS 淺灰背景 */
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            padding-bottom: 100px; /* 預留底部懸浮空間 */
+            padding-bottom: 120px; /* 預留底部懸浮空間 */
         }
         
         .dashboard-container { max-width: 1200px; margin: 20px auto; padding: 0 20px; }
@@ -31,7 +31,7 @@
             background: white;
             height: 100%;
         }
-        .card:active { transform: scale(0.98); } /* 手機按壓回饋 */
+        .card:active { transform: scale(0.98); }
         
         .metric-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
         .metric-title { font-size: 0.8rem; color: #8e8e93; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
@@ -48,7 +48,7 @@
             margin: 30px 0 15px 0; letter-spacing: -0.5px;
         }
 
-        /* iOS 風格懸浮控制列 */
+        /* iOS 風格懸浮控制列 (修正為絕對置中與毛玻璃效果) */
         .floating-controls {
             position: fixed;
             bottom: 30px;
@@ -202,18 +202,12 @@
     let rawData = [];
     let charts = {};
     
-    // 顏色定義 (iOS System Colors)
+    // 顏色定義
     const COLORS = { 
-        red: '#ff3b30',     // 危險/過熱
-        orange: '#ff9500',  // 警告/高檔
-        yellow: '#ffcc00',  // 黃金
-        green: '#34c759',   // 安全/便宜
-        blue: '#007aff',    // 中立/冷
-        grey: '#8e8e93',    // 灰色
-        teal: '#5ac8fa'     // 淺藍
+        red: '#ff3b30', orange: '#ff9500', yellow: '#ffcc00', green: '#34c759', 
+        blue: '#007aff', grey: '#8e8e93', teal: '#5ac8fa'
     };
 
-    // 1. 進度條計算
     function getProgress(val, type) {
         let pct = 50;
         val = parseFloat(val);
@@ -223,11 +217,10 @@
         else if (type === 'vix') pct = (val - 10) / (40 - 10) * 100;
         else if (type === 'bond') pct = (val - 3.0) / (5.0 - 3.0) * 100;
         else if (type === 'usd') pct = (val - 29) / (33 - 29) * 100;
-        else if (type === 'gold') pct = (val - 2000) / (3000 - 2000) * 100; // 黃金區間 2000~3000
+        else if (type === 'gold') pct = (val - 2000) / (3000 - 2000) * 100;
         return Math.min(100, Math.max(5, pct));
     }
 
-    // 2. 狀態判讀
     function getStatus(value, type) {
         val = parseFloat(value);
         if (type === 'cnn') {
@@ -261,9 +254,8 @@
             return { color: COLORS.teal, text: '盤整' };
         }
         if (type === 'gold') {
-            // 黃金 > 2700 高檔, < 2400 拉回
-            if (val >= 2700) return { color: COLORS.red, text: '創高熱' }; // 熱度高
-            if (val >= 2500) return { color: COLORS.yellow, text: '強勢' }; // 用黃色代表黃金
+            if (val >= 2700) return { color: COLORS.red, text: '創高熱' };
+            if (val >= 2500) return { color: COLORS.yellow, text: '強勢' };
             return { color: COLORS.green, text: '回檔' };
         }
         return { color: COLORS.grey, text: 'N/A' };
@@ -277,7 +269,7 @@
                 responsive: true, 
                 maintainAspectRatio: false, 
                 plugins: { legend: { display: false } }, 
-                scales: { x: { display: false }, y: { display: false } }, // 隱藏 Y 軸標籤讓畫面更乾淨
+                scales: { x: { display: false }, y: { display: false } },
                 interaction: { mode: 'index', intersect: false }
             }
         });
@@ -291,11 +283,10 @@
             
             updateDashboard(rawData[rawData.length - 1]);
             
-            // 初始化圖表
             charts.cnn = initChart('chartCNN', COLORS.orange);
             charts.pe = initChart('chartPE', COLORS.red);
             charts.biz = initChart('chartBiz', COLORS.red);
-            charts.gold = initChart('chartGold', '#FFD700'); // 黃金專屬色
+            charts.gold = initChart('chartGold', '#FFD700'); 
             charts.vix = initChart('chartVIX', COLORS.grey);
             charts.bond = initChart('chartBond', '#000');
             charts.usd = initChart('chartUSD', COLORS.blue);
@@ -305,7 +296,7 @@
     }
 
     function updateDashboard(latest) {
-        document.getElementById('last-update').innerText = latest.date.split(" ")[0]; // 只顯示日期比較簡潔
+        document.getElementById('last-update').innerText = latest.date.split(" ")[0];
         
         const updateCard = (id, val, type) => {
             const stat = getStatus(val, type);
@@ -313,12 +304,12 @@
 
             const elVal = document.getElementById(id + '-val');
             elVal.innerText = val;
-            elVal.style.color = stat.color === '#FFD700' ? '#b58900' : stat.color; // 黃金文字用深一點的顏色才看得到
+            elVal.style.color = stat.color === '#FFD700' ? '#b58900' : stat.color; 
             
             const elBadge = document.getElementById(id + '-badge');
             elBadge.innerText = stat.text;
             elBadge.style.backgroundColor = stat.color;
-            if(stat.color === '#FFD700') elBadge.style.color = '#000'; // 黃金Badge文字用黑色
+            if(stat.color === '#FFD700') elBadge.style.color = '#000'; 
 
             document.getElementById(id + '-bar').style.width = pct + '%'; 
             document.getElementById(id + '-bar').style.backgroundColor = stat.color;
