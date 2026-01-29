@@ -35,20 +35,15 @@ jobs:
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           
-          # 加入所有 data 檔案
           git add data/*
           
-          # 檢查是否有變更
           if git diff --quiet && git diff --staged --quiet; then
             echo "沒有變更，跳過 Commit"
           else
-            # 1. 先 Commit 本地變更
             git commit -m "Auto-update finance data"
             
-            # 2. 關鍵修正：改用標準 Pull (自動合併)，這比 Rebase 更能容忍差異
-            # --no-edit 表示自動使用預設的合併訊息，不要跳出編輯器
-            git pull origin main --no-edit
+            # 關鍵修正：加上 --no-rebase 明確告訴 Git 使用合併策略
+            git pull origin main --no-edit --no-rebase
             
-            # 3. 再次上傳
             git push
           fi
