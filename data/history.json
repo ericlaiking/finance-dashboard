@@ -5438,5 +5438,15 @@
     "us_10y": 0,
     "usd_twd": 0,
     "gold": 0
+  },
+  {
+    "date": "2026-02-01 14:40",
+    "cnn_score": 57,
+    "tw_pe": 26.79,
+    "biz_score": 38,
+    "vix": 0,
+    "us_10y": 0,
+    "usd_twd": 0,
+    "gold": 0
   }
 ]
