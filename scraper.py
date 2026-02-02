@@ -27,61 +27,81 @@ def get_fear_and_greed():
 
 def get_market_metrics():
     """
-    改良版：抓取 VIX, 美債, 匯率, 黃金, 台積電
-    使用 period='5d' 確保不會因為假日或剛開盤而抓到空值
+    智慧防呆版：
+    1. 抓取過去 5 天資料
+    2. ★關鍵★ 檢查抓到的資料日期，如果太舊 (>2天) 視為無效，避免用到歷史高價
     """
     try:
         tickers_list = ["^VIX", "^TNX", "TWD=X", "GC=F", "2330.TW"]
-        # 一次抓 5 天，避免當天沒開盤回傳空值
         data = yf.download(tickers_list, period="5d", progress=False)['Close']
         
-        # 取得各指標「最後一筆有效的數值」(Last Valid Index)
-        # .iloc[-1] 即使中間有缺漏，也會抓到最近的一筆
-        vix = data['^VIX'].dropna().iloc[-1]
-        tnx = data['^TNX'].dropna().iloc[-1]
-        twd = data['TWD=X'].dropna().iloc[-1]
-        gold = data['GC=F'].dropna().iloc[-1]
-        tsmc = data['2330.TW'].dropna().iloc[-1]
-
-        # 計算 PE
-        pe = tsmc / FIXED_EPS
-
-        return {
-            "vix": round(float(vix), 2),
-            "us_10y": round(float(tnx), 2), 
-            "usd_twd": round(float(twd), 2),
-            "gold": round(float(gold), 2),
-            "tw_pe": round(float(pe), 2)
+        # 取得當下時間 (UTC+8) 用來比對
+        tz_tw = timezone(timedelta(hours=8))
+        today = datetime.now(tz_tw).date()
+        
+        result = {}
+        
+        # 定義我們要抓的欄位與對應名稱
+        map_keys = {
+            '^VIX': 'vix', 
+            '^TNX': 'us_10y', 
+            'TWD=X': 'usd_twd', 
+            'GC=F': 'gold', 
+            '2330.TW': 'tw_price' # 先存股價，等下算 PE
         }
+
+        for ticker, key in map_keys.items():
+            # 1. 取出該商品的資料，移除空值
+            series = data[ticker].dropna()
+            
+            if series.empty:
+                result[key] = None
+                continue
+
+            # 2. ★關鍵檢核★：最後一筆資料的日期
+            last_date = series.index[-1].date()
+            days_diff = (today - last_date).days
+            
+            # 如果資料落後超過 2 天 (例如今天是週五，卻只抓到週二的)，視為失效
+            # (週末容許度大一點，設為 4 天以免週一抓不到週五)
+            allowable_lag = 4 if today.weekday() == 0 else 2 
+            
+            if days_diff > allowable_lag:
+                print(f"⚠️ {ticker} 資料過期！最後日期: {last_date}, 忽略此數值。")
+                result[key] = None # 強制設為 None，讓主程式去繼承舊檔
+            else:
+                result[key] = float(series.iloc[-1])
+
+        # 計算 PE (如果股價有效)
+        if result.get('tw_price'):
+            result['tw_pe'] = round(result['tw_price'] / FIXED_EPS, 2)
+        else:
+            result['tw_pe'] = None
+
+        return result
+
     except Exception as e:
-        print(f"❌ 市場指標抓取失敗 (將沿用舊資料): {e}")
-        # 回傳 None，讓主程式知道要去讀歷史紀錄
+        print(f"❌ 市場指標抓取失敗: {e}")
         return None
 
 def get_business_score(date_obj):
-    # 根據當下月份回傳景氣分數 (模擬/真實對照表)
     y = date_obj.year
     m = date_obj.month
-    # 2026 最新
     if y == 2026: return 38
-    # 2025 歷史
     if y == 2025 and m >= 12: return 34
-    return 32 # 預設
+    return 32
 
 if __name__ == "__main__":
-    print("🚀 開始執行爬蟲 (Robust Version)...")
+    print("🚀 開始執行爬蟲 (Date-Check Version)...")
     
-    # 1. 時間設定
     utc_now = datetime.now(timezone.utc)
     tw_time = utc_now + timedelta(hours=8)
     date_str = tw_time.strftime("%Y-%m-%d %H:%M")
 
-    # 2. 抓取資料
     market_data = get_market_metrics()
     cnn_score = get_fear_and_greed()
     biz_score = get_business_score(tw_time)
 
-    # 3. 讀取歷史檔案
     file_path = "data/history.json"
     history = []
     if os.path.exists(file_path):
@@ -90,24 +110,24 @@ if __name__ == "__main__":
                 history = json.load(f)
         except: pass
     
-    # 取得上一筆資料作為備份
-    last_entry = history[-1] if history else {
-        "cnn_score": 50, "tw_pe": 20, "biz_score": 30,
-        "vix": 15, "us_10y": 4.0, "usd_twd": 31.0, "gold": 2000
-    }
+    # 上一筆資料 (備份用)
+    last_entry = history[-1] if history else {}
 
-    # 4. 資料合併與防呆 (關鍵步驟!)
-    # 如果抓取失敗 (None) 或數值為 0，就用上一筆資料覆蓋
-    
-    final_vix = market_data['vix'] if (market_data and market_data['vix'] > 0) else last_entry.get('vix', 0)
-    final_bond = market_data['us_10y'] if (market_data and market_data['us_10y'] > 0) else last_entry.get('us_10y', 0)
-    final_usd = market_data['usd_twd'] if (market_data and market_data['usd_twd'] > 0) else last_entry.get('usd_twd', 0)
-    final_gold = market_data['gold'] if (market_data and market_data['gold'] > 0) else last_entry.get('gold', 0)
-    final_pe = market_data['tw_pe'] if (market_data and market_data['tw_pe'] > 0) else last_entry.get('tw_pe', 0)
-    
+    # 4. 資料合併與繼承
+    # 邏輯：有新值且不為None -> 用新的；否則 -> 用舊的
+    def get_val(key, default=0):
+        new_val = market_data.get(key) if market_data else None
+        if new_val is not None and new_val > 0:
+            return round(new_val, 2)
+        return last_entry.get(key, default)
+
+    final_vix = get_val('vix', 15.0)
+    final_bond = get_val('us_10y', 4.0)
+    final_usd = get_val('usd_twd', 31.0)
+    final_gold = get_val('gold', 2000.0)
+    final_pe = get_val('tw_pe', 20.0)
     final_cnn = cnn_score if cnn_score is not None else last_entry.get('cnn_score', 50)
 
-    # 5. 建立新資料
     new_entry = {
         "date": date_str,
         "cnn_score": final_cnn,
@@ -119,10 +139,7 @@ if __name__ == "__main__":
         "gold": final_gold
     }
 
-    # 6. 寫入檔案
     history.append(new_entry)
-    
-    # 保留 20000 筆
     history = history[-20000:] 
 
     os.makedirs("data", exist_ok=True)
@@ -130,4 +147,4 @@ if __name__ == "__main__":
         json.dump(history, f, ensure_ascii=False, indent=2)
         
     print(f"💾 資料更新完成: {date_str}")
-    print(f"📊 寫入數據: VIX={final_vix}, Gold={final_gold}, PE={final_pe}")
+    print(f"📊 寫入: VIX={final_vix}, Gold={final_gold} (若為舊值代表抓取過期)")
