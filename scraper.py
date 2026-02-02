@@ -7,15 +7,14 @@ import re
 from datetime import datetime, timedelta, timezone
 
 # ==========================================
-# ★ 請確認您的 Google Sheet CSV 網址還在 ★
-GOOGLE_SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNHviKb9PNe3Ho-5JAf10hfsJkRusPT_oJS2rfP0i2US0AGs32ZbQAoYa3TaIzNdHsWPcEpqX1IcJ3/pub?gid=1615478278&single=true&output=csv" 
-# (請記得換回您真正的那串網址)
+# ★ 已更新為您提供的正確網址 ★
+GOOGLE_SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQNHviKb9PNe3Ho-5JAf10hfsJkRusPT_oJS2rfP0i2US0AGs32ZbQAoYa3TaIzNdHsWPcEpqX1IcJ3/pub?gid=1615478278&single=true&output=csv"
 # ==========================================
 
 # 設定固定的 EPS (2025 全年)
 FIXED_EPS = 66.25 
 
-# 偽裝 Headers (這是突破 Investing.com 的關鍵)
+# 偽裝 Headers (用於 Investing.com)
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
@@ -26,117 +25,105 @@ def get_google_sheet_data():
     """從 Google Sheets 讀取黃金、匯率、台積電"""
     print("📥 正在從 Google Sheets 讀取數據...")
     try:
+        # 直接讀取您的 CSV 連結
         df = pd.read_csv(GOOGLE_SHEET_CSV_URL)
-        # 轉成 Dictionary
+        
+        # 簡單檢查格式：如果欄位不對，嘗試印出以利除錯
+        if df.shape[1] < 2:
+            print(f"⚠️ Google Sheet 格式警告: 讀取到的欄位過少 ({df.shape})")
+            print(df.head())
+            return {}
+
+        # 轉成 Dictionary: { 'gold': 4685.5, ... }
+        # 假設 A 欄是 Key (Item), B 欄是 Value
         data = dict(zip(df.iloc[:, 0], df.iloc[:, 1]))
+        
+        print("✅ Google Sheet 讀取成功！")
+        # 印出部分數據確認
+        for k, v in data.items():
+            print(f"   - {k}: {v}")
+            
         return data
     except Exception as e:
         print(f"❌ Google Sheet 讀取失敗: {e}")
         return {}
 
 def get_investing_us10y():
-    """
-    專門為 Investing.com 寫的爬蟲
-    目標網址: https://hk.investing.com/rates-bonds/u.s.-10-year-bond-yield
-    """
+    """備援：從 Investing.com 抓美債"""
     url = "https://hk.investing.com/rates-bonds/u.s.-10-year-bond-yield"
-    print(f"🕵️ 正在嘗試抓取 Investing.com: {url} ...")
-    
     try:
         r = requests.get(url, headers=HEADERS, timeout=10)
-        if r.status_code != 200:
-            print(f"⚠️ Investing.com 回傳錯誤碼: {r.status_code}")
-            return None
-            
-        # 使用 Regex 直接搜尋 HTML 裡的價格數據
-        # 目標特徵: data-test="instrument-price-last">4.253</span>
-        # 這種寫法不需要安裝 BeautifulSoup，適合 GitHub Actions
+        if r.status_code != 200: return None
         match = re.search(r'data-test="instrument-price-last"[^>]*>([0-9\.]+)<', r.text)
-        
-        if match:
-            val = float(match.group(1))
-            print(f"✅ 抓到了！美債殖利率: {val}")
-            return val
-        else:
-            print("⚠️ 找不到價格欄位，可能是網頁改版了")
-            return None
-    except Exception as e:
-        print(f"❌ Investing.com 抓取失敗: {e}")
-        return None
+        if match: return float(match.group(1))
+    except: pass
+    return None
 
 def get_vix_from_yf():
-    """VIX 維持原案，用 yfinance 抓"""
+    """備援：從 yfinance 抓 VIX"""
     try:
         ticker = yf.Ticker("^VIX")
         data = ticker.history(period="5d")
-        if not data.empty:
-            return round(data['Close'].iloc[-1], 2)
-    except:
-        pass
+        if not data.empty: return round(data['Close'].iloc[-1], 2)
+    except: pass
     return None
 
 def get_fear_and_greed():
     try:
         r = requests.get("https://production.dataviz.cnn.io/index/fearandgreed/graphdata", headers=HEADERS, timeout=10)
         return int(r.json()['fear_and_greed']['score'])
-    except:
-        return None
+    except: return None
 
 if __name__ == "__main__":
-    print("🚀 開始執行爬蟲 (Hybrid V4.0)...")
+    print("🚀 開始執行爬蟲 (v4.1 Correct URL)...")
     
-    # 1. 各路人馬分頭抓取
-    sheet_data = get_google_sheet_data()  # 黃金, 匯率, 2330
-    us_10y_val = get_investing_us10y()    # 美債 (新來源)
-    vix_val = get_vix_from_yf()           # VIX (原方案)
-    cnn_score = get_fear_and_greed()      # CNN
+    # 1. 抓取所有來源
+    sheet_data = get_google_sheet_data()
+    us_10y_val = get_investing_us10y()
+    vix_val = get_vix_from_yf()
+    cnn_score = get_fear_and_greed()
     
-    # 2. 數值整理
+    # 2. 數據清洗與轉換
     def parse_val(val):
         try:
-            return float(val)
+            # 處理 Google Sheet 可能傳回的字串 (例如 "31.5")
+            return float(str(val).replace(',', ''))
         except:
             return 0.0
 
-    # 從 Sheet 拿
     tw_price = parse_val(sheet_data.get('2330_price', 0))
     gold_price = parse_val(sheet_data.get('gold', 0))
     usd_twd = parse_val(sheet_data.get('usd_twd', 0))
     
-    # 3. 讀取歷史 (為了繼承舊資料)
+    # VIX 與 美債：Google Sheet 優先，抓不到才用爬蟲備援
+    sheet_vix = parse_val(sheet_data.get('vix', 0))
+    sheet_us10y = parse_val(sheet_data.get('us_10y', 0))
+    
+    final_vix = sheet_vix if sheet_vix > 0 else (vix_val if vix_val else 0)
+    final_us10y = sheet_us10y if sheet_us10y > 0 else (us_10y_val if us_10y_val else 0)
+
+    # 3. 讀取舊歷史 (繼承用)
     file_path = "data/history.json"
     history = []
     if os.path.exists(file_path):
         with open(file_path, "r", encoding="utf-8") as f:
             history = json.load(f)
-            
     last = history[-1] if history else {}
-    
-    # 4. 組合最終數據 (優先用新抓到的 -> 失敗用 Sheet 備份 -> 再失敗用 History 繼承)
-    
-    # VIX
-    final_vix = vix_val if (vix_val and vix_val > 0) else parse_val(sheet_data.get('vix', 0))
+
+    # 4. 最終防呆繼承 (若所有來源都失敗，用昨日資料)
     if final_vix == 0: final_vix = last.get('vix', 0)
-    
-    # 美債 (US 10Y)
-    final_us10y = us_10y_val if (us_10y_val and us_10y_val > 0) else parse_val(sheet_data.get('us_10y', 0))
     if final_us10y == 0: final_us10y = last.get('us_10y', 0)
-
-    # 黃金 & 匯率 & 股價 (主要靠 Sheet)
-    final_gold = gold_price if gold_price > 0 else last.get('gold', 0)
-    final_usd = usd_twd if usd_twd > 0 else last.get('usd_twd', 0)
-    final_price = tw_price if tw_price > 0 else last.get('tw_price', 0) # 暫存股價但不寫入 JSON
-
+    if gold_price == 0: gold_price = last.get('gold', 0)
+    if usd_twd == 0: usd_twd = last.get('usd_twd', 0)
+    
+    # 股價繼承 (為了算 PE)
+    if tw_price == 0: tw_price = last.get('tw_pe', 0) * FIXED_EPS
+    
     # PE 計算
-    if final_price > 0:
-        final_pe = round(final_price / FIXED_EPS, 2)
-    else:
-        final_pe = last.get('tw_pe', 0)
-
-    # CNN
+    final_pe = round(tw_price / FIXED_EPS, 2) if tw_price > 0 else last.get('tw_pe', 0)
     final_cnn = cnn_score if cnn_score else last.get('cnn_score', 50)
 
-    # 5. 建立新紀錄
+    # 5. 組合與存檔
     final_entry = {
         "date": (datetime.now(timezone.utc) + timedelta(hours=8)).strftime("%Y-%m-%d %H:%M"),
         "cnn_score": final_cnn,
@@ -144,8 +131,8 @@ if __name__ == "__main__":
         "biz_score": 38,
         "vix": final_vix,
         "us_10y": final_us10y,
-        "usd_twd": final_usd,
-        "gold": final_gold
+        "usd_twd": usd_twd,
+        "gold": gold_price
     }
 
     history.append(final_entry)
@@ -154,4 +141,7 @@ if __name__ == "__main__":
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(history, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ 更新完成: US10Y={final_us10y}, VIX={final_vix}, Gold={final_gold}")
+    print(f"✅ 更新完成！")
+    print(f"   - Gold: {gold_price}")
+    print(f"   - PE: {final_pe} (Price: {tw_price})")
+    print(f"   - US10Y: {final_us10y}")
