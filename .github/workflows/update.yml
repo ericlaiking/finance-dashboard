@@ -30,20 +30,25 @@ jobs:
       - name: Run Scraper
         run: python scraper.py
 
-      - name: Commit and Push
+      - name: Commit and Push (存檔並上傳)
         run: |
+          # 設定機器人身分
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           
+          # 加入所有變更
           git add data/*
           
+          # 檢查是否有變更
           if git diff --quiet && git diff --staged --quiet; then
-            echo "沒有變更，跳過 Commit"
+            echo "沒有新資料，跳過存檔"
           else
             git commit -m "Auto-update finance data"
             
-            # 關鍵修正：加上 --no-rebase 明確告訴 Git 使用合併策略
-            git pull origin main --no-edit --no-rebase
+            # ★★★ 關鍵修正：先抓取遠端最新版，並自動合併 (Rebase) ★★★
+            # 這行指令會把別人的修改墊在下面，把機器人的修改疊在最上面
+            git pull --rebase origin main
             
+            # 再推上去
             git push
           fi
