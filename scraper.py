@@ -20,38 +20,57 @@ HEADERS = {
     'Accept-Language': 'en-US,en;q=0.9,zh-TW;q=0.8,zh;q=0.7'
 }
 
+def parse_val(val):
+    """
+    ★ 核心修正：超強效數字提取器 ★
+    能處理: "$4,774.70", "4.25 (備註)", "16.35%", "N/A"
+    """
+    if val is None: return 0.0
+    
+    # 1. 轉成字串
+    s = str(val).strip()
+    
+    # 2. 先移除絕對會干擾的符號 (逗號, 美元, 百分比)
+    #    這樣 4,774.70 會變成 4774.70
+    s_clean = s.replace(',', '').replace('$', '').replace('%', '')
+    
+    # 3. 使用 Regex 抓取「字串中的第一個數字」
+    #    \d+   : 數字
+    #    \.?   : 可能有小數點
+    #    \d* : 小數點後的數字
+    match = re.search(r'-?\d+\.?\d*', s_clean)
+    
+    if match:
+        try:
+            return float(match.group())
+        except:
+            pass
+            
+    return 0.0
+
 def get_google_sheet_data_smart():
-    """
-    智慧讀取版：
-    不再依賴固定欄位 (A, B)，而是搜尋 'key' 在哪裡，然後抓取它右邊的值。
-    """
     print("📥 正在從 Google Sheets 讀取數據 (Smart Mode)...")
     try:
-        # header=None 代表不把第一行當標題，讀取所有原始數據
+        # header=None 讀取所有內容
         df = pd.read_csv(GOOGLE_SHEET_CSV_URL, header=None)
         
-        # 將所有資料轉為字串，方便搜尋
-        df_str = df.astype(str)
-        
         extracted_data = {}
+        # 注意: 您的 Google Sheet 裡的 Key 似乎是小寫，這裡要對應
         target_keys = ['gold', 'usd_twd', '2330_price', 'vix', 'us_10y']
         
-        print("🔍 原始資料預覽 (前3列):")
-        print(df.head(3)) 
-
-        # 暴力搜尋法：遍歷每一個儲存格
-        # 只要找到關鍵字，就抓它「右邊那一格」
+        # 遍歷尋找
         for r_idx, row in df.iterrows():
             for c_idx, cell_value in enumerate(row):
-                # 轉成字串並去除空白
                 val_str = str(cell_value).strip()
                 
                 if val_str in target_keys:
-                    # 找到了 Key！檢查右邊有沒有值
+                    # 找到 Key，抓右邊那格
                     if c_idx + 1 < len(row):
                         target_val = row[c_idx + 1]
-                        print(f"   ✅ 找到 {val_str}: {target_val}")
-                        extracted_data[val_str] = target_val
+                        # ★ 立即在此處解析並印出結果，方便除錯 ★
+                        clean_val = parse_val(target_val)
+                        print(f"   ✅ 找到 {val_str}: 原文='{target_val}' -> 解析={clean_val}")
+                        extracted_data[val_str] = clean_val
         
         return extracted_data
 
@@ -84,7 +103,7 @@ def get_fear_and_greed():
     except: return None
 
 if __name__ == "__main__":
-    print("🚀 開始執行爬蟲 (v4.2 Smart Search)...")
+    print("🚀 開始執行爬蟲 (v4.3 Robust Parser)...")
     
     # 1. 抓取資料
     sheet_data = get_google_sheet_data_smart()
@@ -92,25 +111,18 @@ if __name__ == "__main__":
     vix_val = get_vix_from_yf()
     cnn_score = get_fear_and_greed()
     
-    # 2. 數據清洗
-    def parse_val(val):
-        try:
-            return float(str(val).replace(',', '').strip())
-        except:
-            return 0.0
-
-    tw_price = parse_val(sheet_data.get('2330_price', 0))
-    gold_price = parse_val(sheet_data.get('gold', 0))
-    usd_twd = parse_val(sheet_data.get('usd_twd', 0))
+    # 2. 取值 (因為 sheet_data 裡面的值已經被 clean 過了，直接拿即可)
+    tw_price = sheet_data.get('2330_price', 0)
+    gold_price = sheet_data.get('gold', 0)
+    usd_twd = sheet_data.get('usd_twd', 0)
+    sheet_vix = sheet_data.get('vix', 0)
+    sheet_us10y = sheet_data.get('us_10y', 0)
     
-    # VIX 與 美債：Google Sheet 優先 -> 爬蟲備援
-    sheet_vix = parse_val(sheet_data.get('vix', 0))
-    sheet_us10y = parse_val(sheet_data.get('us_10y', 0))
-    
+    # 3. 備援邏輯
     final_vix = sheet_vix if sheet_vix > 0 else (vix_val if vix_val else 0)
     final_us10y = sheet_us10y if sheet_us10y > 0 else (us_10y_val if us_10y_val else 0)
 
-    # 3. 讀取舊歷史 (繼承用)
+    # 4. 讀取歷史
     file_path = "data/history.json"
     history = []
     if os.path.exists(file_path):
@@ -118,20 +130,17 @@ if __name__ == "__main__":
             history = json.load(f)
     last = history[-1] if history else {}
 
-    # 4. 最終防呆繼承
+    # 5. 最終防呆繼承
     if final_vix == 0: final_vix = last.get('vix', 0)
     if final_us10y == 0: final_us10y = last.get('us_10y', 0)
     if gold_price == 0: gold_price = last.get('gold', 0)
     if usd_twd == 0: usd_twd = last.get('usd_twd', 0)
-    
-    # 股價繼承
     if tw_price == 0: tw_price = last.get('tw_pe', 0) * FIXED_EPS
     
-    # PE 計算
     final_pe = round(tw_price / FIXED_EPS, 2) if tw_price > 0 else last.get('tw_pe', 0)
     final_cnn = cnn_score if cnn_score else last.get('cnn_score', 50)
 
-    # 5. 組合與存檔
+    # 6. 存檔
     final_entry = {
         "date": (datetime.now(timezone.utc) + timedelta(hours=8)).strftime("%Y-%m-%d %H:%M"),
         "cnn_score": final_cnn,
