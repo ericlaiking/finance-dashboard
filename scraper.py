@@ -83,6 +83,20 @@ def get_fear_and_greed():
         return int(r.json()['fear_and_greed']['score'])
     except: return None
 
+def get_tsmc_eps():
+    print("🕵️ 正在從 Yahoo 抓取最新台積電 EPS...")
+    try:
+        ticker = yf.Ticker("2330.TW")
+        # info 字典裡面的 trailingEps 就是近四季 EPS 總和
+        eps = ticker.info.get('trailingEps')
+        if eps and eps > 0:
+            print(f"✅ 成功抓取最新 EPS: {eps}")
+            return round(eps, 2)
+    except Exception as e:
+        print(f"⚠️ EPS 抓取失敗，使用預設值。錯誤: {e}")
+        pass
+    return 66.25 # 如果 Yahoo 當機，保底回傳這個數字
+
 if __name__ == "__main__":
     print("🚀 開始執行爬蟲 (v5.0 Two-Decimal Enforcer)...")
     
