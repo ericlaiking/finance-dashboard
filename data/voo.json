@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-03-10 03:40",
+  "updated_at": "2026-03-10 03:50",
   "fund": {
     "name": "VOO",
-    "price": 624.65,
-    "change_pct": 1.01
+    "price": 623.46,
+    "change_pct": 0.81
   },
   "signal": {
     "action": "HOLD",
@@ -17,7 +17,7 @@
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 26
+      "value": 27
     },
     {
       "id": "us_10y",
@@ -34,7 +34,7 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 25.87
+      "value": 25.24
     }
   ],
   "chart": [
