@@ -4,7 +4,8 @@ on:
   push:
     branches: [ main ]
   schedule:
-    - cron: '*/10 * * * *'
+    # Changed from 10 minutes to every hour as per the refactor plan
+    - cron: '0 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -18,37 +19,30 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          python-version: '3.9'
+          node-version: '20'
 
-      # 這裡記得要有 yfinance
       - name: Install dependencies
-        run: pip install requests yfinance
+        working-directory: ./scraper
+        run: npm check || npm install
 
-      - name: Run Scraper
-        run: python scraper.py
+      - name: Run Scraper Engine
+        working-directory: ./scraper
+        run: node index.js
 
-      - name: Commit and Push (存檔並上傳)
+      - name: Commit and Push
         run: |
-          # 設定機器人身分
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           
-          # 加入所有變更
           git add data/*
           
-          # 檢查是否有變更
           if git diff --quiet && git diff --staged --quiet; then
             echo "沒有新資料，跳過存檔"
           else
-            git commit -m "Auto-update finance data"
-            
-            # ★★★ 關鍵修正：先抓取遠端最新版，並自動合併 (Rebase) ★★★
-            # 這行指令會把別人的修改墊在下面，把機器人的修改疊在最上面
+            git commit -m "Auto-update finance data & decision signals"
             git pull --rebase origin main
-            
-            # 再推上去
             git push
           fi

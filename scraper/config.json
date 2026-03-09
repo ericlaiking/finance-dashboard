@@ -1,0 +1,50 @@
+{
+  "voo": {
+    "buyThresholds": {
+      "fear_greed_max": 25,
+      "sp500_deviation_max": -10,
+      "vix_min": 30
+    },
+    "sellThresholds": {
+      "fear_greed_min": 75,
+      "sp500_deviation_min": 10,
+      "us10y_yield_min": 5.0
+    }
+  },
+  "tw0050": {
+    "ndc_light_current": 39,
+    "buyThresholds": {
+      "ndc_light_max": 17,
+      "foreign_buy_streak_days": 5,
+      "foreign_buy_amount_min_bn": 200
+    },
+    "sellThresholds": {
+      "ndc_light_min": 38,
+      "foreign_sell_streak_days": 1,
+      "foreign_sell_amount_min_bn": 300,
+      "usd_twd_max": 33.5
+    }
+  },
+  "defense00713": {
+    "annual_dividend": 2.5,
+    "buyThresholds": {
+      "yield_gap_min": 3.0,
+      "vix_min": 25
+    },
+    "sellThresholds": {
+      "yield_gap_max": 1.0,
+      "vix_max": 15
+    },
+    "compositeRules": [
+      {
+        "id": "safe_haven_pick",
+        "label": "🏆 資金避風港首選",
+        "priority": 100,
+        "conditions": [
+          { "indicator": "estimated_yield", "op": ">", "value": 6 },
+          { "indicator": "fear_greed", "op": "<", "value": 40 }
+        ]
+      }
+    ]
+  }
+}
