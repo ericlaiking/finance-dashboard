@@ -34,11 +34,9 @@ async function getQuotes(symbols) {
 async function getMADeviation(symbol, maDays = 120) {
   try {
     const period1 = new Date(Date.now() - (maDays + 60) * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
-    const period2 = new Date().toISOString().split('T')[0];
 
     const result = await yahooFinance.chart(symbol, {
       period1,
-      period2,
       interval: '1d'
     });
 
@@ -74,11 +72,9 @@ async function getMADeviation(symbol, maDays = 120) {
 async function getHistoricalPrices(symbol, days = 250) {
   try {
     const period1 = new Date(Date.now() - (days + 60) * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
-    const period2 = new Date().toISOString().split('T')[0];
 
     const result = await yahooFinance.chart(symbol, {
       period1,
-      period2,
       interval: '1d'
     });
 
