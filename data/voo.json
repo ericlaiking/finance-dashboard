@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-10 20:30",
+  "updated_at": "2026-03-10 20:42",
   "fund": {
     "name": "VOO",
     "price": 623.8,
@@ -17,12 +17,12 @@
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 26
+      "value": 27
     },
     {
       "id": "us_10y",
       "name": "10Y 美債殖利率",
-      "value": 4.14,
+      "value": 4.13,
       "unit": "%"
     },
     {
@@ -34,7 +34,7 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 25.6
+      "value": 25.47
     }
   ],
   "chart": [
