@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-03-16 12:50",
+  "updated_at": "2026-03-16 13:00",
   "fund": {
     "name": "00713",
-    "price": 52.5,
-    "change_pct": 0.86
+    "price": 52.45,
+    "change_pct": 0.77
   },
   "signal": {
     "action": "WAIT",
@@ -18,7 +18,7 @@
     {
       "id": "estimated_yield",
       "name": "預估殖利率",
-      "value": 4.76,
+      "value": 4.77,
       "unit": "%"
     },
     {
@@ -29,7 +29,7 @@
     {
       "id": "gold",
       "name": "黃金避險價格",
-      "value": 5022.8,
+      "value": 5019.3,
       "unit": "USD"
     }
   ],
@@ -660,7 +660,7 @@
     },
     {
       "date": "2026-03-16",
-      "close": 52.5
+      "close": 52.45
     }
   ]
 }
