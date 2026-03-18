@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-18 14:50",
+  "updated_at": "2026-03-18 15:00",
   "fund": {
     "name": "0050",
     "price": 77.8,
@@ -23,12 +23,12 @@
     {
       "id": "usd_twd",
       "name": "台幣匯率",
-      "value": 31.84
+      "value": 31.85
     },
     {
       "id": "foreign_buy",
       "name": "外資買賣超",
-      "value": 5,
+      "value": 93,
       "unit": "億"
     }
   ],
