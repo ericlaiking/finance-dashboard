@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-03-21 03:10",
+  "updated_at": "2026-03-21 03:20",
   "fund": {
     "name": "VOO",
-    "price": 597.38,
-    "change_pct": -1.54
+    "price": 597.47,
+    "change_pct": -1.53
   },
   "signal": {
     "action": "BUY",
@@ -34,7 +34,7 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 27.82
+      "value": 27.89
     }
   ],
   "chart": [
@@ -704,7 +704,7 @@
     },
     {
       "date": "2026-03-20",
-      "close": 597.41
+      "close": 597.42
     }
   ]
 }
