@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-03-23 11:40",
+  "updated_at": "2026-03-23 11:50",
   "fund": {
     "name": "00713",
-    "price": 50.85,
-    "change_pct": -1.64
+    "price": 50.9,
+    "change_pct": -1.55
   },
   "signal": {
     "action": "WAIT",
     "label": "觀望 / 減碼",
     "confidence": 70,
     "reasons": [
-      "Yield Gap 僅 0.53% (吸引力低於無風險美債)"
+      "Yield Gap 僅 0.52% (吸引力低於無風險美債)"
     ]
   },
   "compositeSignal": null,
@@ -18,7 +18,7 @@
     {
       "id": "estimated_yield",
       "name": "預估殖利率",
-      "value": 4.92,
+      "value": 4.91,
       "unit": "%"
     },
     {
@@ -29,7 +29,7 @@
     {
       "id": "gold",
       "name": "黃金避險價格",
-      "value": 4354.9,
+      "value": 4347.4,
       "unit": "USD"
     }
   ],
@@ -660,7 +660,7 @@
     },
     {
       "date": "2026-03-23",
-      "close": 50.85
+      "close": 50.9
     }
   ]
 }
