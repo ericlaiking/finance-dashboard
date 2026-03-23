@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-23 23:10",
+  "updated_at": "2026-03-23 23:20",
   "fund": {
     "name": "00713",
     "price": 50.95,
@@ -10,7 +10,7 @@
     "label": "觀望 / 減碼",
     "confidence": 70,
     "reasons": [
-      "Yield Gap 僅 0.57% (吸引力低於無風險美債)"
+      "Yield Gap 僅 0.59% (吸引力低於無風險美債)"
     ]
   },
   "compositeSignal": null,
@@ -24,12 +24,12 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 24.56
+      "value": 24.14
     },
     {
       "id": "gold",
       "name": "黃金避險價格",
-      "value": 4460.1,
+      "value": 4482.7,
       "unit": "USD"
     }
   ],
