@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-25 03:30",
+  "updated_at": "2026-03-25 03:40",
   "fund": {
     "name": "VOO",
-    "price": 603.145,
+    "price": 603.14,
     "change_pct": -0.21
   },
   "signal": {
@@ -28,13 +28,13 @@
     {
       "id": "sp500_deviation",
       "name": "S&P 500 乖離率",
-      "value": -3.61,
+      "value": -3.62,
       "unit": "%"
     },
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 26.32
+      "value": 26.51
     }
   ],
   "chart": [
@@ -700,7 +700,7 @@
     },
     {
       "date": "2026-03-24",
-      "close": 603.12
+      "close": 603.09
     }
   ]
 }
