@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-24 22:40",
+  "updated_at": "2026-03-24 22:50",
   "fund": {
     "name": "0050",
     "price": 74.4,
@@ -28,7 +28,7 @@
     {
       "id": "foreign_buy",
       "name": "外資買賣超",
-      "value": null,
+      "value": -123,
       "unit": "億"
     }
   ],
