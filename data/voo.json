@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-03-27 01:10",
+  "updated_at": "2026-03-27 01:12",
   "fund": {
     "name": "VOO",
-    "price": 598.825,
+    "price": 598.83,
     "change_pct": -1.13
   },
   "signal": {
@@ -22,7 +22,7 @@
     {
       "id": "us_10y",
       "name": "10Y 美債殖利率",
-      "value": 4.4,
+      "value": 4.41,
       "unit": "%"
     },
     {
@@ -34,7 +34,7 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 27.38
+      "value": 27.35
     }
   ],
   "chart": [
