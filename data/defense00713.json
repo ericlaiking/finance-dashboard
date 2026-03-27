@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-27 18:56",
+  "updated_at": "2026-03-27 19:00",
   "fund": {
     "name": "00713",
     "price": 51.6,
@@ -24,12 +24,12 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 29.08
+      "value": 29.1
     },
     {
       "id": "gold",
       "name": "黃金避險價格",
-      "value": 4440.3,
+      "value": 4443.3,
       "unit": "USD"
     }
   ],
