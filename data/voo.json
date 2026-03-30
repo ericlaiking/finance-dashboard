@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-30 18:00",
+  "updated_at": "2026-03-30 18:10",
   "fund": {
     "name": "VOO",
     "price": 582.96,
@@ -10,15 +10,15 @@
     "label": "逢低買入",
     "confidence": 80,
     "reasons": [
-      "Fear & Greed 處於極度恐懼 (11)",
-      "VIX 恐慌攀升 (30.86)"
+      "Fear & Greed 處於極度恐懼 (10)",
+      "VIX 恐慌攀升 (30.98)"
     ]
   },
   "indicators": [
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 11
+      "value": 10
     },
     {
       "id": "us_10y",
@@ -35,7 +35,7 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 30.86
+      "value": 30.98
     }
   ],
   "chart": [
