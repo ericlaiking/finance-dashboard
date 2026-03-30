@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-03-30 13:40",
+  "updated_at": "2026-03-30 13:50",
   "fund": {
     "name": "00713",
-    "price": 51.15,
-    "change_pct": -0.87
+    "price": 51.1,
+    "change_pct": -0.97
   },
   "signal": {
     "action": "WAIT",
@@ -29,7 +29,7 @@
     {
       "id": "gold",
       "name": "黃金避險價格",
-      "value": 4539.2,
+      "value": 4536.2,
       "unit": "USD"
     }
   ],
@@ -660,7 +660,7 @@
     },
     {
       "date": "2026-03-30",
-      "close": 51.15
+      "close": 51.1
     }
   ]
 }
