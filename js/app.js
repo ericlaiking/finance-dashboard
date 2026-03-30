@@ -92,7 +92,7 @@ async function loadAllPrices() {
 
             const priceEl = document.getElementById('price-' + tab.id);
             if (priceEl && data.fund) {
-                const prefix = tab.id === 'voo' ? '$' : 'NT$';
+                const prefix = (tab.id === 'voo' || tab.id === 'qqq') ? '$' : 'NT$';
                 priceEl.textContent = prefix + (data.fund.price || '--');
             }
         } catch (e) {
@@ -223,7 +223,10 @@ function renderIndicators(indicators, container) {
         usd_twd:         { min: 29, max: 35 },
         foreign_buy:     { min: -500, max: 500 },
         estimated_yield: { min: 0, max: 10 },
-        gold:            { min: 3000, max: 6000 }
+        gold:            { min: 3000, max: 6000 },
+        pe:              { min: 10, max: 40 },
+        us_short_yield:  { min: 3, max: 6 },
+        yield_spread:    { min: -1, max: 1 }
     };
 
     indicators.forEach(ind => {
@@ -246,6 +249,10 @@ function renderIndicators(indicators, container) {
             } else if (ind.id === 'ndc_light') {
                 barClass = ind.value <= 17 ? 'bar-buy' : ind.value >= 38 ? 'bar-wait' : 'bar-hold';
             } else if (ind.id === 'vix') {
+                barClass = ind.value >= 30 ? 'bar-wait' : ind.value >= 20 ? 'bar-hold' : 'bar-buy';
+            } else if (ind.id === 'yield_spread') {
+                barClass = ind.value < 0 ? 'bar-wait' : 'bar-hold'; // 倒掛警告
+            } else if (ind.id === 'pe') {
                 barClass = ind.value >= 30 ? 'bar-wait' : ind.value >= 20 ? 'bar-hold' : 'bar-buy';
             }
 

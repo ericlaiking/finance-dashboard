@@ -23,8 +23,8 @@ async function main() {
     // 2. Fetch all raw data concurrently
     console.log("📥 Fetching raw data...");
     
-    // Symbols to fetch: VOO, QQQ, 0050.TW, 00713.TW, VIX, US10Y (^TNX), Gold (GC=F), USD/TWD (TWD=X)
-    const quoteSymbols = ["VOO", "QQQ", "0050.TW", "00713.TW", "^VIX", "^TNX", "GC=F", "TWD=X"];
+    // Symbols to fetch: VOO, QQQ, 0050.TW, 00713.TW, VIX, US10Y (^TNX), US3M (^IRX), Gold (GC=F), USD/TWD (TWD=X)
+    const quoteSymbols = ["VOO", "QQQ", "0050.TW", "00713.TW", "^VIX", "^TNX", "^IRX", "GC=F", "TWD=X"];
     
     const [
         fearGreed,
@@ -63,14 +63,18 @@ async function main() {
     const dataPack = {
         voo_price: quotes["VOO"]?.price || null,
         voo_change: quotes["VOO"]?.changePercent || 0,
+        voo_pe: quotes["VOO"]?.pe || null,
         qqq_price: quotes["QQQ"]?.price || null,
         qqq_change: quotes["QQQ"]?.changePercent || 0,
+        qqq_pe: quotes["QQQ"]?.pe || null,
         tw0050_price: quotes["0050.TW"]?.price || null,
         tw0050_change: quotes["0050.TW"]?.changePercent || 0,
+        tw0050_pe: quotes["0050.TW"]?.pe || null,
         tw00713_price: quotes["00713.TW"]?.price || null,
         tw00713_change: quotes["00713.TW"]?.changePercent || 0,
         vix: quotes["^VIX"]?.price || null,
         us10y: quotes["^TNX"]?.price || null,
+        us3m: quotes["^IRX"]?.price || null,
         gold: quotes["GC=F"]?.price || null,
         usdTwd: quotes["TWD=X"]?.price || null,
         fearGreed,
@@ -106,7 +110,7 @@ async function main() {
         { id: "fear_greed", name: "Fear & Greed Index", value: fearGreed },
         { id: "us_10y", name: "10Y 美債殖利率", value: parseFloat(dataPack.us10y?.toFixed(2) || 0), unit: "%" },
         { id: "sp500_deviation", name: "S&P 500 乖離率", value: sp500Deviation, unit: "%" },
-        { id: "vix", name: "VIX 恐慌指數", value: parseFloat(dataPack.vix?.toFixed(2) || 0) }
+        { id: "pe", name: "本益比 (P/E)", value: parseFloat(dataPack.voo_pe?.toFixed(2) || 0) }
       ],
       chart: vooHistory
     };
@@ -120,7 +124,7 @@ async function main() {
           { id: "fear_greed", name: "Fear & Greed Index", value: fearGreed },
           { id: "us_10y", name: "10Y 美債殖利率", value: parseFloat(dataPack.us10y?.toFixed(2) || 0), unit: "%" },
           { id: "ndx_deviation", name: "Nasdaq 100 乖離率", value: ndxDeviation, unit: "%" },
-          { id: "vix", name: "VIX 恐慌指數", value: parseFloat(dataPack.vix?.toFixed(2) || 0) }
+          { id: "pe", name: "本益比 (P/E)", value: parseFloat(dataPack.qqq_pe?.toFixed(2) || 0) }
         ],
         chart: qqqHistory
     };
@@ -132,6 +136,7 @@ async function main() {
       signal: { action: tw0050Result.action, label: tw0050Result.label, confidence: tw0050Result.confidence, reasons: tw0050Result.reasons },
       indicators: [
         { id: "ndc_light", name: "景氣對策燈號", value: ndcLight, unit: "分" },
+        { id: "pe", name: "本益比 (P/E)", value: parseFloat(dataPack.tw0050_pe?.toFixed(2) || 0) },
         { id: "usd_twd", name: "台幣匯率", value: parseFloat(dataPack.usdTwd?.toFixed(2) || 0) },
         { id: "foreign_buy", name: "外資買賣超", value: foreignBuy, unit: "億" }
       ],
@@ -139,15 +144,17 @@ async function main() {
     };
 
     // 00713 Defense Output
+    const spread = dataPack.us10y && dataPack.us3m ? (dataPack.us10y - dataPack.us3m) : null;
     const defense00713JSON = {
       updated_at: updatedAt,
       fund: { name: "00713", price: dataPack.tw00713_price, change_pct: parseFloat(dataPack.tw00713_change.toFixed(2)) },
       signal: { action: defenseResult.action, label: defenseResult.label, confidence: defenseResult.confidence, reasons: defenseResult.reasons },
       compositeSignal: defenseResult.compositeSignal || null,
       indicators: [
+        { id: "us_short_yield", name: "3M 美債利率", value: parseFloat(dataPack.us3m?.toFixed(2) || 0), unit: "%" },
+        { id: "yield_spread", name: "美債利差 (10Y-3M)", value: parseFloat(spread?.toFixed(2) || 0), unit: "%" },
         { id: "estimated_yield", name: "預估殖利率", value: defenseResult.estimatedYield, unit: "%" },
-        { id: "vix", name: "VIX 恐慌指數", value: parseFloat(dataPack.vix?.toFixed(2) || 0) },
-        { id: "gold", name: "黃金避險價格", value: parseFloat(dataPack.gold?.toFixed(2) || 0), unit: "USD" }
+        { id: "vix", name: "VIX 恐慌指數", value: parseFloat(dataPack.vix?.toFixed(2) || 0) }
       ],
       chart: tw00713History
     };

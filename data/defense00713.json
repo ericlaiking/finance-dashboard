@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-30 20:50",
+  "updated_at": "2026-03-30 20:52",
   "fund": {
     "name": "00713",
     "price": 51.1,
@@ -16,6 +16,18 @@
   "compositeSignal": null,
   "indicators": [
     {
+      "id": "us_short_yield",
+      "name": "3M 美債利率",
+      "value": 3.6,
+      "unit": "%"
+    },
+    {
+      "id": "yield_spread",
+      "name": "美債利差 (10Y-3M)",
+      "value": 0.77,
+      "unit": "%"
+    },
+    {
       "id": "estimated_yield",
       "name": "預估殖利率",
       "value": 4.89,
@@ -25,12 +37,6 @@
       "id": "vix",
       "name": "VIX 恐慌指數",
       "value": 29.99
-    },
-    {
-      "id": "gold",
-      "name": "黃金避險價格",
-      "value": 4602.8,
-      "unit": "USD"
     }
   ],
   "chart": [

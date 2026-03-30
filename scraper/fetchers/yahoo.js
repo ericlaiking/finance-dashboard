@@ -15,6 +15,7 @@ async function getQuotes(symbols) {
         price: quote.regularMarketPrice,
         change: quote.regularMarketChange,
         changePercent: quote.regularMarketChangePercent,
+        pe: quote.trailingPE || quote.forwardPE || null,
         name: quote.shortName || quote.longName
       };
     });
