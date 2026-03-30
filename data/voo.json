@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-31 04:00",
+  "updated_at": "2026-03-31 04:10",
   "fund": {
     "name": "VOO",
     "price": 580.94,
@@ -11,7 +11,7 @@
     "confidence": 80,
     "reasons": [
       "Fear & Greed 處於極度恐懼 (9)",
-      "VIX 恐慌攀升 (30.73)"
+      "VIX 恐慌攀升 (30.27)"
     ]
   },
   "indicators": [
@@ -29,7 +29,7 @@
     {
       "id": "sp500_deviation",
       "name": "S&P 500 乖離率",
-      "value": -6.74,
+      "value": -6.75,
       "unit": "%"
     },
     {
