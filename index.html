@@ -20,11 +20,25 @@
         </div>
     </header>
 
+    <!-- News Ticker -->
+    <div class="news-ticker-container">
+        <div class="news-ticker-label">國際快訊</div>
+        <div class="news-ticker-wrapper">
+            <div class="news-ticker-content" id="news-ticker-content">
+                載入中...
+            </div>
+        </div>
+    </div>
+
     <!-- Tab Navigation -->
     <nav class="tab-nav" id="tab-nav">
         <button class="tab-btn active" data-target="tab-voo" data-source="./data/voo.json">
             🇺🇸 美股 VOO
             <span class="tab-price" id="price-voo">--</span>
+        </button>
+        <button class="tab-btn" data-target="tab-qqq" data-source="./data/qqq.json">
+            🇺🇸 科技 QQQ
+            <span class="tab-price" id="price-qqq">--</span>
         </button>
         <button class="tab-btn" data-target="tab-0050" data-source="./data/tw0050.json">
             🇹🇼 台股 0050
@@ -61,6 +75,25 @@
             </div>
             <div class="canvas-wrapper">
                 <canvas id="chart-voo"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab: QQQ -->
+    <div id="tab-qqq" class="tab-content">
+        <div class="fund-header" id="fund-header-qqq"></div>
+        <div class="indicators-grid" id="grid-qqq"></div>
+        <div class="chart-container">
+            <div class="chart-header">
+                <span class="chart-title">近期走勢</span>
+                <div class="chart-filters" data-target="qqq">
+                    <button class="filter-btn" data-days="30">30D</button>
+                    <button class="filter-btn" data-days="90">90D</button>
+                    <button class="filter-btn active" data-days="180">180D</button>
+                </div>
+            </div>
+            <div class="canvas-wrapper">
+                <canvas id="chart-qqq"></canvas>
             </div>
         </div>
     </div>

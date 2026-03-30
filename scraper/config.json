@@ -46,5 +46,17 @@
         ]
       }
     ]
+  },
+  "qqq": {
+    "buyThresholds": {
+      "fear_greed_max": 25,
+      "ndx_deviation_max": -10,
+      "vix_min": 30
+    },
+    "sellThresholds": {
+      "fear_greed_min": 75,
+      "ndx_deviation_min": 10,
+      "us10y_yield_min": 5.0
+    }
   }
 }

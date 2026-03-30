@@ -94,8 +94,32 @@ async function getHistoricalPrices(symbol, days = 250) {
   }
 }
 
+/**
+ * Fetch latest news for a given query (e.g. symbol or generic topic)
+ * @param {string} query
+ * @returns {Array<{title: string, link: string, publisher: string, time: string}>}
+ */
+async function getNews(query) {
+  try {
+    const result = await yahooFinance.search(query);
+    if (result && result.news) {
+      return result.news.filter(n => n.title && n.link).map(n => ({
+        title: n.title,
+        link: n.link,
+        publisher: n.publisher,
+        time: new Date(n.providerPublishTime).toISOString()
+      })).slice(0, 10);
+    }
+    return [];
+  } catch (error) {
+    console.error(`❌ [Yahoo Fetcher] Failed to get news for ${query}:`, error.message);
+    return [];
+  }
+}
+
 module.exports = {
   getQuotes,
   getMADeviation,
-  getHistoricalPrices
+  getHistoricalPrices,
+  getNews
 };

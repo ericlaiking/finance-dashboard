@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     loadAllPrices();
+    loadNews();
     document.querySelector('.tab-btn.active').click();
 });
 
@@ -77,6 +78,7 @@ function updateToggleIcon(theme) {
 async function loadAllPrices() {
     const tabs = [
         { id: 'voo', url: './data/voo.json' },
+        { id: 'qqq', url: './data/qqq.json' },
         { id: '0050', url: './data/tw0050.json' },
         { id: '00713', url: './data/defense00713.json' }
     ];
@@ -131,6 +133,31 @@ async function loadTabData(url, tabId) {
         if (!dataCache[shortId]) {
             gridEl.innerHTML = '<div class="error-msg">無法載入數據，請稍後再試。</div>';
         }
+    }
+}
+
+async function loadNews() {
+    try {
+        const res = await fetch('./data/news.json?t=' + Date.now());
+        if (!res.ok) return;
+        const data = await res.json();
+        
+        const tickerEl = document.getElementById('news-ticker-content');
+        if (!tickerEl || !data.items || data.items.length === 0) return;
+        
+        // 重複項目以產生無縫滾動感
+        const displayItems = [...data.items, ...data.items];
+
+        tickerEl.innerHTML = displayItems.map(item => {
+            const time = new Date(item.time).toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' });
+            return `<div class="news-item">
+                <span class="news-time">[${time}]</span>
+                <a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.title}</a>
+                <span style="font-size:11px;color:var(--text-muted);">— ${item.publisher}</span>
+            </div>`;
+        }).join('');
+    } catch (e) {
+        console.warn('Failed to load news', e);
     }
 }
 
