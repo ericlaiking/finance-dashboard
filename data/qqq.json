@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-03-31 01:50",
+  "updated_at": "2026-03-31 02:00",
   "fund": {
     "name": "QQQ",
-    "price": 559.95,
-    "change_pct": -0.47
+    "price": 559.98,
+    "change_pct": -0.46
   },
   "signal": {
     "action": "BUY",
@@ -11,7 +11,7 @@
     "confidence": 80,
     "reasons": [
       "Fear & Greed 處於極度恐懼 (9)",
-      "VIX 恐慌攀升 (30.95)"
+      "VIX 恐慌攀升 (30.58)"
     ]
   },
   "indicators": [
@@ -697,7 +697,7 @@
     },
     {
       "date": "2026-03-30",
-      "close": 560.05
+      "close": 560.01
     }
   ]
 }
