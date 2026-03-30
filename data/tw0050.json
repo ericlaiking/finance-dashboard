@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-03-30 10:50",
+  "updated_at": "2026-03-30 11:00",
   "fund": {
     "name": "0050",
-    "price": 73.25,
-    "change_pct": -2.33
+    "price": 73.3,
+    "change_pct": -2.27
   },
   "signal": {
     "action": "WAIT",
@@ -24,7 +24,7 @@
     {
       "id": "usd_twd",
       "name": "台幣匯率",
-      "value": 32.01
+      "value": 32.02
     },
     {
       "id": "foreign_buy",
