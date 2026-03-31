@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-03-31 23:30",
+  "updated_at": "2026-03-31 23:40",
   "items": [
+    {
+      "title": "Nvidia invests $2B in Marvell, Eli Lilly to buy drugmaker Centessa",
+      "link": "https://finance.yahoo.com/video/nvidia-invests-2b-in-marvell-eli-lilly-to-buy-drugmaker-centessa-152754611.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-03-31T15:27:54.000Z"
+    },
     {
       "title": "Municipality Finance issues EUR 15 million notes under its MTN programme",
       "link": "https://finance.yahoo.com/markets/options/articles/municipality-finance-issues-eur-15-070000355.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/economy/articles/capex-finance-index-february-2026-120000584.html",
       "publisher": "GlobeNewswire",
       "time": "2026-03-31T12:00:00.000Z"
-    },
-    {
-      "title": "duPont REGISTRY Group Acquires LLP Exotic Auto Finance, Expanding Leasing and Financing Capabilities",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/dupont-registry-group-acquires-llp-130000617.html",
-      "publisher": "Business Wire",
-      "time": "2026-03-31T13:00:00.000Z"
     }
   ]
 }
