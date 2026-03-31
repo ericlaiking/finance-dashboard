@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-04-01 01:10",
+  "updated_at": "2026-04-01 01:20",
   "fund": {
     "name": "VOO",
-    "price": 594.35,
-    "change_pct": 2.31
+    "price": 595.635,
+    "change_pct": 2.53
   },
   "signal": {
     "action": "BUY",
@@ -28,13 +28,13 @@
     {
       "id": "sp500_deviation",
       "name": "S&P 500 乖離率",
-      "value": -4.58,
+      "value": -4.36,
       "unit": "%"
     },
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 25.67
+      "value": 25.73
     }
   ],
   "chart": [
@@ -700,7 +700,7 @@
     },
     {
       "date": "2026-03-31",
-      "close": 594.37
+      "close": 595.64
     }
   ]
 }
