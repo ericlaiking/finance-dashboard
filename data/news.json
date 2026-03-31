@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-03-31 13:10",
+  "updated_at": "2026-03-31 13:20",
   "items": [
+    {
+      "title": "US Charges Hacker Behind $53 Million Uranium Finance Exploit",
+      "link": "https://finance.yahoo.com/m/46bc02aa-786e-3644-9d05-be2c3c39212d/us-charges-hacker-behind-%2453.html",
+      "publisher": "decrypt",
+      "time": "2026-03-31T05:04:06.000Z"
+    },
     {
       "title": "Russia is about to roll the dice on crypto regulation. Here’s its playbook",
       "link": "https://finance.yahoo.com/m/bf225d1c-c007-3ad4-b37a-89991841ba75/russia-is-about-to-roll-the.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/municipality-finance-issues-gbp-100-070000891.html",
       "publisher": "GlobeNewswire",
       "time": "2026-03-30T07:00:00.000Z"
-    },
-    {
-      "title": "Alaska Air sinks on fuel prices, Iran strike boosts aluminum stocks",
-      "link": "https://finance.yahoo.com/video/alaska-air-sinks-on-fuel-prices-iran-strike-boosts-aluminum-stocks-145450528.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-03-30T14:54:50.000Z"
     }
   ]
 }
