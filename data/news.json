@@ -1,12 +1,6 @@
 {
-  "updated_at": "2026-03-31 16:50",
+  "updated_at": "2026-03-31 17:00",
   "items": [
-    {
-      "title": "Municipality Finance issues EUR 25 million notes under its MTN programme",
-      "link": "https://finance.yahoo.com/markets/options/articles/municipality-finance-issues-eur-25-070000677.html",
-      "publisher": "GlobeNewswire",
-      "time": "2026-03-31T07:00:00.000Z"
-    },
     {
       "title": "Municipality Finance issues EUR 15 million notes under its MTN programme",
       "link": "https://finance.yahoo.com/markets/options/articles/municipality-finance-issues-eur-15-070000355.html",
@@ -14,16 +8,22 @@
       "time": "2026-03-31T07:00:00.000Z"
     },
     {
+      "title": "Municipality Finance issues EUR 25 million notes under its MTN programme",
+      "link": "https://finance.yahoo.com/markets/options/articles/municipality-finance-issues-eur-25-070000677.html",
+      "publisher": "GlobeNewswire",
+      "time": "2026-03-31T07:00:00.000Z"
+    },
+    {
+      "title": "Workday AI Integration With AppZen May Reframe Valuation And Growth Story",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/workday-ai-integration-appzen-may-081745863.html",
+      "publisher": "Simply Wall St.",
+      "time": "2026-03-31T08:17:45.000Z"
+    },
+    {
       "title": "US Charges Hacker Behind $53 Million Uranium Finance Exploit",
       "link": "https://finance.yahoo.com/m/46bc02aa-786e-3644-9d05-be2c3c39212d/us-charges-hacker-behind-%2453.html",
       "publisher": "decrypt",
       "time": "2026-03-31T05:04:06.000Z"
-    },
-    {
-      "title": "Alleged Uranium Finance Hacker Faces 30 Years Over Crypto Theft",
-      "link": "https://finance.yahoo.com/m/cef9ce2b-7bc9-3aa4-b5d8-8c6ac510b56c/alleged-uranium-finance.html",
-      "publisher": "BeInCrypto",
-      "time": "2026-03-31T05:16:51.000Z"
     }
   ]
 }
