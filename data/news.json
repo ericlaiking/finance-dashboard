@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-03-31 13:20",
+  "updated_at": "2026-03-31 13:30",
   "items": [
     {
       "title": "US Charges Hacker Behind $53 Million Uranium Finance Exploit",
       "link": "https://finance.yahoo.com/m/46bc02aa-786e-3644-9d05-be2c3c39212d/us-charges-hacker-behind-%2453.html",
       "publisher": "decrypt",
       "time": "2026-03-31T05:04:06.000Z"
+    },
+    {
+      "title": "Alleged Uranium Finance Hacker Faces 30 Years Over Crypto Theft",
+      "link": "https://finance.yahoo.com/m/cef9ce2b-7bc9-3aa4-b5d8-8c6ac510b56c/alleged-uranium-finance.html",
+      "publisher": "BeInCrypto",
+      "time": "2026-03-31T05:16:51.000Z"
     },
     {
       "title": "Russia is about to roll the dice on crypto regulation. Here’s its playbook",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/video/nasdaq-100-speeds-up-ipo-inclusion-stocks-slide-on-oil-fears-183157500.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-03-30T18:31:57.000Z"
-    },
-    {
-      "title": "Municipality Finance issues a GBP 100 million tap under its MTN programme",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/municipality-finance-issues-gbp-100-070000891.html",
-      "publisher": "GlobeNewswire",
-      "time": "2026-03-30T07:00:00.000Z"
     }
   ]
 }
