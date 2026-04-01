@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-02 01:00",
+  "updated_at": "2026-04-02 01:05",
   "items": [
     {
       "title": "Swiss finance minister sues for defamation over Grok-created post",
       "link": "https://finance.yahoo.com/m/1a579b8f-93f2-301b-aee1-e30a8aa0a083/swiss-finance-minister-sues.html",
       "publisher": "Reuters",
       "time": "2026-04-01T11:50:58.000Z"
+    },
+    {
+      "title": "Liventus Acquires Tamarack to Become the Most Comprehensive Technology Partner for Equipment Finance Organizations",
+      "link": "https://finance.yahoo.com/sectors/technology/articles/liventus-acquires-tamarack-become-most-164900811.html",
+      "publisher": "PR Newswire",
+      "time": "2026-04-01T16:49:00.000Z"
     },
     {
       "title": "Q1 US Leveraged Finance Survey: Geopolitics, gas prices add fuel to risk-off sentiment",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/willis-lease-finance-corporation-closes-120000575.html",
       "publisher": "GlobeNewswire",
       "time": "2026-04-01T12:00:00.000Z"
-    },
-    {
-      "title": "Octane Partners with Suzuki to Expand Financing to Prime Customers",
-      "link": "https://finance.yahoo.com/economy/policy/articles/octane-partners-suzuki-expand-financing-131000982.html",
-      "publisher": "PR Newswire",
-      "time": "2026-04-01T13:10:00.000Z"
     }
   ]
 }
