@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-02 04:30",
+  "updated_at": "2026-04-02 04:40",
   "items": [
     {
       "title": "The state of women’s finances: How homeownership is becoming the great equalizer",
       "link": "https://finance.yahoo.com/economy/articles/state-women-finances-homeownership-becoming-195935179.html",
       "publisher": "Bankrate",
       "time": "2026-04-01T19:59:35.000Z"
+    },
+    {
+      "title": "Blue Owl Technology Finance Corp. Schedules Earnings Release and Quarterly Earnings Call to Discuss its First Quarter Ended March 31, 2026 Financial Results",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/blue-owl-technology-finance-corp-202100694.html",
+      "publisher": "PR Newswire",
+      "time": "2026-04-01T20:21:00.000Z"
     },
     {
       "title": "SpaceX files confidential IPO, Eli Lilly's obesity pill gets US approval",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/video/intel-to-spend-142b-to-buy-back-ireland-fab-stake-cal-maine-stock-pops-181032277.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-04-01T18:10:32.000Z"
-    },
-    {
-      "title": "Swiss finance minister sues for defamation over Grok-created post",
-      "link": "https://finance.yahoo.com/m/1a579b8f-93f2-301b-aee1-e30a8aa0a083/swiss-finance-minister-sues.html",
-      "publisher": "Reuters",
-      "time": "2026-04-01T11:50:58.000Z"
     }
   ]
 }
