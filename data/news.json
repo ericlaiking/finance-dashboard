@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-01 20:00",
+  "updated_at": "2026-04-01 20:10",
   "items": [
     {
       "title": "Swiss finance minister sues for defamation over Grok-created post",
       "link": "https://finance.yahoo.com/m/1a579b8f-93f2-301b-aee1-e30a8aa0a083/swiss-finance-minister-sues.html",
       "publisher": "Reuters",
       "time": "2026-04-01T11:50:58.000Z"
+    },
+    {
+      "title": "Willis Lease Finance Corporation Closes Two Additional JOLCO Deals, Bringing Total JOLCO Financing to Nearly $150 Million",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/willis-lease-finance-corporation-closes-120000575.html",
+      "publisher": "GlobeNewswire",
+      "time": "2026-04-01T12:00:00.000Z"
     },
     {
       "title": "Why your chocolate bunnies might cost more this year",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/quickfi-enables-air-tow-trailers-103000445.html",
       "publisher": "PR Newswire",
       "time": "2026-04-01T10:30:00.000Z"
-    },
-    {
-      "title": "NewcelX Announces Pricing of $1.35 Million Equity Financing at 30% Premium Pricing",
-      "link": "https://finance.yahoo.com/sectors/healthcare/articles/newcelx-announces-pricing-1-35-112100100.html",
-      "publisher": "GlobeNewswire",
-      "time": "2026-04-01T11:21:00.000Z"
     }
   ]
 }
