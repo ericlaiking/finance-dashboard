@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-01 21:50",
+  "updated_at": "2026-04-01 21:54",
   "items": [
     {
       "title": "Swiss finance minister sues for defamation over Grok-created post",
       "link": "https://finance.yahoo.com/m/1a579b8f-93f2-301b-aee1-e30a8aa0a083/swiss-finance-minister-sues.html",
       "publisher": "Reuters",
       "time": "2026-04-01T11:50:58.000Z"
+    },
+    {
+      "title": "Q1 US Leveraged Finance Survey: Geopolitics, gas prices add fuel to risk-off sentiment",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/q1-us-leveraged-finance-survey-133539398.html",
+      "publisher": "Pitchbook",
+      "time": "2026-04-01T13:35:39.000Z"
     },
     {
       "title": "Willis Lease Finance Corporation Closes Two Additional JOLCO Deals, Bringing Total JOLCO Financing to Nearly $150 Million",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/economy/policy/articles/octane-partners-suzuki-expand-financing-131000982.html",
       "publisher": "PR Newswire",
       "time": "2026-04-01T13:10:00.000Z"
-    },
-    {
-      "title": "Q4 Thrifts & Mortgage Finance Earnings: Arbor Realty Trust (NYSE:ABR) Impresses",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/q4-thrifts-mortgage-finance-earnings-130326275.html",
-      "publisher": "StockStory",
-      "time": "2026-04-01T13:03:26.000Z"
     }
   ]
 }
