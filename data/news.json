@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-01 19:50",
+  "updated_at": "2026-04-01 20:00",
   "items": [
+    {
+      "title": "Swiss finance minister sues for defamation over Grok-created post",
+      "link": "https://finance.yahoo.com/m/1a579b8f-93f2-301b-aee1-e30a8aa0a083/swiss-finance-minister-sues.html",
+      "publisher": "Reuters",
+      "time": "2026-04-01T11:50:58.000Z"
+    },
     {
       "title": "Why your chocolate bunnies might cost more this year",
       "link": "https://finance.yahoo.com/video/why-your-chocolate-bunnies-might-cost-more-this-year-103000675.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/sectors/healthcare/articles/newcelx-announces-pricing-1-35-112100100.html",
       "publisher": "GlobeNewswire",
       "time": "2026-04-01T11:21:00.000Z"
-    },
-    {
-      "title": "DeFi’s true believers reminisce in Cannes as they hunt for crypto’s next big thing",
-      "link": "https://finance.yahoo.com/m/99dfd3c8-9cd6-3e07-9906-5428efe3f1e4/defi%E2%80%99s-true-believers.html",
-      "publisher": "DLNews",
-      "time": "2026-04-01T09:38:04.000Z"
     }
   ]
 }
