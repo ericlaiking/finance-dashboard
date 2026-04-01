@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-02 04:10",
+  "updated_at": "2026-04-02 04:20",
   "items": [
+    {
+      "title": "The state of women’s finances: How homeownership is becoming the great equalizer",
+      "link": "https://finance.yahoo.com/economy/articles/state-women-finances-homeownership-becoming-195935179.html",
+      "publisher": "Bankrate",
+      "time": "2026-04-01T19:59:35.000Z"
+    },
     {
       "title": "SpaceX files confidential IPO, Eli Lilly's obesity pill gets US approval",
       "link": "https://finance.yahoo.com/video/spacex-files-confidential-ipo-eli-lillys-obesity-pill-gets-us-approval-173901413.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/m/1a579b8f-93f2-301b-aee1-e30a8aa0a083/swiss-finance-minister-sues.html",
       "publisher": "Reuters",
       "time": "2026-04-01T11:50:58.000Z"
-    },
-    {
-      "title": "Oppenheimer Lowers Chicago Atlantic Real Estate Finance, Inc. (REFI) from Outperform to Perform",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/oppenheimer-lowers-chicago-atlantic-real-165707979.html",
-      "publisher": "Insider Monkey",
-      "time": "2026-04-01T16:57:07.000Z"
     }
   ]
 }
