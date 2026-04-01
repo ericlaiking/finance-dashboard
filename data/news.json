@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-02 01:40",
+  "updated_at": "2026-04-02 01:50",
   "items": [
+    {
+      "title": "SpaceX files confidential IPO, Eli Lilly's obesity pill gets US approval",
+      "link": "https://finance.yahoo.com/video/spacex-files-confidential-ipo-eli-lillys-obesity-pill-gets-us-approval-173901413.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-01T17:39:01.000Z"
+    },
     {
       "title": "Swiss finance minister sues for defamation over Grok-created post",
       "link": "https://finance.yahoo.com/m/1a579b8f-93f2-301b-aee1-e30a8aa0a083/swiss-finance-minister-sues.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/sectors/technology/articles/liventus-acquires-tamarack-become-most-164900811.html",
       "publisher": "PR Newswire",
       "time": "2026-04-01T16:49:00.000Z"
-    },
-    {
-      "title": "Q1 US Leveraged Finance Survey: Geopolitics, gas prices add fuel to risk-off sentiment",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/q1-us-leveraged-finance-survey-133539398.html",
-      "publisher": "Pitchbook",
-      "time": "2026-04-01T13:35:39.000Z"
     }
   ]
 }
