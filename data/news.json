@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-02 02:10",
+  "updated_at": "2026-04-02 02:20",
   "items": [
     {
       "title": "SpaceX files confidential IPO, Eli Lilly's obesity pill gets US approval",
       "link": "https://finance.yahoo.com/video/spacex-files-confidential-ipo-eli-lillys-obesity-pill-gets-us-approval-173901413.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-04-01T17:39:01.000Z"
+    },
+    {
+      "title": "Intel to spend $14.2B to buy back Ireland fab stake, Cal-Maine stock pops",
+      "link": "https://finance.yahoo.com/video/intel-to-spend-142b-to-buy-back-ireland-fab-stake-cal-maine-stock-pops-181032277.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-01T18:10:32.000Z"
     },
     {
       "title": "Swiss finance minister sues for defamation over Grok-created post",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/oppenheimer-lowers-chicago-atlantic-real-165707979.html",
       "publisher": "Insider Monkey",
       "time": "2026-04-01T16:57:07.000Z"
-    },
-    {
-      "title": "Liventus Acquires Tamarack to Become the Most Comprehensive Technology Partner for Equipment Finance Organizations",
-      "link": "https://finance.yahoo.com/sectors/technology/articles/liventus-acquires-tamarack-become-most-164900811.html",
-      "publisher": "PR Newswire",
-      "time": "2026-04-01T16:49:00.000Z"
     }
   ]
 }
