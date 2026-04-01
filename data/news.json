@@ -1,6 +1,18 @@
 {
-  "updated_at": "2026-04-01 18:30",
+  "updated_at": "2026-04-01 18:40",
   "items": [
+    {
+      "title": "Why your chocolate bunnies might cost more this year",
+      "link": "https://finance.yahoo.com/video/why-your-chocolate-bunnies-might-cost-more-this-year-103000675.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-01T10:30:00.000Z"
+    },
+    {
+      "title": "QuickFi Enables Air-tow Trailers National Digital Captive Finance Program",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/quickfi-enables-air-tow-trailers-103000445.html",
+      "publisher": "PR Newswire",
+      "time": "2026-04-01T10:30:00.000Z"
+    },
     {
       "title": "DeFi’s true believers reminisce in Cannes as they hunt for crypto’s next big thing",
       "link": "https://finance.yahoo.com/m/99dfd3c8-9cd6-3e07-9906-5428efe3f1e4/defi%E2%80%99s-true-believers.html",
@@ -12,18 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/look-alkane-resources-asx-alk-071556449.html",
       "publisher": "Simply Wall St.",
       "time": "2026-04-01T07:15:56.000Z"
-    },
-    {
-      "title": "How YOLO investors are shifting market dynamics",
-      "link": "https://finance.yahoo.com/video/how-yolo-investors-are-shifting-market-dynamics-100000998.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-04-01T10:00:00.000Z"
-    },
-    {
-      "title": "Morning Brief: Stocks roar back, plus our giant, action-packed Q1 roundup",
-      "link": "https://finance.yahoo.com/news/morning-brief-stocks-roar-back-plus-our-giant-action-packed-q1-roundup-100033568.html",
-      "publisher": "Yahoo Finance",
-      "time": "2026-04-01T10:00:33.000Z"
     }
   ]
 }
