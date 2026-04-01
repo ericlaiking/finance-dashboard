@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-04-02 00:50",
+  "updated_at": "2026-04-02 01:00",
   "fund": {
     "name": "VOO",
-    "price": 604.72,
-    "change_pct": 1.2
+    "price": 604.67,
+    "change_pct": 1.19
   },
   "signal": {
     "action": "BUY",
@@ -22,7 +22,7 @@
     {
       "id": "us_10y",
       "name": "10Y 美債殖利率",
-      "value": 4.31,
+      "value": 4.3,
       "unit": "%"
     },
     {
@@ -704,7 +704,7 @@
     },
     {
       "date": "2026-04-01",
-      "close": 604.73
+      "close": 604.68
     }
   ]
 }
