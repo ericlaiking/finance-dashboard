@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-02 14:30",
+  "updated_at": "2026-04-02 14:40",
   "items": [
     {
       "title": "The state of women’s finances: How homeownership is becoming the great equalizer",
       "link": "https://finance.yahoo.com/economy/articles/state-women-finances-homeownership-becoming-195935179.html",
       "publisher": "Bankrate",
       "time": "2026-04-01T19:59:35.000Z"
+    },
+    {
+      "title": "Accor Welcomes Aimie, a New Team Member and Performance Engine for Finance",
+      "link": "https://finance.yahoo.com/sectors/technology/articles/accor-welcomes-aimie-team-member-063500983.html",
+      "publisher": "GlobeNewswire",
+      "time": "2026-04-02T06:35:00.000Z"
     },
     {
       "title": "A Look At CIBC (TSX:CM) Valuation After New ETF Launch And Fintech Financing Moves",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/blue-owl-technology-finance-corp-202100694.html",
       "publisher": "PR Newswire",
       "time": "2026-04-01T20:21:00.000Z"
-    },
-    {
-      "title": "SpaceX files confidential IPO, Eli Lilly's obesity pill gets US approval",
-      "link": "https://finance.yahoo.com/video/spacex-files-confidential-ipo-eli-lillys-obesity-pill-gets-us-approval-173901413.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-04-01T17:39:01.000Z"
     }
   ]
 }
