@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-03 03:00",
+  "updated_at": "2026-04-03 03:07",
   "fund": {
     "name": "00713",
     "price": 51.35,
@@ -18,7 +18,7 @@
     {
       "id": "us_short_yield",
       "name": "3M 美債利率",
-      "value": 3.61,
+      "value": 3.6,
       "unit": "%"
     },
     {
@@ -36,7 +36,7 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 25.13
+      "value": 25.05
     }
   ],
   "chart": [
