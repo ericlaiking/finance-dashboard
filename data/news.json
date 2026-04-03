@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-03 16:20",
+  "updated_at": "2026-04-03 16:30",
   "items": [
     {
       "title": "Finance & Restructuring Lawyer Peter Knust Joins Dorsey in London",
       "link": "https://finance.yahoo.com/sectors/technology/articles/finance-restructuring-lawyer-peter-knust-181300911.html",
       "publisher": "Business Wire",
       "time": "2026-04-02T18:13:00.000Z"
+    },
+    {
+      "title": "IMF Identifies 4 Risks Tokenized Finance Poses to Global Financial System",
+      "link": "https://finance.yahoo.com/m/dd20a734-8754-3658-9eef-35d32abe7e69/imf-identifies-4-risks.html",
+      "publisher": "BeInCrypto",
+      "time": "2026-04-03T08:03:53.000Z"
     },
     {
       "title": "B. Riley Initiates Coverage on Finance of America With Buy Rating, $22.50 Price Target",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/finance-america-introduces-homesafe-second-120000258.html",
       "publisher": "Business Wire",
       "time": "2026-04-02T12:00:00.000Z"
-    },
-    {
-      "title": "Bitcoin, crypto stocks slipping lower alongside broader markets",
-      "link": "https://finance.yahoo.com/video/bitcoin-crypto-stocks-slipping-lower-alongside-broader-markets-193058910.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-04-02T19:30:58.000Z"
     }
   ]
 }
