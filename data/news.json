@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-03 20:10",
+  "updated_at": "2026-04-03 20:20",
   "items": [
+    {
+      "title": "Yahoo Finance goes 'undercover' at McDonald's and works a shift",
+      "link": "https://finance.yahoo.com/video/yahoo-finance-goes-undercover-at-mcdonalds-and-works-a-shift-120000271.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-03T12:00:00.000Z"
+    },
     {
       "title": "Unpacking Q4 Earnings: Ally Financial (NYSE:ALLY) In The Context Of Other Consumer Finance Stocks",
       "link": "https://finance.yahoo.com/markets/stocks/articles/unpacking-q4-earnings-ally-financial-101250600.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/sectors/technology/articles/finance-restructuring-lawyer-peter-knust-181300911.html",
       "publisher": "Business Wire",
       "time": "2026-04-02T18:13:00.000Z"
-    },
-    {
-      "title": "How you can reevaluate your finances in times of uncertainty",
-      "link": "https://finance.yahoo.com/video/how-you-can-reevaluate-your-finances-in-times-of-uncertainty-103000442.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-04-03T10:30:00.000Z"
     }
   ]
 }
