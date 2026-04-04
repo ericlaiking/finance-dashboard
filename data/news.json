@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-04 15:00",
+  "updated_at": "2026-04-04 15:10",
   "items": [
     {
       "title": "What’s News: Business & Finance",
       "link": "https://finance.yahoo.com/m/dd6538cf-593e-3c6f-91a8-060a30d7981a/what%E2%80%99s-news%3A-business-%26.html",
       "publisher": "The Wall Street Journal",
       "time": "2026-04-04T04:01:00.000Z"
+    },
+    {
+      "title": "Private-Credit Funds Face Higher Financing Costs in Bond Market. Here’s Why.",
+      "link": "https://finance.yahoo.com/m/a1afd862-d1ef-312c-b632-80e38e614b45/private-credit-funds-face.html",
+      "publisher": "Barrons.com",
+      "time": "2026-04-04T06:30:00.000Z"
     },
     {
       "title": "Assessing Willis Lease Finance (WLFC) Valuation After A Strong Multi‑Year Share Price Run",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/sectors/healthcare/articles/assessing-crispr-therapeutics-crsp-valuation-060922682.html",
       "publisher": "Simply Wall St.",
       "time": "2026-04-04T06:09:22.000Z"
-    },
-    {
-      "title": "A Look At Perimeter Solutions (PRM) Valuation After UBS Upgrade To Buy",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/look-perimeter-solutions-prm-valuation-060852342.html",
-      "publisher": "Simply Wall St.",
-      "time": "2026-04-04T06:08:52.000Z"
     }
   ]
 }
