@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-04 12:10",
+  "updated_at": "2026-04-04 12:20",
   "items": [
+    {
+      "title": "What’s News: Business & Finance",
+      "link": "https://finance.yahoo.com/m/dd6538cf-593e-3c6f-91a8-060a30d7981a/what%E2%80%99s-news%3A-business-%26.html",
+      "publisher": "The Wall Street Journal",
+      "time": "2026-04-04T04:01:00.000Z"
+    },
     {
       "title": "Assessing Willis Lease Finance (WLFC) Valuation After A Strong Multi‑Year Share Price Run",
       "link": "https://finance.yahoo.com/markets/stocks/articles/assessing-willis-lease-finance-wlfc-170746176.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/video/yahoo-finance-goes-undercover-at-mcdonalds-and-works-a-shift-120000271.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-04-03T12:00:00.000Z"
-    },
-    {
-      "title": "OFN Statement on the Fiscal Year 2027 President's Budget Request",
-      "link": "https://finance.yahoo.com/economy/policy/articles/ofn-statement-fiscal-2027-presidents-200100410.html",
-      "publisher": "PR Newswire",
-      "time": "2026-04-03T20:01:00.000Z"
     }
   ]
 }
