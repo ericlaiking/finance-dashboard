@@ -1,23 +1,23 @@
 {
-  "updated_at": "2026-04-06 21:50",
+  "updated_at": "2026-04-06 22:00",
   "fund": {
     "name": "QQQ",
-    "price": 588.44,
-    "change_pct": 0.59
+    "price": 589.5601,
+    "change_pct": 0.78
   },
   "signal": {
     "action": "BUY",
     "label": "逢低買入",
     "confidence": 70,
     "reasons": [
-      "Fear & Greed 處於極度恐懼 (22)"
+      "Fear & Greed 處於極度恐懼 (21)"
     ]
   },
   "indicators": [
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 22
+      "value": 21
     },
     {
       "id": "us_10y",
@@ -28,13 +28,13 @@
     {
       "id": "ndx_deviation",
       "name": "Nasdaq 100 乖離率",
-      "value": -3.53,
+      "value": -3.42,
       "unit": "%"
     },
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 31.67
+      "value": 31.73
     }
   ],
   "chart": [
@@ -692,7 +692,7 @@
     },
     {
       "date": "2026-04-06",
-      "close": 588.52
+      "close": 589.73
     }
   ]
 }
