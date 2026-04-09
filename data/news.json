@@ -1,12 +1,6 @@
 {
-  "updated_at": "2026-04-10 00:20",
+  "updated_at": "2026-04-10 00:25",
   "items": [
-    {
-      "title": "Does Amazon really have more growth avenues than McDonald's?",
-      "link": "https://finance.yahoo.com/video/does-amazon-really-have-more-growth-avenues-than-mcdonalds-160000593.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-04-09T16:00:00.000Z"
-    },
     {
       "title": "Trade Finance Market Size to Reach USD 93.46 Billion by 2035, Fueled by Globalization and Digital Trade Solutions | SNS Insider",
       "link": "https://finance.yahoo.com/economy/policy/articles/trade-finance-market-size-reach-063000308.html",
@@ -24,6 +18,12 @@
       "link": "https://finance.yahoo.com/sectors/technology/articles/oracle-introduces-fusion-agentic-applications-120000815.html",
       "publisher": "PR Newswire",
       "time": "2026-04-09T12:00:00.000Z"
+    },
+    {
+      "title": "Michael Burry: 'Anthropic is eating Palantir's lunch,' stock sinks",
+      "link": "https://finance.yahoo.com/video/michael-burry-anthropic-is-eating-palantirs-lunch-stock-sinks-154829521.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-09T15:48:29.000Z"
     }
   ]
 }
