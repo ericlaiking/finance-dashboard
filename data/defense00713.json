@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-04-09 11:20",
+  "updated_at": "2026-04-09 11:30",
   "fund": {
     "name": "00713",
-    "price": 52.25,
-    "change_pct": -0.1
+    "price": 52.3,
+    "change_pct": 0
   },
   "signal": {
     "action": "WAIT",
@@ -36,7 +36,7 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 25.78
+      "value": 21.04
     }
   ],
   "chart": [
@@ -662,7 +662,7 @@
     },
     {
       "date": "2026-04-09",
-      "close": 52.25
+      "close": 52.3
     }
   ]
 }
