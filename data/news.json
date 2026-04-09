@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-10 02:20",
+  "updated_at": "2026-04-10 02:30",
   "items": [
+    {
+      "title": "Amazon stock is in focus as DOJ launches antitrust NFL probe",
+      "link": "https://finance.yahoo.com/video/amazon-stock-is-in-focus-as-doj-launches-antitrust-nfl-probe-181701505.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-09T18:17:01.000Z"
+    },
     {
       "title": "Does Amazon really have more growth avenues than McDonald's?",
       "link": "https://finance.yahoo.com/video/does-amazon-really-have-more-growth-avenues-than-mcdonalds-160000593.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/sectors/technology/articles/zone-co-acquires-sudozi-expand-130000927.html",
       "publisher": "PR Newswire",
       "time": "2026-04-09T13:00:00.000Z"
-    },
-    {
-      "title": "Oracle Introduces Fusion Agentic Applications for Finance and Supply Chain",
-      "link": "https://finance.yahoo.com/sectors/technology/articles/oracle-introduces-fusion-agentic-applications-120000815.html",
-      "publisher": "PR Newswire",
-      "time": "2026-04-09T12:00:00.000Z"
     }
   ]
 }
