@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-04-10 10:10",
+  "updated_at": "2026-04-10 10:20",
   "fund": {
     "name": "00713",
-    "price": 52.75,
-    "change_pct": 0.67
+    "price": 52.7,
+    "change_pct": 0.57
   },
   "signal": {
     "action": "WAIT",
@@ -662,7 +662,7 @@
     },
     {
       "date": "2026-04-10",
-      "close": 52.75
+      "close": 52.7
     }
   ]
 }
