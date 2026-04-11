@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-11 21:20",
+  "updated_at": "2026-04-11 21:30",
   "items": [
     {
       "title": "What’s News: Business & Finance",
       "link": "https://finance.yahoo.com/m/989c4ce8-5c6c-3580-89af-640d02e560f4/what%E2%80%99s-news%3A-business-%26.html",
       "publisher": "The Wall Street Journal",
       "time": "2026-04-11T04:01:00.000Z"
+    },
+    {
+      "title": "Rio Tinto Expands African Renewables As Shares Trade Above Target Price",
+      "link": "https://finance.yahoo.com/sectors/energy/articles/rio-tinto-expands-african-renewables-130744362.html",
+      "publisher": "Simply Wall St.",
+      "time": "2026-04-11T13:07:44.000Z"
     },
     {
       "title": "From 25% Yield to 46% Loss: What Income Investors Missed About HRZN",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/booking-holdings-board-pet-travel-091109781.html",
       "publisher": "Simply Wall St.",
       "time": "2026-04-11T09:11:09.000Z"
-    },
-    {
-      "title": "Software stocks are plunging. Why that's a warning sign for the entire market: Chart of the Day",
-      "link": "https://finance.yahoo.com/news/software-stocks-are-plunging-why-thats-a-warning-sign-for-the-entire-market-chart-of-the-day-113707428.html",
-      "publisher": "Yahoo Finance",
-      "time": "2026-04-11T11:37:07.000Z"
     }
   ]
 }
