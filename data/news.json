@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-12 01:50",
+  "updated_at": "2026-04-12 02:00",
   "items": [
     {
       "title": "What’s News: Business & Finance",
       "link": "https://finance.yahoo.com/m/989c4ce8-5c6c-3580-89af-640d02e560f4/what%E2%80%99s-news%3A-business-%26.html",
       "publisher": "The Wall Street Journal",
       "time": "2026-04-11T04:01:00.000Z"
+    },
+    {
+      "title": "Why Starlink is so important to SpaceX's IPO",
+      "link": "https://finance.yahoo.com/sectors/technology/article/why-starlink-is-so-important-to-spacexs-ipo-174446711.html",
+      "publisher": "Yahoo Finance",
+      "time": "2026-04-11T17:44:46.000Z"
     },
     {
       "title": "Rio Tinto Expands African Renewables As Shares Trade Above Target Price",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/m/565630fe-8496-30b1-b0b4-110bf6373529/jpmorgan-chase-ceo-jamie.html",
       "publisher": "Motley Fool",
       "time": "2026-04-11T17:07:00.000Z"
-    },
-    {
-      "title": "Assessing BGC Group (BGC) Valuation After Strong Recent Share Price Momentum",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/assessing-bgc-group-bgc-valuation-171152501.html",
-      "publisher": "Simply Wall St.",
-      "time": "2026-04-11T17:11:52.000Z"
     }
   ]
 }
