@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-12 15:30",
+  "updated_at": "2026-04-12 15:39",
   "items": [
     {
       "title": "Best Nonprofit Budgeting Software for Finance Teams and Grant Management",
@@ -14,16 +14,16 @@
       "time": "2026-04-12T07:09:19.000Z"
     },
     {
-      "title": "Is CRISPR Therapeutics (CRSP) Pricing In Too Much Hope After Recent Share Price Recovery",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/crispr-therapeutics-crsp-pricing-too-070816632.html",
-      "publisher": "Simply Wall St.",
-      "time": "2026-04-12T07:08:16.000Z"
-    },
-    {
       "title": "Is It Too Late To Consider Energy Transfer (ET) After Strong 26.8% One Year Return?",
       "link": "https://finance.yahoo.com/sectors/energy/articles/too-consider-energy-transfer-et-070826707.html",
       "publisher": "Simply Wall St.",
       "time": "2026-04-12T07:08:26.000Z"
+    },
+    {
+      "title": "Is CRISPR Therapeutics (CRSP) Pricing In Too Much Hope After Recent Share Price Recovery",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/crispr-therapeutics-crsp-pricing-too-070816632.html",
+      "publisher": "Simply Wall St.",
+      "time": "2026-04-12T07:08:16.000Z"
     }
   ]
 }
