@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-04-15 02:20",
+  "updated_at": "2026-04-15 02:30",
   "fund": {
     "name": "QQQ",
-    "price": 626.385,
-    "change_pct": 1.44
+    "price": 626.355,
+    "change_pct": 1.43
   },
   "signal": {
     "action": "HOLD",
@@ -22,7 +22,7 @@
     {
       "id": "us_10y",
       "name": "10Y 美債殖利率",
-      "value": 4.26,
+      "value": 4.25,
       "unit": "%"
     },
     {
@@ -696,7 +696,7 @@
     },
     {
       "date": "2026-04-14",
-      "close": 626.41
+      "close": 626.35
     }
   ]
 }
