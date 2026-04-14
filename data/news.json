@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-15 01:10",
+  "updated_at": "2026-04-15 01:20",
   "items": [
+    {
+      "title": "US stocks erase Iran war losses, Oracle expands Bloom Energy deal",
+      "link": "https://finance.yahoo.com/video/us-stocks-erase-iran-war-losses-oracle-expands-bloom-energy-deal-171309515.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-14T17:13:09.000Z"
+    },
     {
       "title": "Why Lowe's is investing in skilled trades and partnering with Nvidia",
       "link": "https://finance.yahoo.com/video/why-lowes-is-investing-in-skilled-trades-and-partnering-with-nvidia-155009051.html",
@@ -14,16 +20,10 @@
       "time": "2026-04-14T13:34:11.000Z"
     },
     {
-      "title": "Iran War Must End in Weeks to Limit Economic Shock, French Official Says",
-      "link": "https://finance.yahoo.com/m/2fd54367-13fd-357e-ab60-53458a8f8962/iran-war-must-end-in-weeks-to.html",
-      "publisher": "The Wall Street Journal",
-      "time": "2026-04-14T16:18:24.000Z"
-    },
-    {
-      "title": "BMO's Labelled Indigenous Bond Named Environmental Finance's Social Bond of the Year - Financial Institution",
-      "link": "https://finance.yahoo.com/economy/policy/articles/bmos-labelled-indigenous-bond-named-161900455.html",
-      "publisher": "CNW Group",
-      "time": "2026-04-14T16:19:00.000Z"
+      "title": "OpenAI acquires personal finance startup Hiro Finance, service to wind down in April",
+      "link": "https://finance.yahoo.com/m/7e1c265a-7383-315f-a858-8aa207a3a6f8/openai-acquires-personal.html",
+      "publisher": "Proactive",
+      "time": "2026-04-14T12:48:00.000Z"
     }
   ]
 }
