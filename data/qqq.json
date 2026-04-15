@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-15 15:40",
+  "updated_at": "2026-04-15 15:50",
   "fund": {
     "name": "QQQ",
     "price": null,
@@ -22,7 +22,7 @@
     {
       "id": "us_10y",
       "name": "10Y 美債殖利率",
-      "value": 0,
+      "value": 4.26,
       "unit": "%"
     },
     {
