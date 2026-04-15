@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-04-15 16:00",
+  "updated_at": "2026-04-15 16:10",
   "fund": {
     "name": "0050",
-    "price": null,
-    "change_pct": 0
+    "price": 84.15,
+    "change_pct": 1.26
   },
   "signal": {
     "action": "WAIT",
@@ -23,7 +23,7 @@
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 0
+      "value": 28.9
     },
     {
       "id": "usd_twd",
@@ -33,7 +33,7 @@
     {
       "id": "foreign_buy",
       "name": "外資買賣超",
-      "value": 689,
+      "value": null,
       "unit": "億"
     }
   ],
