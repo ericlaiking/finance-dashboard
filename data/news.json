@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-17 04:50",
+  "updated_at": "2026-04-17 04:57",
   "items": [
+    {
+      "title": "France finance minister says Hormuz must open, G7 ready to mitigate war fallout",
+      "link": "https://finance.yahoo.com/m/69a12fef-f685-3893-a4eb-9f375f9a3779/france-finance-minister-says.html",
+      "publisher": "AFP",
+      "time": "2026-04-16T20:41:28.000Z"
+    },
     {
       "title": "S&P 500 rallies to new record, Spirit Airlines at risk of bankruptcy",
       "link": "https://finance.yahoo.com/video/sp-500-rallies-to-new-record-spirit-airlines-at-risk-of-bankruptcy-181237588.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/video/what-the-sp-500-might-be-telling-us-195358665.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-04-16T19:53:58.000Z"
-    },
-    {
-      "title": "A $285 Million Crypto Hack and Falling Rates Rock DeFi World",
-      "link": "https://finance.yahoo.com/markets/crypto/articles/285-million-crypto-hack-falling-121543806.html",
-      "publisher": "Bloomberg",
-      "time": "2026-04-16T16:54:08.000Z"
     }
   ]
 }
