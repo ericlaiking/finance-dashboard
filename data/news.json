@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-16 19:00",
+  "updated_at": "2026-04-16 19:10",
   "items": [
     {
       "title": "Gartner Announces Gartner Finance Symposium/Xpo 2026 in London",
       "link": "https://finance.yahoo.com/sectors/technology/articles/gartner-announces-gartner-finance-symposium-083000760.html",
       "publisher": "Business Wire",
       "time": "2026-04-16T08:30:00.000Z"
+    },
+    {
+      "title": "Morning Bid: Six-week roundtrip",
+      "link": "https://finance.yahoo.com/news/morning-bid-six-week-roundtrip-105743174.html",
+      "publisher": "Reuters",
+      "time": "2026-04-16T10:57:43.000Z"
     },
     {
       "title": "Why BlackLine’s (BL) Finance AI Push Adds to Its Strategic Value",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/zacks-industry-outlook-highlights-main-074500359.html",
       "publisher": "Zacks",
       "time": "2026-04-16T07:45:00.000Z"
-    },
-    {
-      "title": "Crypto derivatives are much more than just a leverage play",
-      "link": "https://finance.yahoo.com/m/050da117-972c-3432-ae7a-036bc7114415/crypto-derivatives-are-much.html",
-      "publisher": "TheStreet",
-      "time": "2026-04-15T23:57:35.000Z"
     }
   ]
 }
