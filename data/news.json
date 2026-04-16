@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-16 20:20",
+  "updated_at": "2026-04-16 20:30",
   "items": [
+    {
+      "title": "Horizon Technology Finance Provides $25 Million Loan Facility to Stellar Cyber",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/horizon-technology-finance-provides-25-120000152.html",
+      "publisher": "Business Wire",
+      "time": "2026-04-16T12:00:00.000Z"
+    },
     {
       "title": "Gartner Announces Gartner Finance Symposium/Xpo 2026 in London",
       "link": "https://finance.yahoo.com/sectors/technology/articles/gartner-announces-gartner-finance-symposium-083000760.html",
@@ -8,22 +14,16 @@
       "time": "2026-04-16T08:30:00.000Z"
     },
     {
+      "title": "Chef José Andrés warns war-driven inflation will cause a larger world hunger problem",
+      "link": "https://finance.yahoo.com/news/chef-jose-andres-warns-war-driven-inflation-will-cause-a-larger-world-hunger-problem-122235931.html",
+      "publisher": "Yahoo Finance",
+      "time": "2026-04-16T12:22:35.000Z"
+    },
+    {
       "title": "Zanskar Closes $40M in Novel Development Capital Financing, structured to scale to $100M",
       "link": "https://finance.yahoo.com/sectors/energy/articles/zanskar-closes-40m-novel-development-113000803.html",
       "publisher": "GlobeNewswire",
       "time": "2026-04-16T11:30:00.000Z"
-    },
-    {
-      "title": "Taiwan Semiconductor CEO just dropped a hint about the next move in AI stocks",
-      "link": "https://finance.yahoo.com/news/taiwan-semiconductor-ceo-just-dropped-a-hint-about-the-next-move-in-ai-stocks-120227431.html",
-      "publisher": "Yahoo Finance",
-      "time": "2026-04-16T12:02:27.000Z"
-    },
-    {
-      "title": "Alviere Expands Cash Loading Capabilities and Reach to 90,000+ Retail Locations Through Partnership with InComm Payments",
-      "link": "https://finance.yahoo.com/markets/crypto/articles/alviere-expands-cash-loading-capabilities-120000534.html",
-      "publisher": "PR Newswire",
-      "time": "2026-04-16T12:00:00.000Z"
     }
   ]
 }
