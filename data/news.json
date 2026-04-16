@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-16 08:10",
+  "updated_at": "2026-04-16 08:20",
   "items": [
+    {
+      "title": "Crypto derivatives are much more than just a leverage play",
+      "link": "https://finance.yahoo.com/m/050da117-972c-3432-ae7a-036bc7114415/crypto-derivatives-are-much.html",
+      "publisher": "TheStreet",
+      "time": "2026-04-15T23:57:35.000Z"
+    },
     {
       "title": "Allbirds rebrands as an AI company, Snap to cut 1,000 jobs",
       "link": "https://finance.yahoo.com/video/allbirds-rebrands-as-an-ai-company-snap-to-cut-1000-jobs-180535310.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/video/snaps-ai-driven-layoffs-chinas-solar-power-export-limits-145132304.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-04-15T14:51:32.000Z"
-    },
-    {
-      "title": "Hanwha AI Center’s HACathon | Building AI for Finance Awards First Place to Parity",
-      "link": "https://finance.yahoo.com/sectors/technology/articles/hanwha-ai-center-hacathon-building-233000917.html",
-      "publisher": "Business Wire",
-      "time": "2026-04-15T23:30:00.000Z"
     }
   ]
 }
