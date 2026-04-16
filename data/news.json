@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-17 04:10",
+  "updated_at": "2026-04-17 04:20",
   "items": [
     {
       "title": "S&P 500 rallies to new record, Spirit Airlines at risk of bankruptcy",
       "link": "https://finance.yahoo.com/video/sp-500-rallies-to-new-record-spirit-airlines-at-risk-of-bankruptcy-181237588.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-04-16T18:12:37.000Z"
+    },
+    {
+      "title": "What the S&P 500 might be telling us",
+      "link": "https://finance.yahoo.com/video/what-the-sp-500-might-be-telling-us-195358665.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-16T19:53:58.000Z"
     },
     {
       "title": "A $285 Million Crypto Hack and Falling Rates Rock DeFi World",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/video/netflix-earnings-the-key-metrics-wall-street-is-looking-for-171424500.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-04-16T17:14:24.000Z"
-    },
-    {
-      "title": "NEAR Protocol DeFi Hub Rhea Finance Loses $7.6 Million in Oracle Exploit",
-      "link": "https://finance.yahoo.com/m/0fde9707-f694-34c9-9d22-a5975066dcde/near-protocol-defi-hub-rhea.html",
-      "publisher": "BeInCrypto",
-      "time": "2026-04-16T16:36:46.000Z"
     }
   ]
 }
