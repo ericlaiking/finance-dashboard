@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-16 23:10",
+  "updated_at": "2026-04-16 23:20",
   "items": [
+    {
+      "title": "Bitcoin prices lose momentum, Coinbase & Robinhood stocks sink",
+      "link": "https://finance.yahoo.com/video/bitcoin-prices-lose-momentum-coinbase--robinhood-stocks-sink-145522576.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-16T14:55:22.000Z"
+    },
     {
       "title": "Earnings in focus today: TSMC, Netflix, PepsiCo",
       "link": "https://finance.yahoo.com/video/earnings-in-focus-today-tsmc-netflix-pepsico-133654841.html",
@@ -8,22 +14,16 @@
       "time": "2026-04-16T13:36:54.000Z"
     },
     {
+      "title": "A $285 Million Crypto Hack and Falling Yields Rock DeFi Industry",
+      "link": "https://finance.yahoo.com/markets/crypto/articles/285-million-crypto-hack-falling-121543806.html",
+      "publisher": "Bloomberg",
+      "time": "2026-04-16T12:15:43.000Z"
+    },
+    {
       "title": "Horizon Technology Finance Provides Up to $25 Million Loan to Stellar Cyber",
       "link": "https://finance.yahoo.com/sectors/technology/articles/horizon-technology-finance-provides-25-125022465.html",
       "publisher": "MT Newswires",
       "time": "2026-04-16T12:50:22.000Z"
-    },
-    {
-      "title": "Rolls-Royce unveils 'extremely rare' luxury EV: CEO discusses",
-      "link": "https://finance.yahoo.com/video/rolls-royce-unveils-extremely-rare-luxury-ev-ceo-discusses-135213010.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-04-16T13:52:13.000Z"
-    },
-    {
-      "title": "How deepfakes and automation are impacting finance",
-      "link": "https://finance.yahoo.com/m/ff76a391-c5a6-3eab-9630-4eb3f5387fc3/how-deepfakes-and-automation.html",
-      "publisher": "CFO.com",
-      "time": "2026-04-16T08:56:36.000Z"
     }
   ]
 }
