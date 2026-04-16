@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-17 04:20",
+  "updated_at": "2026-04-17 04:30",
   "items": [
     {
       "title": "S&P 500 rallies to new record, Spirit Airlines at risk of bankruptcy",
       "link": "https://finance.yahoo.com/video/sp-500-rallies-to-new-record-spirit-airlines-at-risk-of-bankruptcy-181237588.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-04-16T18:12:37.000Z"
+    },
+    {
+      "title": "Chicago Atlantic Real Estate Finance Schedules First Quarter 2026 Earnings Release and Conference Call Date",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/chicago-atlantic-real-estate-finance-201500598.html",
+      "publisher": "GlobeNewswire",
+      "time": "2026-04-16T20:15:00.000Z"
     },
     {
       "title": "What the S&P 500 might be telling us",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/crypto/articles/285-million-crypto-hack-falling-121543806.html",
       "publisher": "Bloomberg",
       "time": "2026-04-16T16:54:08.000Z"
-    },
-    {
-      "title": "Netflix earnings: The key metrics Wall Street is looking for",
-      "link": "https://finance.yahoo.com/video/netflix-earnings-the-key-metrics-wall-street-is-looking-for-171424500.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-04-16T17:14:24.000Z"
     }
   ]
 }
