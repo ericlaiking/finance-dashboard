@@ -1,12 +1,6 @@
 {
-  "updated_at": "2026-04-17 01:23",
+  "updated_at": "2026-04-17 01:30",
   "items": [
-    {
-      "title": "A $285 Million Crypto Hack and Falling Rates Rock DeFi World",
-      "link": "https://finance.yahoo.com/markets/crypto/articles/285-million-crypto-hack-falling-121543806.html",
-      "publisher": "Bloomberg",
-      "time": "2026-04-16T16:54:08.000Z"
-    },
     {
       "title": "Netflix earnings: The key metrics Wall Street is looking for",
       "link": "https://finance.yahoo.com/video/netflix-earnings-the-key-metrics-wall-street-is-looking-for-171424500.html",
@@ -14,16 +8,22 @@
       "time": "2026-04-16T17:14:24.000Z"
     },
     {
-      "title": "NEAR Protocol DeFi Hub Rhea Finance Loses $7.6 Million in Oracle Exploit",
-      "link": "https://finance.yahoo.com/m/0fde9707-f694-34c9-9d22-a5975066dcde/near-protocol-defi-hub-rhea.html",
-      "publisher": "BeInCrypto",
-      "time": "2026-04-16T16:36:46.000Z"
-    },
-    {
       "title": "Bitcoin prices lose momentum, Coinbase & Robinhood stocks sink",
       "link": "https://finance.yahoo.com/video/bitcoin-prices-lose-momentum-coinbase--robinhood-stocks-sink-145522576.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-04-16T14:55:22.000Z"
+    },
+    {
+      "title": "Earnings in focus today: TSMC, Netflix, PepsiCo",
+      "link": "https://finance.yahoo.com/video/earnings-in-focus-today-tsmc-netflix-pepsico-133654841.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-16T13:36:54.000Z"
+    },
+    {
+      "title": "Hacked Crypto Platform to Relaunch After Securing New Funding",
+      "link": "https://finance.yahoo.com/markets/crypto/articles/hacked-crypto-platform-relaunch-securing-143218701.html",
+      "publisher": "Bloomberg",
+      "time": "2026-04-16T14:32:18.000Z"
     }
   ]
 }
