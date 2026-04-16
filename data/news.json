@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-16 19:40",
+  "updated_at": "2026-04-16 19:50",
   "items": [
     {
       "title": "Gartner Announces Gartner Finance Symposium/Xpo 2026 in London",
       "link": "https://finance.yahoo.com/sectors/technology/articles/gartner-announces-gartner-finance-symposium-083000760.html",
       "publisher": "Business Wire",
       "time": "2026-04-16T08:30:00.000Z"
+    },
+    {
+      "title": "Zanskar Closes $40M in Novel Development Capital Financing, structured to scale to $100M",
+      "link": "https://finance.yahoo.com/sectors/energy/articles/zanskar-closes-40m-novel-development-113000803.html",
+      "publisher": "GlobeNewswire",
+      "time": "2026-04-16T11:30:00.000Z"
     },
     {
       "title": "Morning Bid: Six-week roundtrip",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-price-today-thursday-april-16-2026-prices-hold-amid-profit-taking-and-cautious-outlook-111641743.html",
       "publisher": "Yahoo Personal Finance",
       "time": "2026-04-16T11:16:41.000Z"
-    },
-    {
-      "title": "PepsiCo may be leaving behind $7 Doritos with price cuts",
-      "link": "https://finance.yahoo.com/news/pepsico-may-be-leaving-behind-7-doritos-with-price-cuts-112833478.html",
-      "publisher": "Yahoo Finance",
-      "time": "2026-04-16T11:28:33.000Z"
     }
   ]
 }
