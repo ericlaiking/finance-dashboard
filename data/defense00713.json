@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-16 20:30",
+  "updated_at": "2026-04-16 20:40",
   "fund": {
     "name": "00713",
     "price": 53.6,
@@ -10,7 +10,7 @@
     "label": "觀望 / 減碼",
     "confidence": 70,
     "reasons": [
-      "Yield Gap 僅 0.38% (吸引力低於無風險美債)"
+      "Yield Gap 僅 0.39% (吸引力低於無風險美債)"
     ]
   },
   "compositeSignal": null,
@@ -18,7 +18,7 @@
     {
       "id": "us_short_yield",
       "name": "3M 美債利率",
-      "value": 3.61,
+      "value": 3.6,
       "unit": "%"
     },
     {
