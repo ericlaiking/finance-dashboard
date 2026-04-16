@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-17 01:10",
+  "updated_at": "2026-04-17 01:20",
   "items": [
+    {
+      "title": "Netflix earnings: The key metrics Wall Street is looking for",
+      "link": "https://finance.yahoo.com/video/netflix-earnings-the-key-metrics-wall-street-is-looking-for-171424500.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-16T17:14:24.000Z"
+    },
     {
       "title": "Bitcoin prices lose momentum, Coinbase & Robinhood stocks sink",
       "link": "https://finance.yahoo.com/video/bitcoin-prices-lose-momentum-coinbase--robinhood-stocks-sink-145522576.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/crypto/articles/hacked-crypto-platform-relaunch-securing-143218701.html",
       "publisher": "Bloomberg",
       "time": "2026-04-16T14:32:18.000Z"
-    },
-    {
-      "title": "OpenAI buys personal finance fintech Hiro",
-      "link": "https://finance.yahoo.com/m/bce0bac7-f7f7-39dd-a364-da366c6f6d7d/openai-buys-personal-finance.html",
-      "publisher": "Banking Dive",
-      "time": "2026-04-16T12:28:59.000Z"
     }
   ]
 }
