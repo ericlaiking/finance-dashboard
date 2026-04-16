@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-16 21:30",
+  "updated_at": "2026-04-16 21:40",
   "items": [
+    {
+      "title": "Earnings in focus today: TSMC, Netflix, PepsiCo",
+      "link": "https://finance.yahoo.com/video/earnings-in-focus-today-tsmc-netflix-pepsico-133654841.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-16T13:36:54.000Z"
+    },
     {
       "title": "Horizon Technology Finance Provides Up to $25 Million Loan to Stellar Cyber",
       "link": "https://finance.yahoo.com/sectors/technology/articles/horizon-technology-finance-provides-25-125022465.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/horizon-technology-finance-provides-25-120000152.html",
       "publisher": "Business Wire",
       "time": "2026-04-16T12:00:00.000Z"
-    },
-    {
-      "title": "LQR House Inc. Announces Agreement to Acquire 100% of Fusion Five Continents Limited, a Next-Generation Cross-Border Securities and Digital Asset Trading Platform",
-      "link": "https://finance.yahoo.com/markets/crypto/articles/lqr-house-inc-announces-agreement-123500626.html",
-      "publisher": "ACCESS Newswire",
-      "time": "2026-04-16T12:35:00.000Z"
     }
   ]
 }
