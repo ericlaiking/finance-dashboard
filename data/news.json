@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-18 02:20",
+  "updated_at": "2026-04-18 02:30",
   "items": [
+    {
+      "title": "Dow climbs 900 points, Strategy stock surges as bitcoin passes $77K",
+      "link": "https://finance.yahoo.com/video/dow-climbs-900-points-strategy-stock-surges-as-bitcoin-passes-77k-181238673.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-17T18:12:38.000Z"
+    },
     {
       "title": "Unusual Machines Appoints Chadd Cole as Vice President of FP&A",
       "link": "https://finance.yahoo.com/markets/stocks/articles/unusual-machines-appoints-chadd-cole-120000046.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/video/netflix-stock-post-earnings-market-gains-peace-talks-top-themes-134414965.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-04-17T13:44:14.000Z"
-    },
-    {
-      "title": "The texting crackdown Wall Street executives should fear most",
-      "link": "https://finance.yahoo.com/m/89e32405-383f-324d-a6db-45447547f501/the-texting-crackdown-wall.html",
-      "publisher": "TheStreet",
-      "time": "2026-04-17T17:17:00.000Z"
     }
   ]
 }
