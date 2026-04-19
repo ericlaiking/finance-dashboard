@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-19 20:10",
+  "updated_at": "2026-04-19 20:20",
   "items": [
     {
       "title": "IMF, World Bank meetings show limits in mitigating shocks, reliance on US for solutions",
       "link": "https://finance.yahoo.com/news/imf-world-bank-meetings-show-091203536.html",
       "publisher": "Reuters",
       "time": "2026-04-19T09:12:03.000Z"
+    },
+    {
+      "title": "'Firing on all cylinders': Wall Street strategists expect a strong quarter of earnings growth",
+      "link": "https://finance.yahoo.com/news/firing-on-all-cylinders-wall-street-strategists-expect-a-strong-quarter-of-earnings-growth-121555493.html",
+      "publisher": "Yahoo Finance",
+      "time": "2026-04-19T12:15:55.000Z"
     },
     {
       "title": "Stock market records, Iran updates, and Tesla earnings: What to watch this week",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/articles/suze-orman-first-job-money-095505634.html",
       "publisher": "GOBankingRates",
       "time": "2026-04-19T09:55:05.000Z"
-    },
-    {
-      "title": "Costco at $1,000: Still a Buy or Time to Wait?",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/costco-1-000-still-buy-111059520.html",
-      "publisher": "GuruFocus.com",
-      "time": "2026-04-19T11:10:59.000Z"
     }
   ]
 }
