@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-21 03:40",
+  "updated_at": "2026-04-21 03:50",
   "fund": {
     "name": "VOO",
-    "price": 650.83,
+    "price": 650.8301,
     "change_pct": -0.3
   },
   "signal": {
@@ -17,7 +17,7 @@
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 69
+      "value": 70
     },
     {
       "id": "us_10y",
@@ -692,7 +692,7 @@
     },
     {
       "date": "2026-04-20",
-      "close": 650.83
+      "close": 650.91
     }
   ]
 }
