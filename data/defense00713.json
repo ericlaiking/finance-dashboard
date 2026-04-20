@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-04-20 17:40",
+  "updated_at": "2026-04-20 17:50",
   "fund": {
     "name": "00713",
-    "price": 54,
-    "change_pct": 0.75
+    "price": 54.2,
+    "change_pct": 1.12
   },
   "signal": {
     "action": "WAIT",
     "label": "觀望 / 減碼",
     "confidence": 70,
     "reasons": [
-      "Yield Gap 僅 0.38% (吸引力低於無風險美債)"
+      "Yield Gap 僅 0.37% (吸引力低於無風險美債)"
     ]
   },
   "compositeSignal": null,
@@ -30,13 +30,13 @@
     {
       "id": "estimated_yield",
       "name": "預估殖利率",
-      "value": 4.63,
+      "value": 4.61,
       "unit": "%"
     },
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 19.6
+      "value": 19.58
     }
   ],
   "chart": [
@@ -655,6 +655,10 @@
     {
       "date": "2026-04-17",
       "close": 54
+    },
+    {
+      "date": "2026-04-20",
+      "close": 54.2
     }
   ]
 }
