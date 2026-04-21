@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-22 02:10",
+  "updated_at": "2026-04-22 02:20",
   "items": [
+    {
+      "title": "Meta to track employee keystrokes to train AI, D.R. Horton earnings",
+      "link": "https://finance.yahoo.com/video/meta-to-track-employee-keystrokes-to-train-ai-dr-horton-earnings-180825289.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-21T18:08:25.000Z"
+    },
     {
       "title": "Better Home & Finance Holding Company (BETR) Soars 15.2%: Is Further Upside Left in the Stock?",
       "link": "https://finance.yahoo.com/markets/stocks/articles/better-home-finance-holding-company-143200233.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/video/is-this-the-most-confusing-market-ever-for-bitcoin-holders-164236267.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-04-21T16:42:36.000Z"
-    },
-    {
-      "title": "ADOCIA and Vester Finance sign a shareholder loan agreement, enabling ADOCIA to extend its cash runway until beginning Q2 2027",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/adocia-vester-finance-sign-shareholder-173000120.html",
-      "publisher": "Business Wire",
-      "time": "2026-04-21T17:30:00.000Z"
     }
   ]
 }
