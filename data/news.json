@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-21 20:20",
+  "updated_at": "2026-04-21 20:30",
   "items": [
+    {
+      "title": "Almost 80% of Gen Z and Millennials Use 'Survival Spending'",
+      "link": "https://finance.yahoo.com/economy/articles/almost-80-gen-z-millennials-121000693.html",
+      "publisher": "PR Newswire",
+      "time": "2026-04-21T12:10:00.000Z"
+    },
     {
       "title": "WFW advises NEDF on development financing for Harmony Energy German BESS",
       "link": "https://finance.yahoo.com/m/91e76fde-bd89-3df7-b4f7-b1a91d53a2a2/wfw-advises-nedf-on.html",
@@ -8,22 +14,16 @@
       "time": "2026-04-21T11:00:00.000Z"
     },
     {
+      "title": "A&G's Andy Graiser to Be Honored by the Boston Corporate Finance Community at Event in Support of the Nonprofit More Than Words",
+      "link": "https://finance.yahoo.com/sectors/technology/articles/gs-andy-graiser-honored-boston-121800579.html",
+      "publisher": "PR Newswire",
+      "time": "2026-04-21T12:18:00.000Z"
+    },
+    {
       "title": "Sam Bankman-Fried says bitcoin creator Satoshi Nakamoto could be Paul Le Roux in 2021 interview",
       "link": "https://finance.yahoo.com/news/sam-bankman-fried-says-bitcoin-creator-satoshi-nakamoto-could-be-paul-le-roux-in-2021-interview-120013562.html",
       "publisher": "Yahoo Finance",
       "time": "2026-04-21T12:00:13.000Z"
-    },
-    {
-      "title": "New Survey Finds 72% of Hospital CFOs Report Margins of 2% or Less as Leaders Prioritize Workforce and Technology Investments",
-      "link": "https://finance.yahoo.com/sectors/healthcare/articles/survey-finds-72-hospital-cfos-110000497.html",
-      "publisher": "PR Newswire",
-      "time": "2026-04-21T11:00:00.000Z"
-    },
-    {
-      "title": "AppZen launches AP Inbox Service Center, bringing AI Agents to the most manual process in accounts payable",
-      "link": "https://finance.yahoo.com/sectors/technology/articles/appzen-launches-ap-inbox-center-110000203.html",
-      "publisher": "PR Newswire",
-      "time": "2026-04-21T11:00:00.000Z"
     }
   ]
 }
