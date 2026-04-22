@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-04-22 11:10",
+  "updated_at": "2026-04-22 11:20",
   "fund": {
     "name": "00713",
-    "price": 54.1,
-    "change_pct": 0.19
+    "price": 54.15,
+    "change_pct": 0.28
   },
   "signal": {
     "action": "WAIT",
     "label": "觀望 / 減碼",
     "confidence": 70,
     "reasons": [
-      "Yield Gap 僅 0.33% (吸引力低於無風險美債)"
+      "Yield Gap 僅 0.32% (吸引力低於無風險美債)"
     ]
   },
   "compositeSignal": null,
@@ -662,7 +662,7 @@
     },
     {
       "date": "2026-04-22",
-      "close": 54.1
+      "close": 54.15
     }
   ]
 }
