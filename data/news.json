@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-22 19:00",
+  "updated_at": "2026-04-22 19:10",
   "items": [
+    {
+      "title": "Scotiabank recognized for its commitment to sustainable finance",
+      "link": "https://finance.yahoo.com/sectors/energy/articles/scotiabank-recognized-commitment-sustainable-finance-110000552.html",
+      "publisher": "CNW Group",
+      "time": "2026-04-22T11:00:00.000Z"
+    },
     {
       "title": "PNB Housing Finance Ltd (BOM:540173) Q4 2026 Earnings Call Highlights: Robust Growth and ...",
       "link": "https://finance.yahoo.com/markets/stocks/articles/pnb-housing-finance-ltd-bom-070040275.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/video/why-a-deal-to-reopen-the-strait-of-hormuz-is-unavoidable-100000756.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-04-22T10:00:00.000Z"
-    },
-    {
-      "title": "Ledn identifies massive turning point for crypto lending markets",
-      "link": "https://finance.yahoo.com/m/797dabbd-4f6b-35ff-9fa3-93ceafc8047d/ledn-identifies-massive.html",
-      "publisher": "TheStreet",
-      "time": "2026-04-22T10:04:02.000Z"
     }
   ]
 }
