@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-23 20:03",
+  "updated_at": "2026-04-23 20:10",
   "items": [
     {
       "title": "IESE Launches Master in Finance for Tomorrow’s Financial Leaders",
       "link": "https://finance.yahoo.com/sectors/technology/articles/iese-launches-master-finance-tomorrow-080000646.html",
       "publisher": "GlobeNewswire",
       "time": "2026-04-23T08:00:00.000Z"
+    },
+    {
+      "title": "Senmiao Technology Appoints David Nichols as Strategic Advisor to Advance AI Data Center, Digital Infrastructure, and New Energy Strategy",
+      "link": "https://finance.yahoo.com/sectors/technology/articles/senmiao-technology-appoints-david-nichols-120000353.html",
+      "publisher": "GlobeNewswire",
+      "time": "2026-04-23T12:00:00.000Z"
     },
     {
       "title": "Goldman Sachs Alternatives Invests $50 Million in BLP Digital, Betting on Agentic AI for Core Finance Processes",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/finance-america-announces-first-quarter-200500826.html",
       "publisher": "Business Wire",
       "time": "2026-04-22T20:05:00.000Z"
-    },
-    {
-      "title": "CGI implements multi-agent AI solution for SOK Finance to accelerate financial service operations",
-      "link": "https://finance.yahoo.com/sectors/technology/articles/cgi-implements-multi-agent-ai-103000347.html",
-      "publisher": "CNW Group",
-      "time": "2026-04-23T10:30:00.000Z"
     }
   ]
 }
