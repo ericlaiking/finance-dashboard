@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-04-25 04:10",
+  "updated_at": "2026-04-25 04:20",
   "fund": {
     "name": "QQQ",
-    "price": 664.02,
-    "change_pct": 1.93
+    "price": 663.88,
+    "change_pct": 1.91
   },
   "signal": {
     "action": "HOLD",
@@ -34,7 +34,7 @@
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 35.08
+      "value": 35.07
     }
   ],
   "chart": [
@@ -700,7 +700,7 @@
     },
     {
       "date": "2026-04-24",
-      "close": 664.02
+      "close": 663.88
     }
   ]
 }
