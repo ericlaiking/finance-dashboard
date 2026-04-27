@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-04-28 01:20",
+  "updated_at": "2026-04-28 01:30",
   "items": [
+    {
+      "title": "Shell acquiring Arc for $13.6B, China blocks Meta's bid for Manus AI",
+      "link": "https://finance.yahoo.com/video/shell-acquiring-arc-for-136b-china-blocks-metas-bid-for-manus-ai-170644384.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-27T17:06:44.000Z"
+    },
     {
       "title": "$4 gas and the Teflon US consumer: Yahoo Finance community reacts",
       "link": "https://finance.yahoo.com/news/4-gas-and-the-teflon-us-consumer-yahoo-finance-community-reacts-131302102.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/sectors/technology/articles/sage-brings-core-finance-industry-160000612.html",
       "publisher": "GlobeNewswire",
       "time": "2026-04-27T16:00:00.000Z"
-    },
-    {
-      "title": "Platinum Equity and Ares Commercial Finance Provide Financing for Kingswood Capital Management's Acquisition of Daramic",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/platinum-equity-ares-commercial-finance-144900937.html",
-      "publisher": "PR Newswire",
-      "time": "2026-04-27T14:49:00.000Z"
     }
   ]
 }
