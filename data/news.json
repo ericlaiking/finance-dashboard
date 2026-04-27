@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-28 00:10",
+  "updated_at": "2026-04-28 00:20",
   "items": [
     {
       "title": "$4 gas and the Teflon US consumer: Yahoo Finance community reacts",
@@ -14,16 +14,16 @@
       "time": "2026-04-27T08:00:00.000Z"
     },
     {
+      "title": "Sage brings core finance and industry workflows together in Sage Intacct",
+      "link": "https://finance.yahoo.com/sectors/technology/articles/sage-brings-core-finance-industry-160000612.html",
+      "publisher": "GlobeNewswire",
+      "time": "2026-04-27T16:00:00.000Z"
+    },
+    {
       "title": "Platinum Equity and Ares Commercial Finance Provide Financing for Kingswood Capital Management's Acquisition of Daramic",
       "link": "https://finance.yahoo.com/markets/stocks/articles/platinum-equity-ares-commercial-finance-144900937.html",
       "publisher": "PR Newswire",
       "time": "2026-04-27T14:49:00.000Z"
-    },
-    {
-      "title": "How Investors Are Reacting To BlackLine (BL) Launching Its Explainable Agentic AI Finance Platform",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/investors-reacting-blackline-bl-launching-140656775.html",
-      "publisher": "Simply Wall St.",
-      "time": "2026-04-27T14:06:56.000Z"
     }
   ]
 }
