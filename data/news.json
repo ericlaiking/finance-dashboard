@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-28 02:20",
+  "updated_at": "2026-04-28 02:30",
   "items": [
     {
       "title": "Shell acquiring Arc for $13.6B, China blocks Meta's bid for Manus AI",
       "link": "https://finance.yahoo.com/video/shell-acquiring-arc-for-136b-china-blocks-metas-bid-for-manus-ai-170644384.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-04-27T17:06:44.000Z"
+    },
+    {
+      "title": "Micron stock pops, Verizon reports positive subscriber growth",
+      "link": "https://finance.yahoo.com/video/micron-stock-pops-verizon-reports-positive-subscriber-growth-180820694.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-27T18:08:20.000Z"
     },
     {
       "title": "$4 gas and the Teflon US consumer: Yahoo Finance community reacts",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/tmt-finance-publishes-europe-market-080000896.html",
       "publisher": "PR Newswire",
       "time": "2026-04-27T08:00:00.000Z"
-    },
-    {
-      "title": "Sage brings core finance and industry workflows together in Sage Intacct",
-      "link": "https://finance.yahoo.com/sectors/technology/articles/sage-brings-core-finance-industry-160000612.html",
-      "publisher": "GlobeNewswire",
-      "time": "2026-04-27T16:00:00.000Z"
     }
   ]
 }
