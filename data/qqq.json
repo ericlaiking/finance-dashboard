@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-04-29 03:40",
+  "updated_at": "2026-04-29 03:50",
   "fund": {
     "name": "QQQ",
-    "price": 657.9,
-    "change_pct": -0.95
+    "price": 657.855,
+    "change_pct": -0.96
   },
   "signal": {
     "action": "HOLD",
@@ -17,7 +17,7 @@
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 65
+      "value": 64
     },
     {
       "id": "us_10y",
@@ -34,7 +34,7 @@
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 34.76
+      "value": 34.75
     }
   ],
   "chart": [
@@ -696,7 +696,7 @@
     },
     {
       "date": "2026-04-28",
-      "close": 657.89
+      "close": 657.85
     }
   ]
 }
