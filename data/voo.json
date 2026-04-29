@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-04-30 00:40",
+  "updated_at": "2026-04-30 00:50",
   "fund": {
     "name": "VOO",
-    "price": 652.5,
+    "price": 652.5101,
     "change_pct": -0.27
   },
   "signal": {
@@ -17,18 +17,18 @@
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 64
+      "value": 63
     },
     {
       "id": "us_10y",
       "name": "10Y 美債殖利率",
-      "value": 4.4,
+      "value": 4.41,
       "unit": "%"
     },
     {
       "id": "sp500_deviation",
       "name": "S&P 500 乖離率",
-      "value": 4.19,
+      "value": 4.2,
       "unit": "%"
     },
     {
@@ -700,7 +700,7 @@
     },
     {
       "date": "2026-04-29",
-      "close": 652.53
+      "close": 652.57
     }
   ]
 }
