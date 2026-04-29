@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-04-30 04:10",
+  "updated_at": "2026-04-30 04:20",
   "fund": {
     "name": "VOO",
-    "price": 654.18,
-    "change_pct": -0.01
+    "price": 654.24,
+    "change_pct": 0
   },
   "signal": {
     "action": "HOLD",
@@ -17,7 +17,7 @@
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 63
+      "value": 64
     },
     {
       "id": "us_10y",
@@ -34,7 +34,7 @@
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 28.24
+      "value": 28.25
     }
   ],
   "chart": [
@@ -700,7 +700,7 @@
     },
     {
       "date": "2026-04-29",
-      "close": 654.18
+      "close": 654.24
     }
   ]
 }
