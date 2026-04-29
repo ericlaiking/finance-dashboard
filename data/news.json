@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-04-29 17:40",
+  "updated_at": "2026-04-29 17:50",
   "items": [
     {
       "title": "TPG RE Finance Trust (TRTX) Q1 Earnings Match Estimates",
       "link": "https://finance.yahoo.com/markets/stocks/articles/tpg-finance-trust-trtx-q1-230009199.html",
       "publisher": "Zacks",
       "time": "2026-04-28T23:00:09.000Z"
+    },
+    {
+      "title": "Lithia & Driveway (LAD) Reports First Quarter Results",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/lithia-driveway-lad-reports-first-093000591.html",
+      "publisher": "GlobeNewswire",
+      "time": "2026-04-29T09:30:00.000Z"
     },
     {
       "title": "Apollo Commerical Finance (ARI) Q1 Earnings and Revenues Lag Estimates",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/sectors/energy/articles/strengthening-sustainable-finance-strategy-pt-074100031.html",
       "publisher": "PR Newswire",
       "time": "2026-04-29T07:41:00.000Z"
-    },
-    {
-      "title": "Mag 7 earnings, Fed day, Warsh confirmation vote: What to Watch",
-      "link": "https://finance.yahoo.com/video/mag-7-earnings-fed-day-230000235.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-04-28T23:00:00.000Z"
     }
   ]
 }
