@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-05-01 02:15",
+  "updated_at": "2026-05-01 02:20",
   "items": [
     {
       "title": "Disrupting Agri-Finance: Turning \"Too Risky\" Farmers into Prime Investments",
       "link": "https://finance.yahoo.com/economy/policy/articles/disrupting-agri-finance-turning-too-160300795.html",
       "publisher": "PR Newswire",
       "time": "2026-04-30T16:03:00.000Z"
+    },
+    {
+      "title": "Nvidia stock falls, Hertz & Uber partner on robotaxis",
+      "link": "https://finance.yahoo.com/video/nvidia-stock-falls-hertz--uber-partner-on-robotaxis-180911731.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-04-30T18:09:11.000Z"
     },
     {
       "title": "NexPoint Real Estate Finance, Inc. Q1 2026 Earnings Call Summary",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/better-home-finance-holding-company-140033245.html",
       "publisher": "Zacks",
       "time": "2026-04-30T14:00:33.000Z"
-    },
-    {
-      "title": "How Reporting on Divorce Changed the Way I Think About It",
-      "link": "https://finance.yahoo.com/m/847504dd-8cf1-351f-8fa5-49b1ee131c13/how-reporting-on-divorce.html",
-      "publisher": "The Wall Street Journal",
-      "time": "2026-04-30T16:00:00.000Z"
     }
   ]
 }
