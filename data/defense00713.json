@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-30 23:40",
+  "updated_at": "2026-04-30 23:50",
   "fund": {
     "name": "00713",
     "price": 52.85,
@@ -24,7 +24,7 @@
     {
       "id": "yield_spread",
       "name": "美債利差 (10Y-3M)",
-      "value": 0.8,
+      "value": 0.81,
       "unit": "%"
     },
     {
