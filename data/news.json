@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-05-02 01:30",
+  "updated_at": "2026-05-02 01:40",
   "items": [
+    {
+      "title": "Trump raises tariffs on EU vehicles",
+      "link": "https://finance.yahoo.com/video/trump-raises-tariffs-on-eu-vehicles-171413539.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-05-01T17:14:13.000Z"
+    },
     {
       "title": "Director/PDMR Shareholding",
       "link": "https://finance.yahoo.com/markets/stocks/articles/director-pdmr-shareholding-150300719.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/video/apple-pops-after-beating-q2-estimates-150422688.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-05-01T15:04:22.000Z"
-    },
-    {
-      "title": "Roblox CEO talks safety, outlook on Opening Bid",
-      "link": "https://finance.yahoo.com/video/roblox-ceo-talks-safety-outlook-on-opening-bid-143553231.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-05-01T14:35:53.000Z"
     }
   ]
 }
