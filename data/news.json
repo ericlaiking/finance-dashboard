@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-05-03 00:40",
+  "updated_at": "2026-05-03 00:50",
   "items": [
+    {
+      "title": "TPG RE Finance Trust Q1 Earnings Call Highlights",
+      "link": "https://finance.yahoo.com/m/077abcd0-087f-3322-8159-b9bdf090e5e9/tpg-re-finance-trust-q1.html",
+      "publisher": "MarketBeat",
+      "time": "2026-05-02T16:27:25.000Z"
+    },
     {
       "title": "Finance tips for when you're caring for aging family members",
       "link": "https://finance.yahoo.com/m/91f2d6d2-4d50-3a30-9229-5d66b1c49df5/finance-tips-for-when-you%27re.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/articles/she-never-merged-finances-her-151500158.html",
       "publisher": "Moneywise",
       "time": "2026-05-02T15:15:00.000Z"
-    },
-    {
-      "title": "NexPoint Real Estate Finance Q1 Earnings Call Highlights",
-      "link": "https://finance.yahoo.com/m/92819fa2-8a1d-3451-8dee-f9d1b4a00cf5/nexpoint-real-estate-finance.html",
-      "publisher": "MarketBeat",
-      "time": "2026-05-02T04:08:12.000Z"
     }
   ]
 }
