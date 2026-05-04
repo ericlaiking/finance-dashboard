@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-05 00:10",
+  "updated_at": "2026-05-05 00:20",
   "fund": {
     "name": "00713",
     "price": 53.05,
@@ -10,7 +10,7 @@
     "label": "觀望 / 減碼",
     "confidence": 70,
     "reasons": [
-      "Yield Gap 僅 0.27% (吸引力低於無風險美債)"
+      "Yield Gap 僅 0.26% (吸引力低於無風險美債)"
     ]
   },
   "compositeSignal": null,
@@ -18,7 +18,7 @@
     {
       "id": "us_short_yield",
       "name": "3M 美債利率",
-      "value": 3.59,
+      "value": 3.6,
       "unit": "%"
     },
     {
@@ -36,7 +36,7 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 18.34
+      "value": 18.61
     }
   ],
   "chart": [
