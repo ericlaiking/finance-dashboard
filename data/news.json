@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-05-04 15:20",
+  "updated_at": "2026-05-04 15:30",
   "items": [
+    {
+      "title": "Municipality Finance issues a USD 50 million tap under its MTN programme",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/municipality-finance-issues-usd-50-070000373.html",
+      "publisher": "GlobeNewswire",
+      "time": "2026-05-04T07:00:00.000Z"
+    },
     {
       "title": "Equitas Small Finance Bank Ltd (BOM:543243) Q4 2026 Earnings Call Highlights: Record Profit and ...",
       "link": "https://finance.yahoo.com/markets/stocks/articles/equitas-small-finance-bank-ltd-070037754.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/time-reconsider-qfin-holdings-qfin-042939257.html",
       "publisher": "Simply Wall St.",
       "time": "2026-05-04T04:29:39.000Z"
-    },
-    {
-      "title": "LakeFusion Raises $7.5M Seed Financing to Redefine Master Data Management (MDM) Natively on Databricks",
-      "link": "https://finance.yahoo.com/sectors/technology/articles/lakefusion-raises-7-5m-seed-020200422.html",
-      "publisher": "GlobeNewswire",
-      "time": "2026-05-04T02:02:00.000Z"
     }
   ]
 }
