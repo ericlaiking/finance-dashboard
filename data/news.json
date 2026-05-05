@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-05-06 05:10",
+  "updated_at": "2026-05-06 05:20",
   "items": [
     {
       "title": "Finance of America Reports First Quarter 2026 Results",
       "link": "https://finance.yahoo.com/markets/stocks/articles/finance-america-reports-first-quarter-200500342.html",
       "publisher": "Business Wire",
       "time": "2026-05-05T20:05:00.000Z"
+    },
+    {
+      "title": "Willis Lease Finance Q1 Earnings Call Highlights",
+      "link": "https://finance.yahoo.com/m/2c52f57e-05c5-390c-9fcf-b10c14688f9a/willis-lease-finance-q1.html",
+      "publisher": "MarketBeat",
+      "time": "2026-05-05T21:07:08.000Z"
     },
     {
       "title": "New Mountain Finance Q1 Earnings Call Highlights",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/economy/policy/articles/p-global-ratings-revised-municipality-150000413.html",
       "publisher": "GlobeNewswire",
       "time": "2026-05-05T15:00:00.000Z"
-    },
-    {
-      "title": "Horizon Technology Finance Announces Regular Monthly Distributions for July, August and September 2026 Totaling $0.18 per Share and Special Distributions for July, August and September 2026 Totaling $0.09 per Share",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/horizon-technology-finance-announces-regular-202000244.html",
-      "publisher": "Business Wire",
-      "time": "2026-05-05T20:20:00.000Z"
     }
   ]
 }
