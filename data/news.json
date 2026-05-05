@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-05-05 12:00",
+  "updated_at": "2026-05-05 12:10",
   "items": [
+    {
+      "title": "PwC and OpenAI Build a First-of-Its-Kind OpenAI Native Finance Function",
+      "link": "https://finance.yahoo.com/economy/policy/articles/pwc-openai-build-first-kind-040000257.html",
+      "publisher": "PR Newswire",
+      "time": "2026-05-05T04:00:00.000Z"
+    },
     {
       "title": "New Mountain Finance Corporation Announces Financial Results for the Quarter Ended March 31, 2026",
       "link": "https://finance.yahoo.com/markets/stocks/articles/mountain-finance-corporation-announces-financial-202100436.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/mountain-finance-q1-adjusted-net-211627424.html",
       "publisher": "MT Newswires",
       "time": "2026-05-04T21:16:27.000Z"
-    },
-    {
-      "title": "Municipality Finance will redeem early notes issued under its MTN programme",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/municipality-finance-redeem-early-notes-100000125.html",
-      "publisher": "GlobeNewswire",
-      "time": "2026-05-04T10:00:00.000Z"
     }
   ]
 }
