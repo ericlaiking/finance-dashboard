@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-05-06 17:50",
+  "updated_at": "2026-05-06 18:00",
   "items": [
     {
       "title": "Finance of America Reports First Quarter 2026 Results",
       "link": "https://finance.yahoo.com/markets/stocks/articles/finance-america-reports-first-quarter-200500342.html",
       "publisher": "Business Wire",
       "time": "2026-05-05T20:05:00.000Z"
+    },
+    {
+      "title": "Is OpenAI showing red flags? IBM vice chair discusses",
+      "link": "https://finance.yahoo.com/video/is-openai-showing-red-flags-ibm-vice-chair-discusses-100000002.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-05-06T10:00:00.000Z"
     },
     {
       "title": "Horizon Technology Finance (HRZN) Q1 Earnings Match Estimates",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/m/2c52f57e-05c5-390c-9fcf-b10c14688f9a/willis-lease-finance-q1.html",
       "publisher": "MarketBeat",
       "time": "2026-05-05T21:07:08.000Z"
-    },
-    {
-      "title": "New Mountain Finance Q1 Earnings Call Highlights",
-      "link": "https://finance.yahoo.com/m/e83e23a6-84b5-36aa-92a0-9df4ae903298/new-mountain-finance-q1.html",
-      "publisher": "MarketBeat",
-      "time": "2026-05-05T19:27:18.000Z"
     }
   ]
 }
