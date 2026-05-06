@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-05-06 10:40",
+  "updated_at": "2026-05-06 10:50",
   "items": [
     {
       "title": "Finance of America Reports First Quarter 2026 Results",
       "link": "https://finance.yahoo.com/markets/stocks/articles/finance-america-reports-first-quarter-200500342.html",
       "publisher": "Business Wire",
       "time": "2026-05-05T20:05:00.000Z"
+    },
+    {
+      "title": "Horizon Technology Finance (HRZN) Q1 Earnings Match Estimates",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/horizon-technology-finance-hrzn-q1-003008903.html",
+      "publisher": "Zacks",
+      "time": "2026-05-06T00:30:08.000Z"
     },
     {
       "title": "Willis Lease Finance Q1 Earnings Call Highlights",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/m/e83e23a6-84b5-36aa-92a0-9df4ae903298/new-mountain-finance-q1.html",
       "publisher": "MarketBeat",
       "time": "2026-05-05T19:27:18.000Z"
-    },
-    {
-      "title": "S&P Global Ratings Revised Municipality Finance Plc’s Rating Outlook to Negative",
-      "link": "https://finance.yahoo.com/economy/policy/articles/p-global-ratings-revised-municipality-150000413.html",
-      "publisher": "GlobeNewswire",
-      "time": "2026-05-05T15:00:00.000Z"
     }
   ]
 }
