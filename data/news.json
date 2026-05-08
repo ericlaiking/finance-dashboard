@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-05-09 01:10",
+  "updated_at": "2026-05-09 01:20",
   "items": [
     {
       "title": "Mariner Finance Reaches Settlement Agreement with the State of Tennessee",
       "link": "https://finance.yahoo.com/economy/policy/articles/mariner-finance-reaches-settlement-agreement-145600807.html",
       "publisher": "PR Newswire",
       "time": "2026-05-08T14:56:00.000Z"
+    },
+    {
+      "title": "Better Home & Finance Holding Company Q1 2026 Earnings Call Summary",
+      "link": "https://finance.yahoo.com/m/4524bd35-4d70-303c-86a5-277eb4c6176f/better-home-%26-finance-holding.html",
+      "publisher": "Moby",
+      "time": "2026-05-08T12:30:00.000Z"
     },
     {
       "title": "The Awareness Group Appoints Sanjay Swarup as Chief Financial Officer",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/citigroup-c-outperforming-other-finance-134004696.html",
       "publisher": "Zacks",
       "time": "2026-05-08T13:40:04.000Z"
-    },
-    {
-      "title": "Morgan Stanley unveils crypto trading with cheaper fees than competitors",
-      "link": "https://finance.yahoo.com/video/morgan-stanley-unveils-crypto-trading-170000578.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-05-08T17:00:00.000Z"
     }
   ]
 }
