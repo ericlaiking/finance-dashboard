@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-05-10 06:00",
+  "updated_at": "2026-05-10 06:10",
   "items": [
     {
       "title": "WhiteHorse Finance Q1 Earnings Call Highlights",
       "link": "https://finance.yahoo.com/m/21666e70-e5d2-3960-9e28-d7a5af935bcf/whitehorse-finance-q1.html",
       "publisher": "MarketBeat",
       "time": "2026-05-09T07:10:49.000Z"
+    },
+    {
+      "title": "So you’ve heard these AI terms and nodded along; let’s fix that",
+      "link": "https://finance.yahoo.com/m/860763dc-fc4c-35a2-a666-cd1c0d372aac/so-you%E2%80%99ve-heard-these-ai.html",
+      "publisher": "TechCrunch",
+      "time": "2026-05-09T21:45:00.000Z"
     },
     {
       "title": "Is Harrow (HROW) Pricing Reflect Its 65.5% One Year Surge And DCF Outlook",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/assessing-ringkj-bing-landbobank-cpse-212426027.html",
       "publisher": "Simply Wall St.",
       "time": "2026-05-09T21:24:26.000Z"
-    },
-    {
-      "title": "A Look At Halozyme Therapeutics (HALO) Valuation After Recent Share Price Swings",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/look-halozyme-therapeutics-halo-valuation-212357303.html",
-      "publisher": "Simply Wall St.",
-      "time": "2026-05-09T21:23:57.000Z"
     }
   ]
 }
