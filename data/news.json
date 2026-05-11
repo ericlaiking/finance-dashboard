@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-05-12 04:20",
+  "updated_at": "2026-05-12 04:30",
   "items": [
+    {
+      "title": "Microsoft's Satya Nadella testifies in Elon Musk, OpenAI trial",
+      "link": "https://finance.yahoo.com/video/microsofts-satya-nadella-testifies-in-elon-musk-openai-trial-200758159.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-05-11T20:07:58.000Z"
+    },
     {
       "title": "Personal Finance Expert and 2X National Bestselling Author Anthony O'Neal Announces Forthcoming Book Stop Living Paycheck to Paycheck, Available for Pre-Order Now",
       "link": "https://finance.yahoo.com/markets/articles/personal-finance-expert-2x-national-130400064.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/oxford-finance-closes-600-million-180200229.html",
       "publisher": "Business Wire",
       "time": "2026-05-11T18:02:00.000Z"
-    },
-    {
-      "title": "Four Tree Island Advisory Urges Willis Lease Finance Stockholders to Vote “AGAINST” Proposals at Upcoming Annual Meeting and Demand Board Accountability",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/four-tree-island-advisory-urges-193300133.html",
-      "publisher": "GlobeNewswire",
-      "time": "2026-05-11T19:33:00.000Z"
     }
   ]
 }
