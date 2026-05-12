@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-05-13 03:20",
+  "updated_at": "2026-05-13 03:30",
   "items": [
+    {
+      "title": "Bain Capital Specialty Finance Q1 Earnings Call Highlights",
+      "link": "https://finance.yahoo.com/m/5f3ac10b-dbf1-31c4-aba5-549733983720/bain-capital-specialty.html",
+      "publisher": "MarketBeat",
+      "time": "2026-05-12T19:10:18.000Z"
+    },
     {
       "title": "SRG Housing Finance Ltd (BOM:534680) Q4 2026 Earnings Call Highlights: Robust Growth Amidst ...",
       "link": "https://finance.yahoo.com/markets/stocks/articles/srg-housing-finance-ltd-bom-170147080.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/economy/policy/articles/data-shows-nonprofit-state-based-140000624.html",
       "publisher": "PR Newswire",
       "time": "2026-05-12T14:00:00.000Z"
-    },
-    {
-      "title": "AI Is Supercharging Cybercrime— And IMF Says Finance May Not Be Ready",
-      "link": "https://finance.yahoo.com/economy/policy/articles/ai-supercharging-cybercrime-imf-says-163043774.html",
-      "publisher": "Benzinga",
-      "time": "2026-05-12T16:30:43.000Z"
     }
   ]
 }
