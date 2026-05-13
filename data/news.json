@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-05-13 18:50",
+  "updated_at": "2026-05-13 19:00",
   "items": [
     {
       "title": "Lument Finance Trust Announces Quarter-End Earnings Release and Investor Call Dates",
       "link": "https://finance.yahoo.com/news/lument-finance-trust-announces-quarter-212900889.html",
       "publisher": "PR Newswire",
       "time": "2026-05-12T21:29:00.000Z"
+    },
+    {
+      "title": "Eos Energy Enterprises Reports First Quarter 2026 Financial Results and Announces Frontier Power USA",
+      "link": "https://finance.yahoo.com/news/eos-energy-enterprises-reports-first-103400047.html",
+      "publisher": "GlobeNewswire",
+      "time": "2026-05-13T10:34:00.000Z"
     },
     {
       "title": "UK accounting regulator fines ex-Carillion finance directors",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/news/elon-musks-tesla-launches-affordable-095148232.html",
       "publisher": "Benzinga",
       "time": "2026-05-13T09:51:48.000Z"
-    },
-    {
-      "title": "Morning Bid: Fed alert",
-      "link": "https://finance.yahoo.com/news/morning-bid-fed-alert-103303465.html",
-      "publisher": "Reuters",
-      "time": "2026-05-13T10:33:03.000Z"
     }
   ]
 }
