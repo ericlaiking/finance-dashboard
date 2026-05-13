@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-05-13 22:40",
+  "updated_at": "2026-05-13 22:50",
   "items": [
+    {
+      "title": "Structured Finance Association Opens the Market",
+      "link": "https://finance.yahoo.com/news/structured-finance-association-opens-market-142500257.html",
+      "publisher": "TMX Newsfile",
+      "time": "2026-05-13T14:25:00.000Z"
+    },
     {
       "title": "ISG to Study Finance and Accounting Outsourcing Providers",
       "link": "https://finance.yahoo.com/news/isg-study-finance-accounting-outsourcing-140000976.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/news/public-finance-partner-isaac-yilma-142100407.html",
       "publisher": "GlobeNewswire",
       "time": "2026-05-13T14:21:00.000Z"
-    },
-    {
-      "title": "COMPACOM Launches Annual $1,500 Scholarship to Support U.S. Finance Students",
-      "link": "https://finance.yahoo.com/news/compacom-launches-annual-1-500-125600559.html",
-      "publisher": "PR Newswire",
-      "time": "2026-05-13T12:56:00.000Z"
     }
   ]
 }
