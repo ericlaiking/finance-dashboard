@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-14 03:30",
+  "updated_at": "2026-05-14 03:40",
   "fund": {
     "name": "VOO",
-    "price": 683.51,
+    "price": 683.49,
     "change_pct": 0.71
   },
   "signal": {
@@ -28,7 +28,7 @@
     {
       "id": "sp500_deviation",
       "name": "S&P 500 乖離率",
-      "value": 8.35,
+      "value": 8.34,
       "unit": "%"
     },
     {
@@ -704,7 +704,7 @@
     },
     {
       "date": "2026-05-13",
-      "close": 683.51
+      "close": 683.49
     }
   ]
 }
