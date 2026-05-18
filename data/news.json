@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-05-18 16:50",
+  "updated_at": "2026-05-18 17:00",
   "items": [
     {
       "title": "G7 finance chiefs meet to seek common stance on unstable ground",
       "link": "https://finance.yahoo.com/economy/policy/articles/g7-finance-chiefs-meet-seek-063158764.html",
       "publisher": "AFP",
       "time": "2026-05-18T06:31:58.000Z"
+    },
+    {
+      "title": "G7 finance chiefs seek to tackle imbalances in wake of bond selloff",
+      "link": "https://finance.yahoo.com/news/g7-finance-chiefs-seek-tackle-000359726.html",
+      "publisher": "Reuters",
+      "time": "2026-05-18T08:39:06.000Z"
     },
     {
       "title": "A Look At Willis Lease Finance (WLFC) Valuation After Recent Share Price Weakness",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/sectors/technology/articles/genpact-google-cloud-alliance-targets-031626823.html",
       "publisher": "Simply Wall St.",
       "time": "2026-05-18T03:16:26.000Z"
-    },
-    {
-      "title": "Fidelity National Information Services (FIS) Supply Chain Finance Platform Selected by Glencore for $2.55B Program",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/fidelity-national-information-services-fis-043321492.html",
-      "publisher": "Insider Monkey",
-      "time": "2026-05-18T04:33:21.000Z"
     }
   ]
 }
