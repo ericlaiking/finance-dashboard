@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-05-19 23:10",
+  "updated_at": "2026-05-19 23:20",
   "items": [
     {
       "title": "Take a closer look at Nvidia stock using Yahoo Finance's AlphaSpace",
       "link": "https://finance.yahoo.com/video/take-a-closer-look-at-nvidia-stock-using-yahoo-finances-alphaspace-140312172.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-05-19T14:03:12.000Z"
+    },
+    {
+      "title": "Take a look at Micron stock using Yahoo Finance's AlphaSpace",
+      "link": "https://finance.yahoo.com/video/take-a-look-at-micron-stock-using-yahoo-finances-alphaspace-145841821.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-05-19T14:58:41.000Z"
     },
     {
       "title": "The notes redeemed by Municipality Finance have been removed from trading at Nasdaq Helsinki",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/economy/policy/articles/sparta-commercial-services-highlights-additional-123000720.html",
       "publisher": "TMX Newsfile",
       "time": "2026-05-19T12:30:00.000Z"
-    },
-    {
-      "title": "How the Iran war is driving a renewable energy pivot",
-      "link": "https://finance.yahoo.com/video/how-the-iran-war-is-driving-a-renewable-energy-pivot-140143905.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-05-19T14:01:43.000Z"
     }
   ]
 }
