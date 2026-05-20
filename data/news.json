@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-05-20 17:00",
+  "updated_at": "2026-05-20 17:10",
   "items": [
     {
       "title": "Tencent Ties Climate Finance Push To AI Cloud Growth Story",
       "link": "https://finance.yahoo.com/markets/stocks/articles/tencent-ties-climate-finance-push-031332433.html",
       "publisher": "Simply Wall St.",
       "time": "2026-05-20T03:13:32.000Z"
+    },
+    {
+      "title": "Nearly four in five companies in Western Europe faced with late payments, Atradius survey finds",
+      "link": "https://finance.yahoo.com/economy/articles/nearly-four-five-companies-western-090000239.html",
+      "publisher": "CNW Group",
+      "time": "2026-05-20T09:00:00.000Z"
     },
     {
       "title": "India Invites Binance, WazirX and ZebPay for Crypto Talks — Why It’s a Big Deal",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/american-express-axp-still-attractive-043407898.html",
       "publisher": "Simply Wall St.",
       "time": "2026-05-20T04:34:07.000Z"
-    },
-    {
-      "title": "Take a closer look at Nvidia stock using Yahoo Finance's AlphaSpace",
-      "link": "https://finance.yahoo.com/video/take-a-closer-look-at-nvidia-stock-using-yahoo-finances-alphaspace-140312172.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-05-19T14:03:12.000Z"
     }
   ]
 }
