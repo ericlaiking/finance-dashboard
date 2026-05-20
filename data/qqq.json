@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-05-20 23:40",
+  "updated_at": "2026-05-20 23:42",
   "fund": {
     "name": "QQQ",
-    "price": 711.06,
-    "change_pct": 1.36
+    "price": 711.24,
+    "change_pct": 1.38
   },
   "signal": {
     "action": "WAIT",
@@ -34,7 +34,7 @@
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 34.69
+      "value": 34.7
     }
   ],
   "chart": [
@@ -704,7 +704,7 @@
     },
     {
       "date": "2026-05-20",
-      "close": 711.05
+      "close": 711.24
     }
   ]
 }
