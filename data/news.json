@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-05-22 05:20",
+  "updated_at": "2026-05-22 05:30",
   "items": [
     {
       "title": "Inside Claude’s rapid expansion across corporate finance",
       "link": "https://finance.yahoo.com/m/05f01694-f9e1-35a8-a2f2-8854acb6c72a/inside-claude%E2%80%99s-rapid.html",
       "publisher": "CFO.com",
       "time": "2026-05-21T15:29:09.000Z"
+    },
+    {
+      "title": "Wendy’s debuts revamped spicy chicken sandwich",
+      "link": "https://finance.yahoo.com/video/wendys-debuts-revamped-spicy-chicken-sandwich-211432451.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-05-21T21:14:32.000Z"
     },
     {
       "title": "OneStream Launches AI-Assisted Developer Studio and Agentic Finance Toolkit",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/video/why-spacexs-ipo-could-be-the-biggest-market-opportunity-in-history-194418820.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-05-21T19:44:18.000Z"
-    },
-    {
-      "title": "US-Iran war is 'reigniting' inflation fears while markets hit new highs",
-      "link": "https://finance.yahoo.com/video/us-iran-war-is-reigniting-inflation-fears-while-markets-hit-new-highs-203057603.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-05-21T20:30:57.000Z"
     }
   ]
 }
