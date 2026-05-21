@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-22 00:30",
+  "updated_at": "2026-05-22 00:40",
   "items": [
     {
       "title": "OneStream Launches AI-Assisted Developer Studio and Agentic Finance Toolkit",
@@ -14,16 +14,16 @@
       "time": "2026-05-21T14:30:00.000Z"
     },
     {
-      "title": "Colorado State University Global and Corporate Finance Institute Partner to Advance Finance Education",
-      "link": "https://finance.yahoo.com/economy/policy/articles/colorado-state-university-global-corporate-143200258.html",
-      "publisher": "PR Newswire",
-      "time": "2026-05-21T14:32:00.000Z"
-    },
-    {
       "title": "Microsoft And OneStream Partnership Highlights Growing AI Role In Finance",
       "link": "https://finance.yahoo.com/sectors/technology/articles/microsoft-onestream-partnership-highlights-growing-111139933.html",
       "publisher": "Simply Wall St.",
       "time": "2026-05-21T11:11:39.000Z"
+    },
+    {
+      "title": "Colorado State University Global and Corporate Finance Institute Partner to Advance Finance Education",
+      "link": "https://finance.yahoo.com/economy/policy/articles/colorado-state-university-global-corporate-143200258.html",
+      "publisher": "PR Newswire",
+      "time": "2026-05-21T14:32:00.000Z"
     }
   ]
 }
