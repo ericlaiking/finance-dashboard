@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-05-22 09:10",
+  "updated_at": "2026-05-22 09:20",
   "items": [
     {
       "title": "Retail earnings, consumer data, OpenAI IPO filing: What to Watch",
       "link": "https://finance.yahoo.com/video/retail-earnings-consumer-data-openai-230000570.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-05-21T23:00:00.000Z"
+    },
+    {
+      "title": "Japan will avoid over-reliance on debt for extra budget, finance minister says",
+      "link": "https://finance.yahoo.com/economy/policy/articles/japan-avoid-over-reliance-debt-010443261.html",
+      "publisher": "Reuters",
+      "time": "2026-05-22T01:04:43.000Z"
     },
     {
       "title": "Inside Claude’s rapid expansion across corporate finance",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/video/wendys-debuts-revamped-spicy-chicken-sandwich-211432451.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-05-21T21:14:32.000Z"
-    },
-    {
-      "title": "OneStream Launches AI-Assisted Developer Studio and Agentic Finance Toolkit",
-      "link": "https://finance.yahoo.com/sectors/technology/articles/onestream-launches-ai-assisted-developer-130000120.html",
-      "publisher": "PR Newswire",
-      "time": "2026-05-21T13:00:00.000Z"
     }
   ]
 }
