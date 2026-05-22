@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-05-22 20:20",
+  "updated_at": "2026-05-22 20:30",
   "items": [
     {
       "title": "Electric Vehicles Update - Financing Revolutionizes Accessibility In Sustainable Transportation",
       "link": "https://finance.yahoo.com/sectors/technology/articles/electric-vehicles-financing-revolutionizes-accessibility-103941745.html",
       "publisher": "Simply Wall St.",
       "time": "2026-05-22T10:39:41.000Z"
+    },
+    {
+      "title": "BofA Securities Adjusts Bain Capital Specialty Finance Price Target to $13.50 From $13",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/bofa-securities-adjusts-bain-capital-121153048.html",
+      "publisher": "MT Newswires",
+      "time": "2026-05-22T12:11:53.000Z"
     },
     {
       "title": "Germany’s Finance Committee Rejects Bid to End Crypto Tax Exemption",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/video/walmart-home-depot-consumer-retail-103000165.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-05-22T10:30:00.000Z"
-    },
-    {
-      "title": "Morning Bid: Brittle bonds and AI boom face off",
-      "link": "https://finance.yahoo.com/news/morning-bid-brittle-bonds-ai-104513837.html",
-      "publisher": "Reuters",
-      "time": "2026-05-22T10:45:13.000Z"
     }
   ]
 }
