@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-05-25 13:20",
+  "updated_at": "2026-05-25 13:25",
   "fund": {
     "name": "00713",
-    "price": 56.05,
-    "change_pct": 0.63
+    "price": 56,
+    "change_pct": 0.54
   },
   "signal": {
     "action": "HOLD",
@@ -654,7 +654,7 @@
     },
     {
       "date": "2026-05-25",
-      "close": 56.05
+      "close": 56
     }
   ]
 }
