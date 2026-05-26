@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-05-27 05:40",
+  "updated_at": "2026-05-27 05:50",
   "items": [
+    {
+      "title": "Salesforce, HP earnings to give insight into AI demand, PC market",
+      "link": "https://finance.yahoo.com/video/salesforce-hp-earnings-to-give-insight-into-ai-demand-pc-market-213006729.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-05-26T21:30:06.000Z"
+    },
     {
       "title": "Solstice launches SLX token for fast-growing Solana yield ecosystem",
       "link": "https://finance.yahoo.com/m/3f93dbaf-16f3-36f0-9895-ccb6d4075ea2/solstice-launches-slx-token.html",
@@ -8,22 +14,16 @@
       "time": "2026-05-26T20:24:53.000Z"
     },
     {
+      "title": "The future of warfare: Lockheed Martin exec. talks missile defense",
+      "link": "https://finance.yahoo.com/video/the-future-of-warfare-lockheed-martin-exec-talks-missile-defense-212935335.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-05-26T21:29:35.000Z"
+    },
+    {
       "title": "Municipality Finance issues USD 1 billion benchmark under its MTN programme",
       "link": "https://finance.yahoo.com/markets/stocks/articles/municipality-finance-issues-usd-1-070000630.html",
       "publisher": "GlobeNewswire",
       "time": "2026-05-26T07:00:00.000Z"
-    },
-    {
-      "title": "DIRECTV Financing, LLC and DIRECTV Financing Co-Obligor, Inc. Announce Consideration for Tender Offer for Up to $1,400,000,000 in Aggregate Principal Amount of Their 5.875% Senior Secured Notes Due 2027",
-      "link": "https://finance.yahoo.com/markets/options/articles/directv-financing-llc-directv-financing-163500407.html",
-      "publisher": "PR Newswire",
-      "time": "2026-05-26T16:35:00.000Z"
-    },
-    {
-      "title": "How the ‘Hormuz Hangover’ could impact oil prices",
-      "link": "https://finance.yahoo.com/video/how-the-hormuz-hangover-could-impact-oil-prices-195342163.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-05-26T19:53:42.000Z"
     }
   ]
 }
