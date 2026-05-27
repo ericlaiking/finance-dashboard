@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-05-27 22:40",
+  "updated_at": "2026-05-27 22:50",
   "items": [
+    {
+      "title": "Finance Remains the Top Career Destination for Canadian Graduates Navigating a More Competitive, AI-shaped Job Market",
+      "link": "https://finance.yahoo.com/economy/articles/finance-remains-top-career-destination-130000267.html",
+      "publisher": "Business Wire",
+      "time": "2026-05-27T13:00:00.000Z"
+    },
     {
       "title": "Workday Introduces Adaptive Decision Intelligence, Bringing Planning Questions, Scenarios, and Decisions Into One AI Experience",
       "link": "https://finance.yahoo.com/sectors/technology/articles/workday-introduces-adaptive-decision-intelligence-130300234.html",
@@ -14,16 +20,10 @@
       "time": "2026-05-27T13:15:52.000Z"
     },
     {
-      "title": "Apollo.io Adds Veteran Finance Leader Phil Moon as CFO Amid Rapid Growth",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/apollo-io-adds-veteran-finance-134500607.html",
-      "publisher": "PR Newswire",
-      "time": "2026-05-27T13:45:00.000Z"
-    },
-    {
-      "title": "Standard Uranium expands upcoming Davidson River drill program, launches $4M financing",
-      "link": "https://finance.yahoo.com/m/3558aa93-13da-3e43-87bb-68f58b82c283/standard-uranium-expands.html",
-      "publisher": "Proactive",
-      "time": "2026-05-27T13:29:00.000Z"
+      "title": "Lower oil prices should help alleviate pressure on bond yields",
+      "link": "https://finance.yahoo.com/video/lower-oil-prices-should-help-alleviate-pressure-on-bond-yields-144303198.html",
+      "publisher": "Yahoo Finance Video",
+      "time": "2026-05-27T14:43:03.000Z"
     }
   ]
 }
