@@ -1,11 +1,17 @@
 {
-  "updated_at": "2026-05-27 21:30",
+  "updated_at": "2026-05-27 21:40",
   "items": [
     {
       "title": "Workday Introduces Adaptive Decision Intelligence, Bringing Planning Questions, Scenarios, and Decisions Into One AI Experience",
       "link": "https://finance.yahoo.com/sectors/technology/articles/workday-introduces-adaptive-decision-intelligence-130300234.html",
       "publisher": "PR Newswire",
       "time": "2026-05-27T13:03:00.000Z"
+    },
+    {
+      "title": "AmeriTrust Announces First Quarter 2026 Financial Results",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/ameritrust-announces-first-quarter-2026-132200532.html",
+      "publisher": "ACCESS Newswire",
+      "time": "2026-05-27T13:22:00.000Z"
     },
     {
       "title": "Benton Announces $2 Million Non-Brokered Unit Financing with Investment by Eric Sprott",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/sectors/healthcare/articles/apogee-therapeutics-blackstone-life-sciences-111032354.html",
       "publisher": "MT Newswires",
       "time": "2026-05-27T11:10:32.000Z"
-    },
-    {
-      "title": "Happy Money Crosses $7B in Loan Originations, Appoints Tim Parsons Chief Risk & Analytics Officer",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/happy-money-crosses-7b-loan-120700455.html",
-      "publisher": "PR Newswire",
-      "time": "2026-05-27T12:07:00.000Z"
     }
   ]
 }
