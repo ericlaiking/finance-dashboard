@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-05-27 23:00",
+  "updated_at": "2026-05-27 23:10",
   "items": [
+    {
+      "title": "Finance Remains the Top Career Choice as Graduates Prepare for an Increasingly Competitive, AI-Shaped Job Market",
+      "link": "https://finance.yahoo.com/economy/articles/finance-remains-top-career-choice-130000010.html",
+      "publisher": "Business Wire",
+      "time": "2026-05-27T13:00:00.000Z"
+    },
     {
       "title": "Finance Remains the Top Career Destination for Canadian Graduates Navigating a More Competitive, AI-shaped Job Market",
       "link": "https://finance.yahoo.com/economy/articles/finance-remains-top-career-destination-130000267.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/articles/dave-ramsey-says-wait-least-131552721.html",
       "publisher": "Benzinga",
       "time": "2026-05-27T13:15:52.000Z"
-    },
-    {
-      "title": "Lower oil prices should help alleviate pressure on bond yields",
-      "link": "https://finance.yahoo.com/video/lower-oil-prices-should-help-alleviate-pressure-on-bond-yields-144303198.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-05-27T14:43:03.000Z"
     }
   ]
 }
