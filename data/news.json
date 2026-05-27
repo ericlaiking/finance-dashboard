@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-05-27 21:10",
+  "updated_at": "2026-05-27 21:20",
   "items": [
+    {
+      "title": "Workday Introduces Adaptive Decision Intelligence, Bringing Planning Questions, Scenarios, and Decisions Into One AI Experience",
+      "link": "https://finance.yahoo.com/sectors/technology/articles/workday-introduces-adaptive-decision-intelligence-130300234.html",
+      "publisher": "PR Newswire",
+      "time": "2026-05-27T13:03:00.000Z"
+    },
     {
       "title": "Benton Announces $2 Million Non-Brokered Unit Financing with Investment by Eric Sprott",
       "link": "https://finance.yahoo.com/markets/stocks/articles/benton-announces-2-million-non-113000360.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/markets/stocks/articles/happy-money-crosses-7b-loan-120700455.html",
       "publisher": "PR Newswire",
       "time": "2026-05-27T12:07:00.000Z"
-    },
-    {
-      "title": "Global Talent Trends Survey Finds Accountants Engaging in Environmental Issues and Seeking Social Impact",
-      "link": "https://finance.yahoo.com/economy/policy/articles/global-talent-trends-survey-finds-122600072.html",
-      "publisher": "GlobeNewswire",
-      "time": "2026-05-27T12:26:00.000Z"
     }
   ]
 }
