@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-05-27 18:20",
+  "updated_at": "2026-05-27 18:30",
   "items": [
+    {
+      "title": "Fortune Reveals the 100 Most Powerful Women in Business 2026 List",
+      "link": "https://finance.yahoo.com/sectors/technology/articles/fortune-reveals-100-most-powerful-100000326.html",
+      "publisher": "PR Newswire",
+      "time": "2026-05-27T10:00:00.000Z"
+    },
     {
       "title": "Airbnb-backed WeRoad raises $58M to take its group travel platform to the US",
       "link": "https://finance.yahoo.com/sectors/technology/articles/airbnb-backed-weroad-raises-58m-080000454.html",
@@ -18,12 +24,6 @@
       "link": "https://finance.yahoo.com/sectors/technology/articles/digital-transformation-industry-trends-future-083200552.html",
       "publisher": "GlobeNewswire",
       "time": "2026-05-27T08:32:00.000Z"
-    },
-    {
-      "title": "Salesforce, HP earnings to give insight into AI demand, PC market",
-      "link": "https://finance.yahoo.com/video/salesforce-hp-earnings-to-give-insight-into-ai-demand-pc-market-213006729.html",
-      "publisher": "Yahoo Finance Video",
-      "time": "2026-05-26T21:30:06.000Z"
     }
   ]
 }
