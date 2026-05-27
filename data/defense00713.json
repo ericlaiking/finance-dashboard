@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-05-27 17:20",
+  "updated_at": "2026-05-27 17:30",
   "fund": {
     "name": "00713",
-    "price": null,
-    "change_pct": 0
+    "price": 56.05,
+    "change_pct": 0.18
   },
   "signal": {
     "action": "HOLD",
@@ -18,25 +18,25 @@
     {
       "id": "us_short_yield",
       "name": "3M 美債利率",
-      "value": 0,
+      "value": 3.58,
       "unit": "%"
     },
     {
       "id": "yield_spread",
       "name": "美債利差 (10Y-3M)",
-      "value": 0,
+      "value": 0.91,
       "unit": "%"
     },
     {
       "id": "estimated_yield",
       "name": "預估殖利率",
-      "value": 0,
+      "value": 4.46,
       "unit": "%"
     },
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 0
+      "value": 16.99
     }
   ],
   "chart": [
