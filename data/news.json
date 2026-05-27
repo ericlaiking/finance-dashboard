@@ -1,6 +1,12 @@
 {
-  "updated_at": "2026-05-27 16:30",
+  "updated_at": "2026-05-27 16:40",
   "items": [
+    {
+      "title": "Airbnb-backed WeRoad raises $58M to take its group travel platform to the US",
+      "link": "https://finance.yahoo.com/sectors/technology/articles/airbnb-backed-weroad-raises-58m-080000454.html",
+      "publisher": "TechCrunch",
+      "time": "2026-05-27T08:00:00.000Z"
+    },
     {
       "title": "Civinity, AB continues its bond programme: a new tranche of the bond issue, aimed at financing the Group’s further expansion, will total up to EUR 15 million",
       "link": "https://finance.yahoo.com/markets/stocks/articles/civinity-ab-continues-bond-programme-055700831.html",
@@ -8,22 +14,16 @@
       "time": "2026-05-27T05:57:00.000Z"
     },
     {
+      "title": "Digital Transformation Industry Trends and Future Forecast Report 2025: Market to Reach $13.26 Trillion by 2035 from $1.42 Trillion in 2023",
+      "link": "https://finance.yahoo.com/sectors/technology/articles/digital-transformation-industry-trends-future-083200552.html",
+      "publisher": "GlobeNewswire",
+      "time": "2026-05-27T08:32:00.000Z"
+    },
+    {
       "title": "Salesforce, HP earnings to give insight into AI demand, PC market",
       "link": "https://finance.yahoo.com/video/salesforce-hp-earnings-to-give-insight-into-ai-demand-pc-market-213006729.html",
       "publisher": "Yahoo Finance Video",
       "time": "2026-05-26T21:30:06.000Z"
-    },
-    {
-      "title": "Solstice launches SLX token for fast-growing Solana yield ecosystem",
-      "link": "https://finance.yahoo.com/m/3f93dbaf-16f3-36f0-9895-ccb6d4075ea2/solstice-launches-slx-token.html",
-      "publisher": "TheStreet",
-      "time": "2026-05-26T20:24:53.000Z"
-    },
-    {
-      "title": "ABIONYX Pharma Launches Fully Secured Capital Increase with Preferential Subscription Rights and Structured Debt Financing for an Aggregate Amount of up to c. EUR 33 M",
-      "link": "https://finance.yahoo.com/sectors/healthcare/articles/abionyx-pharma-launches-fully-secured-053000336.html",
-      "publisher": "Business Wire",
-      "time": "2026-05-27T05:30:00.000Z"
     }
   ]
 }
