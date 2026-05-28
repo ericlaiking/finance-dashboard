@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-05-28 22:00",
+  "updated_at": "2026-05-28 22:10",
   "fund": {
     "name": "VOO",
-    "price": 689.99,
-    "change_pct": 0
+    "price": 690.08,
+    "change_pct": 0.02
   },
   "signal": {
     "action": "HOLD",
@@ -34,7 +34,7 @@
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 28.22
+      "value": 28.23
     }
   ],
   "chart": [
@@ -700,7 +700,7 @@
     },
     {
       "date": "2026-05-28",
-      "close": 689.99
+      "close": 690.08
     }
   ]
 }
