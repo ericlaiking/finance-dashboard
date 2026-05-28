@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-05-28 20:30",
+  "updated_at": "2026-05-28 20:40",
   "fund": {
     "name": "00713",
     "price": 55.75,
     "change_pct": -0.54
   },
   "signal": {
-    "action": "WAIT",
-    "label": "觀望 / 減碼",
-    "confidence": 70,
+    "action": "HOLD",
+    "label": "持有觀察",
+    "confidence": 50,
     "reasons": [
-      "Yield Gap 僅 0% (吸引力低於無風險美債)"
+      "防禦指標處於正常區間，維持現有資產配置"
     ]
   },
   "compositeSignal": null,
@@ -24,7 +24,7 @@
     {
       "id": "yield_spread",
       "name": "美債利差 (10Y-3M)",
-      "value": 0.9,
+      "value": 0.92,
       "unit": "%"
     },
     {
