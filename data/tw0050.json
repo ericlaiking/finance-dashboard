@@ -1,17 +1,16 @@
 {
-  "updated_at": "2026-05-29 12:00",
+  "updated_at": "2026-05-29 12:10",
   "fund": {
     "name": "0050",
-    "price": 103.85,
-    "change_pct": 3.33
+    "price": 104,
+    "change_pct": 3.48
   },
   "signal": {
     "action": "WAIT",
     "label": "觀望 / 減碼",
-    "confidence": 80,
+    "confidence": 70,
     "reasons": [
-      "景氣對策燈號過熱 (39分)",
-      "外資大幅賣超台股 (-381億)"
+      "景氣對策燈號過熱 (39分)"
     ]
   },
   "indicators": [
@@ -24,7 +23,7 @@
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 33.98
+      "value": 34.03
     },
     {
       "id": "usd_twd",
@@ -34,7 +33,7 @@
     {
       "id": "foreign_buy",
       "name": "外資買賣超",
-      "value": -381,
+      "value": null,
       "unit": "億"
     }
   ],
@@ -661,7 +660,7 @@
     },
     {
       "date": "2026-05-29",
-      "close": 103.85
+      "close": 104
     }
   ]
 }
