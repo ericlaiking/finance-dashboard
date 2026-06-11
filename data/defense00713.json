@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-06-11 11:00",
+  "updated_at": "2026-06-11 11:10",
   "fund": {
     "name": "00713",
-    "price": 58.65,
-    "change_pct": -0.51
+    "price": 58.75,
+    "change_pct": -0.34
   },
   "signal": {
     "action": "HOLD",
@@ -36,7 +36,7 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 22.22
+      "value": 19.87
     }
   ],
   "chart": [
@@ -670,7 +670,7 @@
     },
     {
       "date": "2026-06-11",
-      "close": 58.65
+      "close": 58.75
     }
   ]
 }
