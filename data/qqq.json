@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-06-16 02:00",
+  "updated_at": "2026-06-16 02:10",
   "fund": {
     "name": "QQQ",
-    "price": 743.365,
-    "change_pct": 3.05
+    "price": 743.52,
+    "change_pct": 3.07
   },
   "signal": {
     "action": "WAIT",
@@ -22,7 +22,7 @@
     {
       "id": "us_10y",
       "name": "10Y 美債殖利率",
-      "value": 4.47,
+      "value": 4.46,
       "unit": "%"
     },
     {
@@ -34,7 +34,7 @@
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 33.17
+      "value": 33.18
     }
   ],
   "chart": [
@@ -692,7 +692,7 @@
     },
     {
       "date": "2026-06-15",
-      "close": 743.36
+      "close": 743.52
     }
   ]
 }
