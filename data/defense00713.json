@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-17 21:51",
+  "updated_at": "2026-06-17 22:01",
   "fund": {
     "name": "00713",
     "price": 61.05,
@@ -24,7 +24,7 @@
     {
       "id": "yield_spread",
       "name": "美債利差 (10Y-3M)",
-      "value": 0.8,
+      "value": 0.81,
       "unit": "%"
     },
     {
@@ -36,7 +36,7 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 16.39
+      "value": 16.29
     }
   ],
   "chart": [
