@@ -1,23 +1,23 @@
 {
-  "updated_at": "2026-06-26 03:10",
+  "updated_at": "2026-06-26 03:20",
   "fund": {
     "name": "VOO",
-    "price": 675.675,
-    "change_pct": 0
+    "price": 674.9,
+    "change_pct": -0.12
   },
   "signal": {
-    "action": "HOLD",
-    "label": "持有觀察",
-    "confidence": 50,
+    "action": "BUY",
+    "label": "逢低買入",
+    "confidence": 70,
     "reasons": [
-      "指標皆在正常區間，維持現有部位"
+      "Fear & Greed 處於極度恐懼 (25)"
     ]
   },
   "indicators": [
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 26
+      "value": 25
     },
     {
       "id": "us_10y",
@@ -28,13 +28,13 @@
     {
       "id": "sp500_deviation",
       "name": "S&P 500 乖離率",
-      "value": 4.55,
+      "value": 4.43,
       "unit": "%"
     },
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 26.37
+      "value": 26.34
     }
   ],
   "chart": [
@@ -696,7 +696,7 @@
     },
     {
       "date": "2026-06-25",
-      "close": 675.67
+      "close": 674.9
     }
   ]
 }
