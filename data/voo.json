@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-08 03:10",
+  "updated_at": "2026-07-08 03:20",
   "fund": {
     "name": "VOO",
-    "price": 686.2951,
-    "change_pct": -0.63
+    "price": 686.22,
+    "change_pct": -0.64
   },
   "signal": {
     "action": "HOLD",
@@ -17,7 +17,7 @@
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 43
+      "value": 42
     },
     {
       "id": "us_10y",
@@ -688,7 +688,7 @@
     },
     {
       "date": "2026-07-07",
-      "close": 686.3
+      "close": 686.22
     }
   ]
 }
