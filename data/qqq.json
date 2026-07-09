@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-10 02:20",
+  "updated_at": "2026-07-10 02:31",
   "fund": {
     "name": "QQQ",
-    "price": 723.47,
+    "price": 723.46,
     "change_pct": 1.69
   },
   "signal": {
@@ -17,7 +17,7 @@
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 47
+      "value": 48
     },
     {
       "id": "us_10y",
@@ -692,7 +692,7 @@
     },
     {
       "date": "2026-07-09",
-      "close": 723.5
+      "close": 723.46
     }
   ]
 }
