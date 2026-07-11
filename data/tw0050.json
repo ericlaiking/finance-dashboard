@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-11 07:50",
+  "updated_at": "2026-07-11 08:01",
   "fund": {
     "name": "0050",
     "price": 105.8,
@@ -8,10 +8,9 @@
   "signal": {
     "action": "WAIT",
     "label": "觀望 / 減碼",
-    "confidence": 80,
+    "confidence": 70,
     "reasons": [
-      "景氣對策燈號過熱 (39分)",
-      "外資大幅賣超台股 (-473億)"
+      "景氣對策燈號過熱 (39分)"
     ]
   },
   "indicators": [
@@ -34,15 +33,11 @@
     {
       "id": "foreign_buy",
       "name": "外資買賣超",
-      "value": -473,
+      "value": null,
       "unit": "億"
     }
   ],
   "chart": [
-    {
-      "date": "2025-11-12",
-      "close": 63.2
-    },
     {
       "date": "2025-11-13",
       "close": 62.9
