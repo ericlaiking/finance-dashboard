@@ -18,13 +18,13 @@
     {
       "id": "us_short_yield",
       "name": "3M 美債利率",
-      "value": 3.7,
+      "value": 3.68,
       "unit": "%"
     },
     {
       "id": "yield_spread",
       "name": "美債利差 (10Y-3M)",
-      "value": 0.87,
+      "value": 0.86,
       "unit": "%"
     },
     {
@@ -36,7 +36,7 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 15.03
+      "value": 15.84
     }
   ],
   "chart": [
