@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-14 20:10",
+  "updated_at": "2026-07-14 20:21",
   "fund": {
     "name": "00713",
-    "price": 60.55,
-    "change_pct": 0
+    "price": 60.05,
+    "change_pct": -0.83
   },
   "signal": {
     "action": "HOLD",
@@ -30,13 +30,13 @@
     {
       "id": "estimated_yield",
       "name": "預估殖利率",
-      "value": 4.13,
+      "value": 4.16,
       "unit": "%"
     },
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 17.16
+      "value": 17.5
     }
   ],
   "chart": [
