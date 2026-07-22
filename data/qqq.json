@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-23 00:00",
+  "updated_at": "2026-07-23 00:10",
   "fund": {
     "name": "QQQ",
-    "price": 709.265,
+    "price": 709.2429,
     "change_pct": 0.04
   },
   "signal": {
@@ -17,12 +17,12 @@
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 43
+      "value": 44
     },
     {
       "id": "us_10y",
       "name": "10Y 美債殖利率",
-      "value": 4.64,
+      "value": 4.65,
       "unit": "%"
     },
     {
@@ -692,7 +692,7 @@
     },
     {
       "date": "2026-07-22",
-      "close": 709.27
+      "close": 709.24
     }
   ]
 }
