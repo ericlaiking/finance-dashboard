@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-25 00:10",
+  "updated_at": "2026-07-25 00:20",
   "fund": {
     "name": "QQQ",
     "price": null,
@@ -17,7 +17,7 @@
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 40
+      "value": 41
     },
     {
       "id": "us_10y",
@@ -28,7 +28,7 @@
     {
       "id": "ndx_deviation",
       "name": "Nasdaq 100 乖離率",
-      "value": 4.77,
+      "value": 4.57,
       "unit": "%"
     },
     {
@@ -692,7 +692,7 @@
     },
     {
       "date": "2026-07-24",
-      "close": 692.62
+      "close": 691.2
     }
   ]
 }
