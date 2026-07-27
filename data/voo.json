@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-27 21:30",
+  "updated_at": "2026-07-27 21:40",
   "fund": {
     "name": "VOO",
-    "price": 684.6753,
+    "price": 684.6557,
     "change_pct": 0.82
   },
   "signal": {
@@ -17,12 +17,12 @@
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 39
+      "value": 41
     },
     {
       "id": "us_10y",
       "name": "10Y 美債殖利率",
-      "value": 4.64,
+      "value": 4.65,
       "unit": "%"
     },
     {
@@ -688,7 +688,7 @@
     },
     {
       "date": "2026-07-27",
-      "close": 684.68
+      "close": 684.66
     }
   ]
 }
