@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-30 00:00",
+  "updated_at": "2026-07-30 00:10",
   "fund": {
     "name": "QQQ",
-    "price": 665.51,
-    "change_pct": -1.48
+    "price": 664.41,
+    "change_pct": -1.64
   },
   "signal": {
     "action": "HOLD",
@@ -17,7 +17,7 @@
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 33
+      "value": 34
     },
     {
       "id": "us_10y",
@@ -28,13 +28,13 @@
     {
       "id": "ndx_deviation",
       "name": "Nasdaq 100 乖離率",
-      "value": 0.66,
+      "value": 0.3,
       "unit": "%"
     },
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 29.53
+      "value": 29.48
     }
   ],
   "chart": [
@@ -691,8 +691,12 @@
       "close": 682.12
     },
     {
+      "date": "2026-07-28",
+      "close": 675.49
+    },
+    {
       "date": "2026-07-29",
-      "close": 665.52
+      "close": 664.41
     }
   ]
 }
