@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-30 11:20",
+  "updated_at": "2026-07-30 11:30",
   "fund": {
     "name": "0050",
-    "price": 94.55,
-    "change_pct": 0.91
+    "price": 94.85,
+    "change_pct": 1.23
   },
   "signal": {
     "action": "WAIT",
@@ -23,7 +23,7 @@
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 28.67
+      "value": 28.76
     },
     {
       "id": "usd_twd",
@@ -668,7 +668,7 @@
     },
     {
       "date": "2026-07-30",
-      "close": 94.55
+      "close": 94.85
     }
   ]
 }
