@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 16:10",
+  "updated_at": "2026-08-03 16:20",
   "fund": {
     "name": "VOO",
     "price": 686.65,
@@ -17,7 +17,7 @@
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 42
+      "value": 45
     },
     {
       "id": "us_10y",
@@ -34,7 +34,7 @@
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 26.9
+      "value": 0
     }
   ],
   "chart": [
