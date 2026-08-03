@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 16:35",
+  "updated_at": "2026-08-03 16:40",
   "fund": {
     "name": "VOO",
     "price": 686.65,
@@ -34,7 +34,7 @@
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 26.9
+      "value": 0
     }
   ],
   "chart": [
