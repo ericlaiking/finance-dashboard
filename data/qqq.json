@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-05 23:20",
+  "updated_at": "2026-08-05 23:30",
   "fund": {
     "name": "QQQ",
-    "price": 722.6699,
-    "change_pct": -0.16
+    "price": 722.41,
+    "change_pct": -0.2
   },
   "signal": {
     "action": "HOLD",
@@ -22,19 +22,19 @@
     {
       "id": "us_10y",
       "name": "10Y 美債殖利率",
-      "value": 4.62,
+      "value": 4.63,
       "unit": "%"
     },
     {
       "id": "ndx_deviation",
       "name": "Nasdaq 100 乖離率",
-      "value": 8.45,
+      "value": 8.4,
       "unit": "%"
     },
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 32.07
+      "value": 32.06
     }
   ],
   "chart": [
@@ -696,7 +696,7 @@
     },
     {
       "date": "2026-08-05",
-      "close": 722.67
+      "close": 722.31
     }
   ]
 }
