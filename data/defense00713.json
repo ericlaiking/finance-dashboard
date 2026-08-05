@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-05 11:10",
+  "updated_at": "2026-08-05 11:17",
   "fund": {
     "name": "00713",
-    "price": 61.15,
-    "change_pct": 0.58
+    "price": 61.2,
+    "change_pct": 0.66
   },
   "signal": {
     "action": "HOLD",
@@ -30,7 +30,7 @@
     {
       "id": "estimated_yield",
       "name": "預估殖利率",
-      "value": 4.09,
+      "value": 4.08,
       "unit": "%"
     },
     {
@@ -670,7 +670,7 @@
     },
     {
       "date": "2026-08-05",
-      "close": 61.1
+      "close": 61.2
     }
   ]
 }
