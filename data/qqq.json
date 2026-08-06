@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-07 03:48",
+  "updated_at": "2026-08-07 04:07",
   "fund": {
     "name": "QQQ",
-    "price": 714.61,
-    "change_pct": -0.38
+    "price": 714.65,
+    "change_pct": -0.37
   },
   "signal": {
     "action": "HOLD",
@@ -696,7 +696,7 @@
     },
     {
       "date": "2026-08-06",
-      "close": 714.55
+      "close": 714.65
     }
   ]
 }
