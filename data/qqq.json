@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-12 04:10",
+  "updated_at": "2026-08-12 04:20",
   "fund": {
     "name": "QQQ",
     "price": 718.45,
@@ -17,7 +17,7 @@
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 60
+      "value": 61
     },
     {
       "id": "us_10y",
