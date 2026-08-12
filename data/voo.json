@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-13 04:20",
+  "updated_at": "2026-08-13 04:30",
   "fund": {
     "name": "VOO",
-    "price": 710.12,
-    "change_pct": 0.24
+    "price": 710.17,
+    "change_pct": 0.25
   },
   "signal": {
     "action": "HOLD",
@@ -696,7 +696,7 @@
     },
     {
       "date": "2026-08-12",
-      "close": 710.12
+      "close": 710.17
     }
   ]
 }
