@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13 14:20",
+  "updated_at": "2026-08-13 14:23",
   "fund": {
     "name": "QQQ",
     "price": 723.7,
@@ -28,7 +28,7 @@
     {
       "id": "ndx_deviation",
       "name": "Nasdaq 100 乖離率",
-      "value": 7.8,
+      "value": 8.2,
       "unit": "%"
     },
     {
