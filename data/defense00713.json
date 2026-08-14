@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-14 14:50",
+  "updated_at": "2026-08-14 15:10",
   "fund": {
     "name": "00713",
-    "price": 60.85,
-    "change_pct": -0.41
+    "price": null,
+    "change_pct": 0
   },
   "signal": {
-    "action": "WAIT",
-    "label": "觀望 / 減碼",
-    "confidence": 70,
+    "action": "HOLD",
+    "label": "持有觀察",
+    "confidence": 50,
     "reasons": [
-      "VIX 恐慌指數低迷 (14.63)，市場無需防禦"
+      "防禦指標處於正常區間，維持現有資產配置"
     ]
   },
   "compositeSignal": null,
@@ -18,25 +18,25 @@
     {
       "id": "us_short_yield",
       "name": "3M 美債利率",
-      "value": 3.71,
+      "value": 0,
       "unit": "%"
     },
     {
       "id": "yield_spread",
       "name": "美債利差 (10Y-3M)",
-      "value": 0.94,
+      "value": 0,
       "unit": "%"
     },
     {
       "id": "estimated_yield",
       "name": "預估殖利率",
-      "value": 4.11,
+      "value": 0,
       "unit": "%"
     },
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 14.63
+      "value": 0
     }
   ],
   "chart": [
