@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-15 03:00",
+  "updated_at": "2026-08-15 03:02",
   "fund": {
     "name": "VOO",
-    "price": 713.465,
+    "price": 713.44,
     "change_pct": -0.21
   },
   "signal": {
@@ -22,19 +22,19 @@
     {
       "id": "us_10y",
       "name": "10Y 美債殖利率",
-      "value": 4.7,
+      "value": 4.69,
       "unit": "%"
     },
     {
       "id": "sp500_deviation",
       "name": "S&P 500 乖離率",
-      "value": 7.75,
+      "value": 7.76,
       "unit": "%"
     },
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 27.96
+      "value": 0
     }
   ],
   "chart": [
@@ -696,7 +696,7 @@
     },
     {
       "date": "2026-08-14",
-      "close": 713.47
+      "close": 713.44
     }
   ]
 }
