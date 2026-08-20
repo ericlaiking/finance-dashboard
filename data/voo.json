@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-21 00:20",
+  "updated_at": "2026-08-21 00:30",
   "fund": {
     "name": "VOO",
-    "price": 703.63,
+    "price": 703.625,
     "change_pct": -0.46
   },
   "signal": {
