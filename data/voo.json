@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-24 22:49",
+  "updated_at": "2026-08-24 22:50",
   "fund": {
     "name": "VOO",
-    "price": 702.02,
-    "change_pct": -0.24
+    "price": 702.07,
+    "change_pct": -0.23
   },
   "signal": {
     "action": "HOLD",
@@ -692,7 +692,7 @@
     },
     {
       "date": "2026-08-24",
-      "close": 702.02
+      "close": 702.07
     }
   ]
 }
