@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-08-27 19:50",
+  "updated_at": "2026-08-27 20:00",
   "fund": {
     "name": "00713",
     "price": 61.6,
     "change_pct": -0.08
   },
   "signal": {
-    "action": "WAIT",
-    "label": "觀望 / 減碼",
-    "confidence": 70,
+    "action": "HOLD",
+    "label": "持有觀察",
+    "confidence": 50,
     "reasons": [
-      "VIX 恐慌指數低迷 (14.99)，市場無需防禦"
+      "防禦指標處於正常區間，維持現有資產配置"
     ]
   },
   "compositeSignal": null,
@@ -36,7 +36,7 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 14.99
+      "value": 15
     }
   ],
   "chart": [
