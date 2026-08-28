@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-29 00:50",
+  "updated_at": "2026-08-29 01:00",
   "fund": {
     "name": "00713",
     "price": 61.55,
@@ -10,7 +10,7 @@
     "label": "觀望 / 減碼",
     "confidence": 70,
     "reasons": [
-      "VIX 恐慌指數低迷 (14.63)，市場無需防禦"
+      "VIX 恐慌指數低迷 (14.59)，市場無需防禦"
     ]
   },
   "compositeSignal": null,
@@ -24,7 +24,7 @@
     {
       "id": "yield_spread",
       "name": "美債利差 (10Y-3M)",
-      "value": 1,
+      "value": 0.99,
       "unit": "%"
     },
     {
@@ -36,7 +36,7 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 14.63
+      "value": 14.59
     }
   ],
   "chart": [
