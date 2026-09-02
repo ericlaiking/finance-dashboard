@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02 15:00",
+  "updated_at": "2026-09-02 15:10",
   "fund": {
     "name": "VOO",
     "price": 700.28,
@@ -17,7 +17,7 @@
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 44
+      "value": 29
     },
     {
       "id": "us_10y",
@@ -28,7 +28,7 @@
     {
       "id": "sp500_deviation",
       "name": "S&P 500 乖離率",
-      "value": 4.55,
+      "value": 4.44,
       "unit": "%"
     },
     {
