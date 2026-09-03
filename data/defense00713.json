@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03 22:50",
+  "updated_at": "2026-09-03 23:00",
   "fund": {
     "name": "00713",
     "price": 63.1,
@@ -10,7 +10,7 @@
     "label": "觀望 / 減碼",
     "confidence": 70,
     "reasons": [
-      "VIX 恐慌指數低迷 (14.99)，市場無需防禦"
+      "VIX 恐慌指數低迷 (14.96)，市場無需防禦"
     ]
   },
   "compositeSignal": null,
@@ -36,7 +36,7 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 14.99
+      "value": 14.96
     }
   ],
   "chart": [
