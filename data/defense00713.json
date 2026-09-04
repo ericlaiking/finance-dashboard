@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-04 22:40",
+  "updated_at": "2026-09-04 22:50",
   "fund": {
     "name": "00713",
     "price": 63.45,
@@ -10,7 +10,7 @@
     "label": "觀望 / 減碼",
     "confidence": 70,
     "reasons": [
-      "VIX 恐慌指數低迷 (14.05)，市場無需防禦"
+      "VIX 恐慌指數低迷 (14.11)，市場無需防禦"
     ]
   },
   "compositeSignal": null,
@@ -18,7 +18,7 @@
     {
       "id": "us_short_yield",
       "name": "3M 美債利率",
-      "value": 3.77,
+      "value": 3.76,
       "unit": "%"
     },
     {
@@ -36,7 +36,7 @@
     {
       "id": "vix",
       "name": "VIX 恐慌指數",
-      "value": 14.05
+      "value": 14.11
     }
   ],
   "chart": [
