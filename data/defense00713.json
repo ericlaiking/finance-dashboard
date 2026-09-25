@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-26 02:50",
+  "updated_at": "2026-09-26 03:00",
   "fund": {
     "name": "00713",
     "price": 63.2,
@@ -18,7 +18,7 @@
     {
       "id": "us_short_yield",
       "name": "3M 美債利率",
-      "value": 4.08,
+      "value": 4.07,
       "unit": "%"
     },
     {
