@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-09-26 02:00",
+  "updated_at": "2026-09-26 02:10",
   "fund": {
     "name": "QQQ",
-    "price": 745.01,
-    "change_pct": 0.53
+    "price": 745.0701,
+    "change_pct": 0.54
   },
   "signal": {
     "action": "WAIT",
     "label": "觀望 / 減碼",
     "confidence": 70,
     "reasons": [
-      "10Y 美債殖利率過高 (5.196%)"
+      "10Y 美債殖利率過高 (5.2%)"
     ]
   },
   "indicators": [
@@ -704,7 +704,7 @@
     },
     {
       "date": "2026-09-25",
-      "close": 744.98
+      "close": 745.07
     }
   ]
 }

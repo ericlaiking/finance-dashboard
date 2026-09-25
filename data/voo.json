@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-09-26 02:00",
+  "updated_at": "2026-09-26 02:10",
   "fund": {
     "name": "VOO",
-    "price": 710.66,
-    "change_pct": 0.52
+    "price": 710.63,
+    "change_pct": 0.51
   },
   "signal": {
     "action": "WAIT",
     "label": "觀望 / 減碼",
     "confidence": 70,
     "reasons": [
-      "10Y 美債殖利率過高 (5.196%)"
+      "10Y 美債殖利率過高 (5.2%)"
     ]
   },
   "indicators": [
@@ -704,7 +704,7 @@
     },
     {
       "date": "2026-09-25",
-      "close": 710.64
+      "close": 710.63
     }
   ]
 }
