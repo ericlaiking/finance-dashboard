@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-10-05 09:40",
+  "updated_at": "2026-10-05 09:50",
   "fund": {
     "name": "0050",
-    "price": 115.5,
-    "change_pct": 2.39
+    "price": 115.65,
+    "change_pct": 2.53
   },
   "signal": {
     "action": "WAIT",
@@ -23,12 +23,12 @@
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 35.02
+      "value": 35.06
     },
     {
       "id": "usd_twd",
       "name": "台幣匯率",
-      "value": 31.76
+      "value": 31.78
     },
     {
       "id": "foreign_buy",
@@ -664,7 +664,7 @@
     },
     {
       "date": "2026-10-05",
-      "close": 115.55
+      "close": 115.7
     }
   ]
 }
