@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-06 19:40",
+  "updated_at": "2026-10-06 19:50",
   "fund": {
     "name": "QQQ",
     "price": 756.2,
@@ -34,7 +34,7 @@
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 28.96
+      "value": 30.82
     }
   ],
   "chart": [
