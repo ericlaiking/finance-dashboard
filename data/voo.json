@@ -1,23 +1,23 @@
 {
-  "updated_at": "2026-10-06 22:40",
+  "updated_at": "2026-10-06 22:50",
   "fund": {
     "name": "VOO",
-    "price": 716.7199,
-    "change_pct": 0.62
+    "price": 716.985,
+    "change_pct": 0.65
   },
   "signal": {
     "action": "WAIT",
     "label": "觀望 / 減碼",
     "confidence": 70,
     "reasons": [
-      "10Y 美債殖利率過高 (5.292%)"
+      "10Y 美債殖利率過高 (5.2860003%)"
     ]
   },
   "indicators": [
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 49
+      "value": 48
     },
     {
       "id": "us_10y",
@@ -28,13 +28,13 @@
     {
       "id": "sp500_deviation",
       "name": "S&P 500 乖離率",
-      "value": 4.15,
+      "value": 4.18,
       "unit": "%"
     },
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 25.21
+      "value": 25.22
     }
   ],
   "chart": [
@@ -700,7 +700,7 @@
     },
     {
       "date": "2026-10-06",
-      "close": 716.72
+      "close": 716.98
     }
   ]
 }
