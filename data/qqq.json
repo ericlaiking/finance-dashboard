@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-10 02:00",
+  "updated_at": "2026-10-10 02:10",
   "fund": {
     "name": "QQQ",
-    "price": 750.77,
-    "change_pct": 0.43
+    "price": 751.0651,
+    "change_pct": 0.47
   },
   "signal": {
     "action": "WAIT",
     "label": "觀望 / 減碼",
     "confidence": 70,
     "reasons": [
-      "10Y 美債殖利率過高 (5.253%)"
+      "10Y 美債殖利率過高 (5.248%)"
     ]
   },
   "indicators": [
@@ -28,13 +28,13 @@
     {
       "id": "ndx_deviation",
       "name": "Nasdaq 100 乖離率",
-      "value": 5.2,
+      "value": 5.25,
       "unit": "%"
     },
     {
       "id": "pe",
       "name": "本益比 (P/E)",
-      "value": 30.6
+      "value": 30.61
     }
   ],
   "chart": [
@@ -704,7 +704,7 @@
     },
     {
       "date": "2026-10-09",
-      "close": 750.77
+      "close": 751.07
     }
   ]
 }
