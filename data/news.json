@@ -1,4 +1,29 @@
 {
-  "updated_at": "2026-10-13 14:20",
-  "items": []
+  "updated_at": "2026-10-13 14:30",
+  "items": [
+    {
+      "title": "What’s News: Business & Finance",
+      "link": "https://finance.yahoo.com/m/09140df2-e6fe-3e3f-8fe8-5722511285c5/what%E2%80%99s-news%3A-business-%26.html",
+      "publisher": "The Wall Street Journal",
+      "time": "2026-10-13T04:01:00.000Z"
+    },
+    {
+      "title": "Tencent Kicks Off $5 Billion Bond Sale to Finance AI Spending",
+      "link": "https://finance.yahoo.com/technology/ai/articles/tencent-kicks-off-5-billion-002558908.html",
+      "publisher": "Bloomberg",
+      "time": "2026-10-13T00:25:58.000Z"
+    },
+    {
+      "title": "Maia 300: Microsoft Builds the Exit From a Compute Landlord Model It Helped Finance",
+      "link": "https://finance.yahoo.com/technology/ai/articles/maia-300-microsoft-builds-exit-193001930.html",
+      "publisher": "Forkast News",
+      "time": "2026-10-12T19:30:01.000Z"
+    },
+    {
+      "title": "Q2 Earnings Highs And Lows: Nelnet (NYSE:NNI) Vs The Rest Of The Consumer Finance Stocks",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/q2-earnings-highs-lows-nelnet-170303549.html",
+      "publisher": "StockStory",
+      "time": "2026-10-12T17:03:03.000Z"
+    }
+  ]
 }
