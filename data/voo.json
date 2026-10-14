@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15 04:30",
+  "updated_at": "2026-10-15 04:40",
   "fund": {
     "name": "VOO",
     "price": 707.43,
@@ -17,7 +17,7 @@
     {
       "id": "fear_greed",
       "name": "Fear & Greed Index",
-      "value": 33
+      "value": 32
     },
     {
       "id": "us_10y",
